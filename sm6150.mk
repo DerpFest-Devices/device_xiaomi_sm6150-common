@@ -127,7 +127,7 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.bluetooth.audio@2.0-impl:32 \
     audio.bluetooth.default \
     BluetoothQti \
     libbthost_if \
@@ -137,7 +137,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-impl:64 \
     android.hardware.camera.provider@2.4-service_64 \
     libdng_sdk.vendor \
     libgui_vendor \
@@ -202,7 +202,7 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1-impl-qti \
+    android.hardware.gnss@2.1-impl-qti:64 \
     android.hardware.gnss@2.1-service-qti \
     libbatching \
     libgeofencing \
@@ -213,8 +213,8 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-impl.recovery \
+    android.hardware.health@2.1-impl:64 \
+    android.hardware.health@2.1-impl.recovery:64 \
     android.hardware.health@2.1-service
 
 # IFAA manager
