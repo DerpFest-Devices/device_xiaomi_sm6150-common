@@ -5,6 +5,6 @@ on boot
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/hbm
 
 service vendor.livedisplay-hal-2-1 /vendor/bin/hw/vendor.lineage.livedisplay@2.1-service.xiaomi_sm6150
-    class hal
+    class late_start
     user system
     group system
