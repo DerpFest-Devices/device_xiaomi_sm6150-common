@@ -611,4 +611,9 @@
     <!-- Package name of a telephony-related system app, such as an IMS service.
          Exempted from privacy indicators. -->
     <string name="config_systemTelephonyPackage" translatable="false">com.qualcomm.qti.cne</string>
+
+    <!-- Control whether Night display is available. This should only be enabled on devices
+    that have a HWC implementation that can apply the matrix passed to setColorTransform
+    without impacting power, performance, and app compatibility (e.g. protected content). -->
+    <bool name="config_nightDisplayAvailable">false</bool>
 </resources>
