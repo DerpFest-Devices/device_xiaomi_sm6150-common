@@ -185,6 +185,9 @@ persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
 ro.vendor.use_data_netmgrd=true
 
+# Media
+debug.stagefright.c2inputsurface=-1
+
 # Netflix
 ro.netflix.bsp_rev=Q6150-17263-1
 
