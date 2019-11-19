@@ -87,6 +87,7 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.1-impl:32 \
     audio.a2dp.default \
     audio.r_submix.default \
+    audio.primary.sm6150 \
     audio.usb.default \
     libaudio-resampler \
     libqcomvisualizer \
@@ -278,12 +279,8 @@ PRODUCT_COPY_FILES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.msm.usb.configfs.rc \
-    init.qcom.early_boot.sh \
-    init.qcom.post_boot.sh \
     init.qcom.rc \
     init.qcom.power.rc \
-    init.qcom.sensors.sh \
-    init.qcom.sh \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
     init.qti.qseecomd.sh \

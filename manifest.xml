@@ -175,15 +175,6 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.neuralnetworks</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>IDevice</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.power</name>
         <transport>hwbinder</transport>
         <version>1.2</version>
@@ -241,23 +232,6 @@
         <interface>
             <name>ISoundTriggerHw</name>
             <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.mlshal</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IMlsDap</name>
-            <instance>mlsdaphal</instance>
-        </interface>
-        <interface>
-            <name>IMlsVnc</name>
-            <instance>mlsvnchal</instance>
-        </interface>
-        <interface>
-            <name>IMlsIon</name>
-            <instance>mlsionhal</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -384,7 +358,7 @@
     <hal format="hidl">
         <name>vendor.display.config</name>
         <transport>hwbinder</transport>
-        <version>1.10</version>
+        <version>1.8</version>
         <interface>
             <name>IDisplayConfig</name>
             <instance>default</instance>
@@ -405,15 +379,6 @@
         <version>1.1</version>
         <interface>
             <name>IFactory</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.esepowermanager</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IEsePowerManager</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -482,42 +447,11 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.iop</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IIop</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.hardware.perf</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IPerf</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.qdutils_disp</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IQdutilsDisp</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.qteeconnector</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IAppConnector</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>IGPAppConnector</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -612,37 +546,6 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.scve.objecttracker</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IObjectTracker</name>
-            <instance>objectTracker</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.scve.panorama</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IPanoramaStitching</name>
-            <instance>panoStitching</instance>
-        </interface>
-        <interface>
-            <name>IPanoramaTracking</name>
-            <instance>panoTracking</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.sensorscalibrate</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISensorsCalibrate</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.hardware.soter</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -663,7 +566,7 @@
     <hal format="hidl">
         <name>vendor.qti.hardware.vpp</name>
         <transport>hwbinder</transport>
-        <version>1.3</version>
+        <version>1.2</version>
         <interface>
             <name>IHidlVppService</name>
             <instance>vppService</instance>
