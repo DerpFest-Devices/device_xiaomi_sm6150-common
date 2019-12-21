@@ -16,5 +16,17 @@
     "target_path"  :"hardware/xiaomi",
     "branch"       :"lineage-17.1",
     "remote"       :"github"
-  }
+  },
+  {
+    "repository"   :"packages_apps_PixelLiveWallpaper",
+    "target_path"  :"packages/apps/PixelLiveWallpaper",
+    "branch"       :"ten",
+    "remote"       :"pixel-gitlab"
+  },
+  {
+    "repository"   :"crdroidandroid/android_hardware_xiaomi",
+    "target_path"  :"hardware/xiaomi",
+    "branch"       :"10.0",
+    "remote"       :"github"
+  },
 ]
