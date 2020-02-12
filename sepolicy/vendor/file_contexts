@@ -10,6 +10,7 @@
 /data/vendor/fpdump(/.*)?       u:object_r:fingerprint_data_file:s0
 /data/vendor/thermal(/.*)?      u:object_r:thermal_data_file:s0
 /data/vendor/mac_addr(/.*)?     u:object_r:wifi_vendor_data_file:s0
+/data/per_boot(/.*)?            u:object_r:per_boot_file:s0
 
 # Executable
 /vendor/bin/init\.insmod\.sh    u:object_r:init-insmod-sh_exec:s0
