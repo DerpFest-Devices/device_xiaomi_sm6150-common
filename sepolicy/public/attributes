@@ -1,5 +1,5 @@
-hal_attribute_lineage(mlipay)
+hal_attribute_derp(mlipay)
 
-hal_attribute_lineage(motor)
+hal_attribute_derp(motor)
 
-hal_attribute_lineage(touchfeature)
+hal_attribute_derp(touchfeature)
