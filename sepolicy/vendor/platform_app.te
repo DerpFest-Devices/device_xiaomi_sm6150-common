@@ -1,0 +1,2 @@
+# Allow Faceunlock service read sensors prop
+get_prop(platform_app, sensors_prop);
