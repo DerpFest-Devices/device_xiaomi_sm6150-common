@@ -1,0 +1,56 @@
+[
+  {
+    "repository"   :"trpsl/android_kernel_xiaomi_sm6150",
+    "target_path"  :"kernel/xiaomi/sm6150",
+    "branch"       :"ten",
+    "remote"       :"github"
+  },
+  {
+    "repository"   :"trpsl/android_vendor_xiaomi",
+    "target_path"  :"android/xiaomi",
+    "branch"       :"ten",
+    "remote"       :"gitlab"
+  },
+  {
+    "repository"   :"LineageOS/android_hardware_xiaomi",
+    "target_path"  :"hardware/xiaomi",
+    "branch"       :"lineage-17.1",
+    "remote"       :"github"
+  },
+  {
+    "repository"   :"LineageOS/android_vendor_nxp_interfaces_opensource_nfc",
+    "target_path"  :"vendor/nxp/opensource/interfaces/nfc",
+    "branch"       :"lineage-17.1",
+    "remote"       :"github"
+   },
+   {
+    "repository"   :"LineageOS/android_vendor_nxp_opensource_external_libnfc-nci",
+    "target_path"  :"vendor/nxp/opensource/commonsys/external/libnfc-nci",
+    "branch"       :"lineage-17.1",
+    "remote"       :"github"
+   },
+   {
+    "repository"   :"LineageOS/android_vendor_nxp_opensource_frameworks",
+    "target_path"  :"vendor/nxp/opensource/commonsys/frameworks",
+    "branch"       :"lineage-17.1",
+    "remote"       :"github"
+   },
+   {
+    "repository"   :"LineageOS/android_vendor_nxp_opensource_packages_apps_Nfc",
+    "target_path"  :"vendor/nxp/opensource/commonsys/packages/apps/Nfc",
+    "branch"       :"lineage-17.1",
+    "remote"       :"github"
+   },
+   {
+    "repository"   :"LineageOS/android_vendor_nxp_opensource_halimpl",
+    "target_path"  :"vendor/nxp/opensource/sn100x/halimpl",
+    "branch"       :"lineage-17.1-sn100x",
+    "remote"       :"github"
+   },
+   {
+    "repository"   :"LineageOS/android_vendor_nxp_opensource_hidlimpl",
+    "target_path"  :"vendor/nxp/opensource/sn100x/hidlimpl",
+    "branch"       :"lineage-17.1-sn100x",
+    "remote"       :"github"
+   }
+]
