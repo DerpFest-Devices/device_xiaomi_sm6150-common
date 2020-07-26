@@ -17,36 +17,40 @@
 import common
 import re
 
-def FullOTA_Assertions(info):
-  input_zip = info.input_zip
-  AddBasebandAssertion(info, input_zip)
-  return
-
-def IncrementalOTA_Assertions(info):
-  input_zip = info.target_zip
-  AddBasebandAssertion(info, input_zip)
-  return
-
 def FullOTA_InstallEnd(info):
   input_zip = info.input_zip
+  OTA_UpdateFirmware(info)
   OTA_InstallEnd(info, input_zip)
   return
 
 def IncrementalOTA_InstallEnd(info):
   input_zip = info.target_zip
+  OTA_UpdateFirmware(info)
   OTA_InstallEnd(info, input_zip)
   return
 
-def AddBasebandAssertion(info, input_zip):
-  android_info = input_zip.read("OTA/android-info.txt")
-  variants = []
-  for variant in ('in', 'cn', 'eea'):
-    result = re.search(r'require\s+version-{}\s*=\s*(\S+)'.format(variant), android_info)
-    if result is not None:
-      variants.append(result.group(1).split(','))
-  cmd = 'assert(getprop("ro.boot.hwc") == "{0}" && (xiaomi.verify_baseband("{2}", "{1}") == "1" || abort("ERROR: This package requires baseband from atleast {2}. Please upgrade firmware and retry!");) || true);'
-  for variant in variants:
-    info.script.AppendExtra(cmd.format(*variant))
+def OTA_UpdateFirmware(info):
+  info.script.AppendExtra('ui_print("Flashing firmware images");')
+  info.script.AppendExtra('package_extract_file("install/firmware-update/abl.elf", "/dev/block/bootdevice/by-name/abl.elf");')
+  info.script.AppendExtra('package_extract_file("install/firmware-update/aop.mbn", "/dev/block/bootdevice/by-name/aop.mbn");')
+  info.script.AppendExtra('package_extract_file("install/firmware-update/BTFM.bin", "/dev/block/bootdevice/by-name/BTFM.bin");')
+  info.script.AppendExtra('package_extract_file("install/firmware-update/cmnlib64.mbn", "/dev/block/bootdevice/by-name/cmnlib64.mbn");')
+  info.script.AppendExtra('package_extract_file("install/firmware-update/cmnlib.mbn", "/dev/block/bootdevice/by-name/cmnlib.mbn");')
+  info.script.AppendExtra('package_extract_file("install/firmware-update/devcfg.mbn", "/dev/block/bootdevice/by-name/devcfg.mbn");')
+  info.script.AppendExtra('package_extract_file("install/firmware-update/dspso.bin", "/dev/block/bootdevice/by-name/dspso.bin");')
+  info.script.AppendExtra('package_extract_file("install/firmware-update/firmware.mk", "/dev/block/bootdevice/by-name/firmware.mk");')
+  info.script.AppendExtra('package_extract_file("install/firmware-update/hyp.mbn", "/dev/block/bootdevice/by-name/hyp.mbn");')
+  info.script.AppendExtra('package_extract_file("install/firmware-update/imagefv.elf", "/dev/block/bootdevice/by-name/imagefv.elf");')
+  info.script.AppendExtra('package_extract_file("install/firmware-update/km4.mbn", "/dev/block/bootdevice/by-name/km4.mbn");')
+  info.script.AppendExtra('package_extract_file("install/firmware-update/logo.img", "/dev/block/bootdevice/by-name/logo.img");')
+  info.script.AppendExtra('package_extract_file("install/firmware-update/multi_image.mbn", "/dev/block/bootdevice/by-name/multi_image.mbn");')
+  info.script.AppendExtra('package_extract_file("install/firmware-update/NON-HLOS.bin", "/dev/block/bootdevice/by-name/NON-HLOS.bin");')
+  info.script.AppendExtra('package_extract_file("install/firmware-update/qupv3fw.elf", "/dev/block/bootdevice/by-name/qupv3fw.elf");')
+  info.script.AppendExtra('package_extract_file("install/firmware-update/storsec.mbn", "/dev/block/bootdevice/by-name/storsec.mbn");')
+  info.script.AppendExtra('package_extract_file("install/firmware-update/tz.mbn", "/dev/block/bootdevice/by-name/tz.mbn");')
+  info.script.AppendExtra('package_extract_file("install/firmware-update/uefi_sec.mbn", "/dev/block/bootdevice/by-name/uefi_sec.mbn");')
+  info.script.AppendExtra('package_extract_file("install/firmware-update/xbl_config.elf", "/dev/block/bootdevice/by-name/xbl_config.elf");')
+  info.script.AppendExtra('package_extract_file("install/firmware-update/xbl.elf", "/dev/block/bootdevice/by-name/xbl.elf");')
 
 def AddImage(info, input_zip, basename, dest):
   name = basename
