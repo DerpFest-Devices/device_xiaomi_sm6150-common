@@ -11,7 +11,6 @@
 /data/vendor/thermal(/.*)?      u:object_r:thermal_data_file:s0
 /data/vendor/mac_addr(/.*)?     u:object_r:wifi_vendor_data_file:s0
 /data/per_boot(/.*)?            u:object_r:per_boot_file:s0
-/sys/devices/virtual/touch/tp_dev/fp_state u:object_r:vendor_sysfs_sensors:s0
 
 # Executable
 /vendor/bin/init\.insmod\.sh    u:object_r:init-insmod-sh_exec:s0
@@ -23,9 +22,11 @@
 
 # Fingerprint devices
 /dev/goodix_fp                  u:object_r:fingerprint_device:s0
+/sys/devices/virtual/touch/tp_dev/fp_state u:object_r:vendor_sysfs_sensors:s0
 
 # Graphics nodes
 /sys/devices/platform/soc/[a-z0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/panel_info        u:object_r:sysfs_graphics:s0
+/sys/devices/platform/soc/soc:qcom,dsi-display/msm_fb_ea_enable      u:object_r:sysfs_anti_flicker:s0
 
 # HALs
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.xiaomi_sm6150                   u:object_r:hal_fingerprint_default_exec:s0

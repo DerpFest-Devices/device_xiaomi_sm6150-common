@@ -1,3 +1,6 @@
+type sysfs_anti_flicker, sysfs_type, fs_type;
+
 # Grant LiveDisplay access over the control nodes
 allow hal_lineage_livedisplay_qti sysfs_graphics:dir r_dir_perms;
 allow hal_lineage_livedisplay_qti sysfs_graphics:file rw_file_perms;
+allow hal_lineage_livedisplay_qti sysfs_anti_flicker:file rw_file_perms;
