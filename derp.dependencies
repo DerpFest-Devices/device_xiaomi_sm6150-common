@@ -2,8 +2,7 @@
   {
     "repository"   :"vendor_xiaomi_sm6150-common",
     "target_path"  :"vendor/xiaomi/sm6150-common",
-    "branch"       :"ten",
-    "remote"       :"pixel-devices-bitbucket"
+    "branch"       :"ten"
   },
   {
     "repository"   :"LineageOS/android_hardware_xiaomi",
@@ -12,15 +11,9 @@
     "remote"       :"github"
   },
   {
-    "repository"   :"packages_apps_PixelLiveWallpaper",
-    "target_path"  :"packages/apps/PixelLiveWallpaper",
-    "branch"       :"ten",
-    "remote"       :"pixel-gitlab"
-  },
-  {
-    "repository"   :"vendor_xiaomi-firmware",
+    "repository"   :"sreekfreak995/vendor_xiaomi-firmware",
     "target_path"  :"vendor/xiaomi-firmware",
     "branch"       :"ten",
-    "remote"       :"pixel-devices-bitbucket"
+    "remote"       :"gitlab"
   }
 ]
