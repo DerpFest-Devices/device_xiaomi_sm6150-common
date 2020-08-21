@@ -1,1 +1,5 @@
 hal_client_domain(system_app, hal_mlipay)
+
+allow system_app sysfs_zram:dir search;
+
+allow system_app sysfs_zram:file { getattr open read };
