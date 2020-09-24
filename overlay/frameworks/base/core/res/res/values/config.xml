@@ -480,11 +480,6 @@
     <!-- Regex of wired ethernet ifaces -->
     <string translatable="false" name="config_ethernet_iface_regex">eth0</string>
 
-    <!-- Control whether Night display is available. This should only be enabled on devices
-    that have a HWC implementation that can apply the matrix passed to setColorTransform
-    without impacting power, performance, and app compatibility (e.g. protected content). -->
-    <bool name="config_nightDisplayAvailable">false</bool>
-
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
          when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
          where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
@@ -501,7 +496,7 @@
 
     <integer name="config_deviceLightCapabilities">232</integer>
 
- <integer-array name="config_availableColorModes">
+    <integer-array name="config_availableColorModes">
         <item>0</item>
         <item>1</item>
         <item>2</item>
