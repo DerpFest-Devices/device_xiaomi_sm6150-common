@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2015 The CyanogenMod Open Source Project
- * Copyright (C) 2020 The LineageOS Project
+ * Copyright (C) 2020-2021 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,21 +16,12 @@
  */
 
 #define LOG_TAG "amplifier_sm6150"
-//#define LOG_NDEBUG 0
 
-#include <cutils/str_parms.h>
-#include <hardware/audio_amplifier.h>
-#include <hardware/hardware.h>
 #include <log/log.h>
-#include <stdint.h>
-#include <stdlib.h>
-#include <sys/types.h>
 
-/* clang-format off */
 #include "audio_hw.h"
 #include "platform.h"
 #include "platform_api.h"
-/* clang-format on */
 
 #define UNUSED __attribute__((unused))
 
@@ -122,7 +113,7 @@ int tfa98xx_start_feedback(void* adev, uint32_t snd_device) {
 
 error:
     ALOGE("%s: error case", __func__);
-    if (tfa_dev->tfa98xx_out != 0) {
+    if (tfa_dev->tfa98xx_out) {
         pcm_close(tfa_dev->tfa98xx_out);
         tfa_dev->tfa98xx_out = NULL;
     }
