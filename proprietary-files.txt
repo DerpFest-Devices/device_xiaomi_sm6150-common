@@ -596,7 +596,6 @@ vendor/lib/libqmiservices.so
 -system_ext/app/datastatusnotification/datastatusnotification.apk
 -system_ext/app/embms/embms.apk
 -system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 system_ext/etc/permissions/embms.xml
 system_ext/etc/permissions/qcrilhook.xml
