@@ -781,7 +781,7 @@ vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libssc_default_listener.so
 
 # Soter
--vendor/app/SoterService/SoterService.apk
+-app/SoterService/SoterService.apk:vendor/app/SoterService/SoterService.apk
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
