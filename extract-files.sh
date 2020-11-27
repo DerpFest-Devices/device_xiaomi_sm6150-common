@@ -62,7 +62,7 @@ function blob_fixup() {
     vendor/bin/mlipayd@1.1 | vendor/lib64/libmlipay.so | vendor/lib64/libmlipay@1.1.so )
         patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "${2}"
     ;;
-    system_ext/lib64/libwfdnative.so | system_ext/lib/libwfdnative.so | vendor/lib64/libgoodixhwfingerprint.so )
+    system_ext/lib64/libwfdnative.so | vendor/lib64/libgoodixhwfingerprint.so )
         patchelf --remove-needed "android.hidl.base@1.0.so" "${2}"
     ;;
     vendor/etc/camera/camxoverridesettings.txt )
