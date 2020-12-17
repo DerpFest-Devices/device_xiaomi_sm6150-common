@@ -69,6 +69,9 @@ function blob_fixup() {
         sed -i "s|0x10080|0|g" "${2}"
         sed -i "s|0x1F|0x0|g" "${2}"
     ;;
+    vendor/etc/init/vendor.sensors.qti.rc )
+    echo "    disabled" >> "${2}"
+    ;;
     esac
 }
 
