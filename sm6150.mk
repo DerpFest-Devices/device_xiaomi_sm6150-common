@@ -298,7 +298,7 @@ PRODUCT_PACKAGES += \
     fstab.default \
     fstab.emmc \
     init.insmod.sh \
-    init.msm.usb.configfs.rc \
+    init.mi.usb.sh \
     init.power.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
