@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- Thermal Profiles -->
+    <string name="thermal_title">Profile termiczne</string>
+    <string name="thermal_summary">Dostosuj profile termiczne dla aplikacji, aby uzyskać optymalną wydajność</string>
+    <string name="thermal_default">Domyślny</string>
+    <string name="thermal_benchmark">Testy wydajnościowe</string>
+    <string name="thermal_browser">Przeglądarka</string>
+    <string name="thermal_camera">Aparat</string>
+    <string name="thermal_dialer">Dzwonienie</string>
+    <string name="thermal_gaming">Granie</string>
+    <string name="thermal_streaming">Transmisja na żywo</string>
+    
+    <!-- Popup camera settings -->
+    <string name="popup_led_title">Dioda LED przedniej kamery</string>
+    <string name="popup_led_summary">Włącz diodę LED, gdy przednia kamera pojawia się i chowa</string>
+    <string name="popup_title">Ustawienia efektów przedniej kamery</string>
+    <string name="popup_sound_muqin">Ksylofon</string>
+    <string name="popup_sound_yingyan">Kondor</string>
+    <string name="popup_sound_mofa">Magia</string>
+    <string name="popup_sound_jijia">Mecha</string>
+    <string name="popup_sound_chilun">Koło zębate</string>
+    <string name="popup_sound_cangmen">Drzwi kabiny</string>
+
+    <!-- Popup camera strings -->
+    <string name="popup_camera_tip">Ostrzeżenie</string>
+    <string name="popup_camera_takeback_failed_times_calibrate">Nie można było schować przedniej kamery wiele razy. Spróbuj kalibracji silnika.</string>
+    <string name="popup_camera_popup_failed_times_calibrate">Nie można było otworzyć przedniej kamery wiele razy. Spróbuj kalibracji silnika.</string>
+    <string name="popup_camera_calibrate_running">Przednia kamera nie może być używana podczas kalibracji.</string>
+    <string name="popup_camera_calibrate_now">Skalibruj</string>
+    <string name="popup_camera_calibrate_failed">Nie można było skalibrować</string>
+    <string name="popup_camera_calibrate_success">Skalibrowano pomyślnie. Możesz teraz otworzyć przednią kamerę.</string>
+    <string name="stop_operate_camera_frequently">Otwierasz przednią kamerę zbyt często.</string>
+    <string name="takeback_camera_front_failed">Nie można schować przedniej kamery. Spróbuj ponownie.</string>
+    <string name="popup_camera_front_failed">Nie można otworzyć przedniej kamery. Spróbuj ponownie.</string>
+</resources>
