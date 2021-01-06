@@ -125,8 +125,8 @@ void LocAdapterBase::
                         const GpsLocationExtended& locationExtended,
                         enum loc_sess_status status,
                         LocPosTechMask loc_technology_mask,
-                        GnssDataNotification* pDataNotify,
-                        int msInWeek)
+                        GnssDataNotification* pDataNotify __unused,
+                        int msInWeek __unused)
 {
     if (mLocAdapterProxyBase != NULL) {
         mLocAdapterProxyBase->reportPositionEvent((UlpLocation&)location,
@@ -199,7 +199,7 @@ DEFAULT_IMPL(false)
 bool LocAdapterBase::
     requestNiNotifyEvent(const GnssNiNotification &/*notify*/,
                          const void* /*data*/,
-                         const LocInEmergency emergencyState)
+                         const LocInEmergency /*emergencyState*/)
 DEFAULT_IMPL(false)
 
 void LocAdapterBase::
@@ -381,7 +381,7 @@ LocAdapterBase::updateClientsEventMask()
 DEFAULT_IMPL()
 
 void
-LocAdapterBase::stopClientSessions(LocationAPI* client)
+LocAdapterBase::stopClientSessions(LocationAPI* /*client*/)
 DEFAULT_IMPL()
 
 void
@@ -470,11 +470,11 @@ LocAdapterBase::reportLatencyInfoEvent(const GnssLatencyInfo& /*gnssLatencyInfo*
 DEFAULT_IMPL()
 
 void
-LocAdapterBase::handleEngineLockStatusEvent(const EngineLockState engineLockState)
+LocAdapterBase::handleEngineLockStatusEvent(const EngineLockState /*engineLockState*/)
 DEFAULT_IMPL()
 
 bool LocAdapterBase::
-    reportQwesCapabilities(const std::unordered_map<LocationQwesFeatureType, bool> &featureMap)
+    reportQwesCapabilities(const std::unordered_map<LocationQwesFeatureType, bool> &/*featureMap*/)
 DEFAULT_IMPL(false)
 
 } // namespace loc_core
