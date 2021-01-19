@@ -602,11 +602,10 @@ vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 
 # Telephony - from smali edit: https://gist.github.com/PIPIPIG233666/72806386c8b93729ce7f2b2c263d8889
-system_ext/framework/qti-telephony-common.jar|dd4480f54de10114d56a22ec7e95b443d9d2e721
+system_ext/framework/qti-telephony-common.jar|e35f61c08837c909aa03a52bf6aa5243f8b75956
 
 # Radio - IMS
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice.xml
--system_ext/app/imssettings/imssettings.apk
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml
