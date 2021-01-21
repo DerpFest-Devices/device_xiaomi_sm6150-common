@@ -16,12 +16,12 @@
 <!-- Pixel specific wifi overlays -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     coreApp="true"
-    package="com.android.wifi.resources.xiaomi"
+    package="com.google.android.wifi.resources.xiaomi"
     android:versionCode="1"
     android:versionName="1.0">
     <application android:hasCode="false" />
     <overlay
-      android:targetPackage="com.android.wifi.resources"
+      android:targetPackage="com.google.android.wifi.resources"
       android:targetName="WifiCustomization"
       android:isStatic="true"
       android:priority="0"/>
