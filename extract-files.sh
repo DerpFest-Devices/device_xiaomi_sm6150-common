@@ -60,10 +60,10 @@ fi
 function blob_fixup() {
     case "${1}" in
     vendor/bin/mlipayd@1.1 | vendor/lib64/libmlipay.so | vendor/lib64/libmlipay@1.1.so )
-        "${PATCHELF}" --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "${2}"
+        patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "${2}"
     ;;
     system_ext/lib64/libwfdnative.so | vendor/lib64/libgoodixhwfingerprint.so )
-        "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
+        patchelf --remove-needed "android.hidl.base@1.0.so" "${2}"
     ;;
     vendor/etc/camera/camxoverridesettings.txt )
         sed -i "s|0x10080|0|g" "${2}"
@@ -86,7 +86,7 @@ fi
 if [ -z "${ONLY_COMMON}" ] && [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
     # Reinitialize the helper for device
     source "${MY_DIR}/../${DEVICE}/extract-files.sh"
-    setup_vendor "${DEVICE}" "${VENDOR}" "${AOSIP_ROOT}" false "${CLEAN_VENDOR}"
+    setup_vendor "${DEVICE}" "${VENDOR}" "${POTATO_ROOT}" false "${CLEAN_VENDOR}"
 
     extract "${MY_DIR}/../${DEVICE}/proprietary-files.txt" "${SRC}" \
             "${KANG}" --section "${SECTION}"
