@@ -328,6 +328,12 @@ on boot
     chown system system /sys/class/sensors/apds9930-proximity/enable
     chown system system /sys/class/sensors/apds9930-proximity/poll_delay
 
+    # Enable qcrild and data services on boot so process starts in main
+    start vendor.qcrild
+    start vendor.qcrild2
+    start vendor.dataqti
+    start vendor.dataadpl
+
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/hbtp 0750 system system
@@ -471,11 +477,6 @@ on post-fs-data
 
     # Create dir for TUI
     mkdir /data/vendor/tui 0700 system system
-
-    start vendor.qcrild
-    start vendor.qcrild2
-    start vendor.dataqti
-    start vendor.dataadpl
 
 on charger
     start vendor.power_off_alarm
