@@ -358,9 +358,6 @@ vendor/lib64/libsdedrm.so|582910d21139781ad9e414c35207584f51e035e2
 # Graphics (HDR)
 vendor/lib64/libhdr_tm.so
 
-# Graphics (Renderscript)
-vendor/lib64/librs_adreno.so
-
 # Graphics (SDM)
 vendor/lib64/libqseed3.so
 vendor/lib64/libsdm-color.so
