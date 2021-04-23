@@ -579,11 +579,11 @@ vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 
-# Telephony - from LA.QSSI.11.0.r1-09400-qssi.0
--system_ext/priv-app/ims/ims.apk|cccc15a4fbaff0f412e09e63744fc95c3c339da8
+# Telephony - from LA.QSSI.11.0.r1-10400-qssi.0
+-system_ext/priv-app/ims/ims.apk|9bd9423a998eae93b2c94a4820459d7b33c8a51a
 -system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|344ad9179560cc83b208f62fb009fdc2799609fd
-system_ext/framework/qti-telephony-common.jar|e6f7c4df7b925073525d9b678f27087e1f45017f
-system_ext/framework/qcrilhook.jar|ad688364314100318f305ed4ab5defec8766b20a
+system_ext/framework/qti-telephony-common.jar|1fd37129f961e58f9d1189736e2cb46290666b97
+system_ext/framework/qcrilhook.jar|f2888f922b8347417dfa86741feb8348795fce6f
 
 # Radio - IMS
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice.xml
