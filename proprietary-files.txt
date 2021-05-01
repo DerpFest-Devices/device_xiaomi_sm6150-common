@@ -6,17 +6,17 @@ vendor/lib/libacdb-fts.so|3545b73503a48ed64e9a78b00615158d75d63be6
 vendor/lib/libacdbloader.so|b5ec378ecfc7545462a1318fdfaeec3d467d0654
 vendor/lib/libacdbrtac.so|672f78b76cd62383d9620371c501cf348b5275e6
 
-# ADSP - from LA.UM.9.1.r1-07700-SMxxx0.0
-vendor/bin/adsprpcd|b736b00857d64e74a3b9be887215124d186f95d5
+# ADSP - from LA.UM.9.1.r1-09100-SMxxx0.0
+vendor/bin/adsprpcd|c8a45eb83a6d70dcbcc1b8ec574391b49e8ca8b9
 vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc|96b08f4e97ef20e20a8d7f89212a5549abe66666
-vendor/lib/libadsp_default_listener.so|0376a56ab5d88e5d118e37f6e6371b30746a97e2
-vendor/lib/libadsprpc.so|19cc1b24786a0ac4afa9cccdfecb9bd8c377cf6a
-vendor/lib/libmdsprpc.so|fe968b111971c48622c88cdae8120a9a834908d0
-vendor/lib/libsdsprpc.so|1d9dfd57bc4d35940777b42a14a422af701ee00b
-vendor/lib64/libadsp_default_listener.so|0324e797f6fdd15680df7fdacc51f713e40b9806
-vendor/lib64/libadsprpc.so|795e320110b46ae349d9beb7810e01aefa2d6c35
-vendor/lib64/libmdsprpc.so|0571d17287b0f8bcc06a4a70264ac72d219e0290
-vendor/lib64/libsdsprpc.so|06d6268dc4680bfe05936ba75c0574c2e121a1f0
+vendor/lib/libadsp_default_listener.so|aebe95ff3eeb279a642770db5f1383e5aefc4d2f
+vendor/lib/libadsprpc.so|51b7f989926ebcc9b91aff6ff4cf7f01d00fbeac
+vendor/lib/libmdsprpc.so|bfa5705d1687a7fb823cf1dc17353422c2b6d515
+vendor/lib/libsdsprpc.so|ad98ee6799a1014151eaeb49533d93a6d96ce1e2
+vendor/lib64/libadsp_default_listener.so|aa3b51b544032a250ab02687c0200152f80a23dd
+vendor/lib64/libadsprpc.so|cb1f9cc789c0bf7730bded482ac1cbde401d60bc
+vendor/lib64/libmdsprpc.so|667f740e50d0d4e78f003c2f31d115a1e04258ca
+vendor/lib64/libsdsprpc.so|f2a1d1ecc7191176d4dc061c484d021d78257a03
 
 # ADSP Modules - from LA.UM.9.1-r1-07700-SMxxx0.0
 vendor/lib/rfsa/adsp/libfastcvdsp_skel.so|f3f79fd19ade4ec0947fd901d216e9c39ef5e276
@@ -89,13 +89,13 @@ vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|624ac893ea428a29df
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|64de735684377aba4a33a3bb0bee25f7999bafcd
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|32c763b353882c9a711a641ff9eb99fe1b0e164d
 
-# CDSP - from LA.UM.9.1.r1-07700-SMxxx0.0
+# CDSP - from LA.UM.9.1.r1-09100-SMxxx0.0
 vendor/bin/cdsprpcd|8f541eab74d52bff8d73f7f280e085c4bf706e99
 vendor/etc/init/vendor.qti.cdsprpc-service.rc|36772b70216796e8ef19376d9c6a81ee9ffff549
-vendor/lib/libcdsp_default_listener.so|3af8e9fbe0b154574ac0a709d1af401960922471
-vendor/lib/libcdsprpc.so|5eb93a2fac0294dd0d78378ee033d03e68c82d29
-vendor/lib64/libcdsp_default_listener.so|c639e68a44537450a7aabb3549ac9edb5b940641
-vendor/lib64/libcdsprpc.so|5b03d16530811757b11332b453150e0d31845bb9
+vendor/lib/libcdsp_default_listener.so|49dbdd4c8c73a21619569f3723a71b3467e73e75
+vendor/lib/libcdsprpc.so|2b0ad6f94d63712a1e5719e0204f30446cce7cfb
+vendor/lib64/libcdsp_default_listener.so|10907139f8fe737cbffba80947082d83e1c019d8
+vendor/lib64/libcdsprpc.so|b7908cc133befa774849005fe010e1979a7f0584
 
 # Charger - from LA.UM.9.1.r1-09200-SMxxx0.0
 vendor/bin/hvdcp_opti|a25722671437ff70c3ff12b8f86647ae8a454832
@@ -242,11 +242,11 @@ vendor/lib64/librmp.so
 vendor/lib64/libwvhidl.so
 vendor/lib64/mediadrm/libwvdrmengine.so
 
-# DSP - from LA.UM.9.1.r1-07700-SMxxx0.0
+# DSP - from LA.UM.9.1.r1-09100-SMxxx0.0
 vendor/bin/dspservice|c7809e32581d5c6efac65a3a7689f43526c17bb8
 vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc|fbf2bb38ca6bdddf98c7123da9e1f263a4eec55f
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|f060101b26d3674bb173e5fc95e118f56a8ac15d
-vendor/lib64/vendor.qti.hardware.dsp@1.0.so|d2934b67e0d6f319017bb892e7dfee5086c7a3ec
+vendor/lib64/vendor.qti.hardware.dsp@1.0.so|45244ba636fb2ea6ad7ade9217e109fd2814442c
 
 # DRM - Widevine -L1 - from DAVINCIGLOBAL
 vendor/lib64/liboemcrypto.so|2cee717b25559030a61709e826b4a5dae6043c20
