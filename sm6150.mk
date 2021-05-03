@@ -148,6 +148,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
+# Dependency     
+PRODUCT_PACKAGES += \
+    libhwbinder.vendor
+
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
@@ -340,10 +344,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_BOARD_PLATFORM := sm6150
 PRODUCT_USES_QCOM_HARDWARE := true
-
-# Soter
-PRODUCT_PACKAGES += \
-    libhwbinder.vendor
 
 # Telephony
 PRODUCT_PACKAGES += \

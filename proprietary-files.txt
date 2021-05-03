@@ -329,6 +329,11 @@ vendor/lib64/libllvm-qcom.so|73b23b1f3c23360320746763ab6bfb669f03cc07
 vendor/lib64/libpvr.so|f37eb5853c2aab264ed3f9fe77e30f5858c81715
 vendor/lib/libC2D2.so|267be7bd6768fa3b9bed2b9a42062cb5a77ca59b
 vendor/lib/libc2d30_bltlib.so|950c705e6dbc02b646a0129e66e94e192f5cd87f
+
+# Graphics (Adreno - updatable apk) - from mojito-user 11 RKQ1.201022.002 V12.0.5.0.RKGEUXM release-keys
+-vendor/app/com.qualcomm.qti.gpudrivers.sm6150.api30/com.qualcomm.qti.gpudrivers.sm6150.api30.apk|c3601f567e672f5493fd8015d858d78399b891f2
+
+# Graphics (Adreno - updatable) - from LA.UM.9.1.r1-09200-SMxxx0.0
 vendor/lib64/egl/eglSubDriverAndroid.so|d48512c209f63be3a2940855d79d4d773b45713b
 vendor/lib64/egl/libEGL_adreno.so|8f3435dbecb22fd3217698ebbd9b002ad2420576
 vendor/lib64/egl/libGLESv1_CM_adreno.so|e2e8a079e680bf92f686fb79146651c158f6e130
@@ -380,7 +385,7 @@ vendor/lib64/libkeymasterutils.so|ae5c51cc7be40b7fd052bc8debf89723f5646eae
 vendor/lib64/libqcbor.so|df6a3f00d7d49e482e0ca2937f5bd708fba32ae6
 vendor/lib64/libqtikeymaster4.so|69018deb5c3025f5641e1adaf452cc0687ed11ba
 
-# Listen - MIUI - from mojito-user 11 RKQ1.201022.002 V12.0.5.0.RKGEUXM release-keys
+# Listen (Sound Trigger) - from mojito-user 11 RKQ1.201022.002 V12.0.5.0.RKGEUXM release-keys
 vendor/lib/hw/sound_trigger.primary.sm6150.so|3fa605146f824cf3297d2d3147afafee8ce51bf8
 
 # Listen - from LA.UM.9.1.r1-09200-SMxxx0.0
