@@ -146,6 +146,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
+# Dependency     
+PRODUCT_PACKAGES += \
+    libhwbinder.vendor
+
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
@@ -315,7 +319,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librecovery_updater_xiaomi
 
-# Remove Google Recorder
+# Remove some packages in runtime
 PRODUCT_PACKAGES += \
     RemovePackages
 
@@ -344,10 +348,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/xiaomi
-
-# Soter
-PRODUCT_PACKAGES += \
-    libhwbinder.vendor
 
 # Telephony
 PRODUCT_PACKAGES += \
