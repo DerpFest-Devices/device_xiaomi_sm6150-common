@@ -208,6 +208,7 @@ system_ext/lib64/libdpmctmgr.so|305ff03241dd426af93ad460e616ca4f284c29bd
 system_ext/lib64/libdpmfdmgr.so|232bb4c0f9bf5603e9a1d917dfc6f9e447eb7b4b
 system_ext/lib64/libdpmframework.so|19fc8dae183a79e609b4d473de59d3449f87c7a6
 system_ext/lib64/libdpmtcm.so|9a7bdbcab5e46106fa2c4d90327d0a8118d545d7
+system_ext/lib64/libmwqemiptablemgr.so|9a55f6fbf1b1b997a4e60c4df3c4f73833e7ce47
 -system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|74ec0d8e2ef3d7e3b0a730da9b97237921778ac4
 
 # DPM (vendor) - from LA.UM.9.1.r1-09200-SMxxx0.0
