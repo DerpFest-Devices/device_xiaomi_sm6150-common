@@ -26,7 +26,7 @@ vendor/lib/rfsa/adsp/libdirac-capiv2.so
 vendor/lib/rfsa/adsp/libVC1Dec.so|732ede3ede9e6e1b09c439156f62a07d8fa0ee3e
 vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so|eff059c5a29a44d205bd60ad24aecc46416e939e
 vendor/lib/rfsa/adsp/libapps_mem_heap.so|1cdac354c585c0d236d77b0888ebd5894b333326
-vendor/lib/rfsa/adsp/libcamera_nn_skel.so|29d949909c9f115491b781ff93604be238e0f965
+vendor/lib/rfsa/adsp/libcamera_nn_skel.so|e4a35174a93264b38fe210a3f99e5fb7be8dc39e
 vendor/lib/rfsa/adsp/libcvpdsp_skel.so|58cbb97212073cf7e4780c6d77a7628c3ee845bd
 vendor/lib/rfsa/adsp/libdspCV_skel.so|63fc368b17e1b112c8824cd245c3a4dec17d13e4
 vendor/lib/rfsa/adsp/libdsp_streamer_add_constant.so|2ccb3f4f32a73ee6c14e1b4697f449561ab8dc18
@@ -192,26 +192,26 @@ vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service|67a6d0fef28f
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc|4ede0250585a44b01d351bbc301d7a13cc3d783d
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|043e60b3814acd2c84ca4a0344ae95b654db8bdd
 
-# DPM (system) - from LA.QSSI.11.0.r1-11400-qssi.0 
-framework/tcmclient.jar|22858e8bb7e3f956e487dc6764ad8250f118d7ac
-system_ext/bin/dpmd|f31dd437925322a60b90a0013f0cf45f0da3ee7f
+# DPM - system - from LA.QSSI.11.0.r1-11600-qssi.0
+framework/tcmclient.jar|cdd1ea7143a5a7acc3909b5cfa706650179647c7
+system_ext/bin/dpmd|e04b54867d3c1c5e6622e41bc052529a81c82e3c
 system_ext/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
 system_ext/etc/init/dpmd.rc|738b638ff04cda368e22c03e16baf90ba157a6fc
 system_ext/etc/permissions/com.qti.dpmframework.xml|c4b7ad0879d00c1eba4f3fe3a88ddb8aa153629a
 system_ext/etc/permissions/dpmapi.xml|9158c9789cc7135a685b3fb27f8cc27108b51fef
 system_ext/framework/com.qti.dpmframework.jar|96a29e28b3abffb9223daadd67459e3f5a3271df
 system_ext/framework/dpmapi.jar|2e2fbe2257a697b96a644c774136da0554430d3f
-system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so|f2d02195cca305fad78402c65d090bad72955262
-system_ext/lib64/libdiag_system.so|8467418300a89968adfe8438e9783d95e65f78f9
-system_ext/lib64/vendor.qti.diaghal@1.0.so|538bf671dc91ca385f453723f1cc6588057e4c5a
-system_ext/lib64/libdpmctmgr.so|305ff03241dd426af93ad460e616ca4f284c29bd
-system_ext/lib64/libdpmfdmgr.so|232bb4c0f9bf5603e9a1d917dfc6f9e447eb7b4b
-system_ext/lib64/libdpmframework.so|19fc8dae183a79e609b4d473de59d3449f87c7a6
-system_ext/lib64/libdpmtcm.so|9a7bdbcab5e46106fa2c4d90327d0a8118d545d7
-system_ext/lib64/libmwqemiptablemgr.so|9a55f6fbf1b1b997a4e60c4df3c4f73833e7ce47
--system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|74ec0d8e2ef3d7e3b0a730da9b97237921778ac4
+system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so|6c43ecc5fb917872c91a5e46ce826bba4b767be3
+system_ext/lib64/libdiag_system.so|8869eb5ae6b9be44addb6589d065d36cbf53e794
+system_ext/lib64/vendor.qti.diaghal@1.0.so|d0e63f3676a43466122d3494f2c82472546c7b3f
+system_ext/lib64/libdpmctmgr.so|68cfd00ab275a298b17515c0abd059b48e1f91c2
+system_ext/lib64/libdpmfdmgr.so|c76fa9c50ba139094b66ab918676ae0a524eda13
+system_ext/lib64/libdpmframework.so|1c681e10ae9493db96cb8755f421127465a8cd06
+system_ext/lib64/libdpmtcm.so|653a713295c2445f242f2d873f47d679d027918d
+system_ext/lib64/libmwqemiptablemgr.so|acd67ff252e34691a9f5ad3e1d00833c747e30c0
+-system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|2e049f21d6ae89ac01c545a69dd3b24c9e86c233
 
-# DPM (vendor) - from LA.UM.9.1.r1-09200-SMxxx0.0
+# DPM - vendor - from LA.UM.9.1.r1-09200-SMxxx0.0
 vendor/bin/dpmQmiMgr|4fe936478b0da1ee20c6222234b80d478a72cc2a
 vendor/etc/init/dpmQmiMgr.rc|1538743661a5c48c15cd105beaad20f72953885a
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|c5c893e86d38b8aa8cd277ccb8b011fb2f19995e
@@ -592,11 +592,11 @@ vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 
-# Telephony - from LA.QSSI.11.0.r1-10400-qssi.0
--system_ext/priv-app/ims/ims.apk|7c243d450cc215be2b0187d5e3e6cd01059b8cc1
--system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|344ad9179560cc83b208f62fb009fdc2799609fd
+# Telephony - from LA.QSSI.11.0.r1-11600-qssi.0
+-system_ext/priv-app/ims/ims.apk|6ab68813175286f21c963840449a5433b3ad981c
+-system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|175e4412e17b7bbfe75f98d468645ec18c6a33fa
 system_ext/framework/qcrilhook.jar|f2888f922b8347417dfa86741feb8348795fce6f
-system_ext/framework/qti-telephony-common.jar|861221f3cf8aff871c246d3e8dd3a09ae75e6cb2
+system_ext/framework/qti-telephony-common.jar|0d3da7628506d66852de19f296a05f728710c4e3
 
 # Radio - IMS
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice.xml
