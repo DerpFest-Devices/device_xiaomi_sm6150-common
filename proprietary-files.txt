@@ -6,17 +6,17 @@ vendor/lib/libacdb-fts.so|c0347a8375b8ccb25b1218644d74da3536c753ed
 vendor/lib/libacdbloader.so|0d2066bac11c303ea6c962a14bcc2461844a2a66
 vendor/lib/libacdbrtac.so|d98c9962122cbfc9686bca7663eadd9a01441a0b
 
-# ADSP - from LA.UM.9.1.r1-09100-SMxxx0.0
+# ADSP - from LA.UM.9.1.r1-09200-SMxxx0.0
 vendor/bin/adsprpcd|c8a45eb83a6d70dcbcc1b8ec574391b49e8ca8b9
-vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc|96b08f4e97ef20e20a8d7f89212a5549abe66666
+vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc|77f5aaf6d773ee545e39bc5fdc99c65434c05379
 vendor/lib/libadsp_default_listener.so|aebe95ff3eeb279a642770db5f1383e5aefc4d2f
-vendor/lib/libadsprpc.so|51b7f989926ebcc9b91aff6ff4cf7f01d00fbeac
-vendor/lib/libmdsprpc.so|bfa5705d1687a7fb823cf1dc17353422c2b6d515
-vendor/lib/libsdsprpc.so|ad98ee6799a1014151eaeb49533d93a6d96ce1e2
+vendor/lib/libadsprpc.so|65fdbcc30e440a817261b7811b51c4500e3ecbff
+vendor/lib/libmdsprpc.so|8f6922978529c413bd63ca1eb233c59de7bf471d
+vendor/lib/libsdsprpc.so|bbf71d4dabc4f1ddcbcb34c105886c8099095032
 vendor/lib64/libadsp_default_listener.so|aa3b51b544032a250ab02687c0200152f80a23dd
-vendor/lib64/libadsprpc.so|cb1f9cc789c0bf7730bded482ac1cbde401d60bc
-vendor/lib64/libmdsprpc.so|667f740e50d0d4e78f003c2f31d115a1e04258ca
-vendor/lib64/libsdsprpc.so|f2a1d1ecc7191176d4dc061c484d021d78257a03
+vendor/lib64/libadsprpc.so|c8e50f443e882d757961313adac1af1c1f9ecc5b
+vendor/lib64/libmdsprpc.so|1caa9e12fabffc849ed76782379c05dcd12ea870
+vendor/lib64/libsdsprpc.so|36bde4ad40d0214455ec484c2f84fa3811881180
 
 # ADSP Modules
 vendor/lib/rfsa/adsp/dirac_resource.dar
@@ -89,13 +89,13 @@ vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|adb12656df030f95a7
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|b239194bf8d1727c2e7b2627c4af5f8d0760791d
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|94c195d57420f54a89f183a24657914617092cb2
 
-# CDSP - from LA.UM.9.1.r1-09100-SMxxx0.0
+# CDSP - from LA.UM.9.1.r1-09200-SMxxx0.0
 vendor/bin/cdsprpcd|8f541eab74d52bff8d73f7f280e085c4bf706e99
 vendor/etc/init/vendor.qti.cdsprpc-service.rc|36772b70216796e8ef19376d9c6a81ee9ffff549
 vendor/lib/libcdsp_default_listener.so|49dbdd4c8c73a21619569f3723a71b3467e73e75
-vendor/lib/libcdsprpc.so|2b0ad6f94d63712a1e5719e0204f30446cce7cfb
+vendor/lib/libcdsprpc.so|caae66e156f79727c28eae1be251173b900cc08f
 vendor/lib64/libcdsp_default_listener.so|10907139f8fe737cbffba80947082d83e1c019d8
-vendor/lib64/libcdsprpc.so|b7908cc133befa774849005fe010e1979a7f0584
+vendor/lib64/libcdsprpc.so|b69f64e41364250a59ee55b55da2ba24824761fd
 
 # Charger - from LA.UM.9.1.r1-09200-SMxxx0.0
 vendor/bin/hvdcp_opti|a25722671437ff70c3ff12b8f86647ae8a454832
@@ -246,7 +246,7 @@ vendor/lib64/librmp.so
 vendor/lib64/libwvhidl.so
 vendor/lib64/mediadrm/libwvdrmengine.so
 
-# DSP - from LA.UM.9.1.r1-09100-SMxxx0.0
+# DSP - from LA.UM.9.1.r1-09200-SMxxx0.0
 vendor/bin/dspservice|c7809e32581d5c6efac65a3a7689f43526c17bb8
 vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc|fbf2bb38ca6bdddf98c7123da9e1f263a4eec55f
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|f060101b26d3674bb173e5fc95e118f56a8ac15d
