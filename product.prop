@@ -1,6 +1,3 @@
-# Audio
-ro.config.media_vol_default=25
-
 # Bluetooth
 persist.bluetooth.bqr.event_mask=14
 persist.bluetooth.bqr.min_interval_ms=500
@@ -24,7 +21,6 @@ persist.data.df.dev_name=rmnet_usb0
 persist.vendor.data.profile_update=true
 
 # Graphics
-debug.sdm.support_writeback=0
 debug.sf.latch_unsignaled=1
 persist.demo.hdmirotationlock=false
 persist.hwc.enable_vds=1
