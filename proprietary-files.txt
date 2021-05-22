@@ -64,30 +64,28 @@ system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e
 system_ext/framework/audiosphere.jar|9c28317f12b93a6d881c80a991ff24716fce4a12
 vendor/lib/soundfx/libasphere.so|e5b0484dd81b124e5f82cae2355a74302e81291c
 
-# Bluetooth - from LA.UM.9.1.r1-09200-SMxxx0.0
-vendor/lib64/libbtnv.so|d4ea42554c70099426aa57208350460d7996f9d0
-vendor/lib64/libbt-hidlclient.so|281669321b7f8da7df5a894d66bee7721502ba05
+# Bluetooth - from mojito-user 11 RKQ1.201022.002 V12.0.5.0.RKGMIXM release-keys
+vendor/lib64/libbtnv.so|07e031527e60ce5e62a5017fd1d7ff83ef1aafcf
+vendor/lib64/libbt-hidlclient.so|c0b65ec61252af17d10f0d02063bc5c5e0366b91
 
-# Bluetooth (A2DP) - from LA.UM.9.1.r1-09200-SMxxx0.0
-vendor/lib/btaudio_offload_if.so|c74eb12fe3776eb3e1f004a44e321833da761ea6
-vendor/lib/hw/audio.bluetooth_qti.default.so|9458bcc42defdb244e6a9661f84408a01d58a84c
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|75ce5d1666e446e59c0ef8a21db971a612140164
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so|0700c691902062baadd447d611c7528e0849fa05
-vendor/lib/libbluetooth_audio_session_qti.so|87141cd0c105590dd075ef706bb1381193134d36
-vendor/lib/libbluetooth_audio_session_qti_2_1.so|3373162ec0649b9faf348e6c909f44f633f8bdd0
+# Bluetooth (A2DP) - from mojito-user 11 RKQ1.201022.002 V12.0.5.0.RKGMIXM release-keys
+vendor/lib/btaudio_offload_if.so|29d13cf463ff767ef20ee473a4a13e8167f3326e
+vendor/lib/hw/audio.bluetooth_qti.default.so|b660ba1337b2415d85bf319de258bde60154247a
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|cdc97c1e06642d39d49ec055a86896cf1bd3b4c1
+vendor/lib/libbluetooth_audio_session_qti.so|d0da7c75c6d76ec151864c84f986cdcc932a3d99
 
 # Bluetooth (aptX)
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Encoder.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
 
-# Bluetooth (Configstore) - from LA.UM.9.1.r1-09200-SMxxx0.0
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|95975d3c29710178dd2c9eed4d208dc48eed5349
+# Bluetooth (Configstore) - from mojito-user 11 RKQ1.201022.002 V12.0.5.0.RKGMIXM release-keys
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|0abafcc0c404b67bb0d87128a87cc9deabe54935
 
-# Bluetooth (SAR) - from LA.UM.9.1.r1-09200-SMxxx0.0
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|adb12656df030f95a762d7d9ca41481c33baaa41
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|b239194bf8d1727c2e7b2627c4af5f8d0760791d
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|94c195d57420f54a89f183a24657914617092cb2
+# Bluetooth (SAR) - from mojito-user 11 RKQ1.201022.002 V12.0.5.0.RKGMIXM release-keys
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|a97a6c330c932176acee0bce820c6e737778aed4
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|d1443e04e24cb45dd06f5d222b22a699c9e82cb1
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|1671815a79dab0fde9248d0851085ec1ab314f64
 
 # CDSP - from LA.UM.9.1.r1-09200-SMxxx0.0
 vendor/bin/cdsprpcd|8f541eab74d52bff8d73f7f280e085c4bf706e99
@@ -361,7 +359,7 @@ vendor/lib/libgpudataproducer.so|0f2923f13ae93b2eab2638a21aff4bc633b017ca
 vendor/lib/libgsl.so|1089f49022734541ccb56c42839f685cb835f6c3
 vendor/lib/libllvm-glnext.so|12a4ccd43e414b1717c8cceda581bd3a8792f440
 
-# Graphics (Adreno - updatable apk) - from mojito-user 11 RKQ1.201022.002 V12.0.5.0.RKGEUXM release-keys
+# Graphics (Adreno - updatable apk) - from mojito-user 11 RKQ1.201022.002 V12.0.5.0.RKGMIXM release-keys
 -vendor/app/com.qualcomm.qti.gpudrivers.sm6150.api30/com.qualcomm.qti.gpudrivers.sm6150.api30.apk|c3601f567e672f5493fd8015d858d78399b891f2
 
 # Graphics (DRM) - from LA.UM.9.1.r1-09200-SMxxx0.0
@@ -388,7 +386,7 @@ vendor/lib64/libkeymasterutils.so|ae5c51cc7be40b7fd052bc8debf89723f5646eae
 vendor/lib64/libqcbor.so|df6a3f00d7d49e482e0ca2937f5bd708fba32ae6
 vendor/lib64/libqtikeymaster4.so|69018deb5c3025f5641e1adaf452cc0687ed11ba
 
-# Listen (Sound Trigger) - from mojito-user 11 RKQ1.201022.002 V12.0.5.0.RKGEUXM release-keys
+# Listen (Sound Trigger) - from mojito-user 11 RKQ1.201022.002 V12.0.5.0.RKGMIXM release-keys
 vendor/lib/hw/sound_trigger.primary.sm6150.so|3fa605146f824cf3297d2d3147afafee8ce51bf8
 
 # Listen - from LA.UM.9.1.r1-09200-SMxxx0.0
@@ -695,7 +693,7 @@ vendor/lib64/libsns_low_lat_stream_stub.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libssc_default_listener.so
 
-# Soter - from mojito-user 11 RKQ1.201022.002 V12.0.5.0.RKGEUXM release-keys
+# Soter - from mojito-user 11 RKQ1.201022.002 V12.0.5.0.RKGMIXM release-keys
 -app/SoterService/SoterService.apk:vendor/app/SoterService/SoterService.apk|9d41ded29f97671f28874f1f4c5921844bc46a3a
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|a6ea6031c27889797b96fe29ba100924b79fe3fb
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
