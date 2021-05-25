@@ -378,6 +378,14 @@ vendor/lib64/libsdm-disp-vndapis.so|4fbf76da3a9eb5d227f948521bd4c80842446bb4
 vendor/lib64/libsdmextension.so|76ef1430f700480509b5f991e031447fea9ddb01
 vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
 
+# Hotword enrollment - from neobuddy89
+-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk;PRESIGNED|91c49e2f1f95fe76952eb55d7a936a997685b964
+-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk;PRESIGNED|89b2c917c0c35489f10306f1627b2cf7cf6b59cf
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a58554d9c0dd0608552b644fbf74519a447bb
+system_ext/framework/com.android.hotwordenrollment.common.util.jar|0492cd3db2e253e23b78e56fa8ea7b3a4b15edeb
+product/etc/permissions/privapp-permissions-google-hotword.xml|325ff76a3a1daa6eb1bdf0eb659fa31fa6e9d4ed
+product/etc/sysconfig/hotword-hiddenapi-package-whitelist.xml|a062041908164045e8b658d1cc4e8f3302f4bb90
+
 # Keystore - from LA.UM.9.1.r1-07700-SMxxx0.0
 vendor/bin/hw/android.hardware.keymaster@4.0-service-qti|2eedb6b2c2e0bcb54d0aae1e19ccfa2c8fc0f116
 vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc|c8999fb1bccbef81e6b362059e9a6ebd023de98f
