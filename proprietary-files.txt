@@ -248,8 +248,10 @@ vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc|fbf2bb38ca6bdddf98c7123da
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|f060101b26d3674bb173e5fc95e118f56a8ac15d
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so|45244ba636fb2ea6ad7ade9217e109fd2814442c
 
-# DRM - Widevine -L1 - from DAVINCIGLOBAL
-vendor/lib64/liboemcrypto.so|2cee717b25559030a61709e826b4a5dae6043c20
+# DRM - Widevine L1 - from davinci-user 11 RKQ1.200826.002 V12.1.2.0.RFJMIXM release-keys
+vendor/lib64/libminksocket.so|0722b9042892e83d4c615e0f70e4ad040365b170
+vendor/lib64/liboemcrypto.so|6b8c5ab8cb16b7f42071ddc59ac868fa684cff4e
+vendor/lib64/libtrustedapploader.so|53f72443cbbdec707658ffd46fcf418361315a06
 
 # Firmware
 vendor/firmware/a615_zap.b00
