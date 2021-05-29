@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- Thermal Profiles -->
+    <string name="thermal_title">Тепловые профили</string>
+    <string name="thermal_summary">Настраивает ограничение нагрева для оптимальной производительности</string>
+    <string name="thermal_default">По умолчанию</string>
+    <string name="thermal_benchmark">Для бенчмарка</string>
+    <string name="thermal_browser">Для браузера</string>
+    <string name="thermal_camera">Для камеры</string>
+    <string name="thermal_dialer">Для звонков</string>
+    <string name="thermal_gaming">Для игр</string>
+    <string name="thermal_streaming">Для прямых трансляций</string>
+
+    <!-- Popup camera settings -->
+    <string name="popup_led_title">Визуальный эффект</string>
+    <string name="popup_led_summary">Показывать анимацию при открытии и закрытии фронтальной камеры</string>
+    <string name="popup_title">Эффекты фронтальной камеры</string>
+    <string name="popup_title_muqin">Ксилофон</string>
+    <string name="popup_title_yingyan">Кондор</string>
+    <string name="popup_title_mofa">Магия</string>
+    <string name="popup_title_jijia">Механика</string>
+    <string name="popup_title_chilun">Шестерня</string>
+    <string name="popup_title_cangmen">Дверь каюты</string>
+
+    <!-- Popup camera strings -->
+    <string name="popup_camera_tip">Внимание!</string>
+    <string name="popup_camera_takeback_falied_times_calibrate">Не удалось закрыть переднюю камеру несколько раз. Попробуйте откалибровать камеру.</string>
+    <string name="popup_camera_popup_falied_times_calibrate">Не удалось открыть переднюю камеру несколько раз. Попробуйте откалибровать камеру.</string>
+    <string name="popup_camera_calibrate_running">Переднюю камеру нельзя использовать во время калибровки.</string>
+    <string name="popup_camera_calibrate_now">Калибровка</string>
+    <string name="popup_camera_calibrate_failed">Не удалось откалибровать. Возможно, нужно отнести устройство в сервисный центр для диагностики проблемы или прошить persist</string>
+    <string name="popup_camera_calibrate_success">Камера откалибровалась. Теперь можно открыть переднюю камеру.</string>
+    <string name="stop_operate_camera_frequently">Вы слишком часто открываете переднюю камеру. Успокойтесь.</string>
+    <string name="takeback_camera_front_failed">Не удалось закрыть переднюю камеру. Повторите попытку.</string>
+    <string name="popup_camera_front_failed">Не удалось открыть переднюю камеру. Повторите попытку.</string>
+</resources>
