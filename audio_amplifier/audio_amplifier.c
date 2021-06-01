@@ -116,7 +116,7 @@ disable:
         pcm_close(tfa_dev->tfa98xx_out);
         tfa_dev->tfa98xx_out = NULL;
     }
-    tfa_dev->usecase_tx = get_usecase_from_list(tfa_dev->adev, tfa_dev->usecase_tx->in_snd_device);
+    tfa_dev->usecase_tx = get_usecase_from_list(tfa_dev->adev, tfa_dev->usecase_tx->id);
     if (tfa_dev->usecase_tx) {
         list_remove(&tfa_dev->usecase_tx->list);
         disable_snd_device(tfa_dev->adev, tfa_dev->usecase_tx->in_snd_device);
