@@ -1,1 +1,3 @@
 set_prop(rild, deviceid_prop)
+
+add_hwservice(rild, hal_rilnv_hwservice)
