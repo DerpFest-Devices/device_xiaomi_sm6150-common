@@ -70,6 +70,11 @@ function blob_fixup() {
         sed -i "s|0x10080|0|g" "${2}"
         sed -i "s|0x1F|0x0|g" "${2}"
     ;;
+    vendor/lib64/hw/camera.qcom.so)
+        "${PATCHELF}" --remove-needed "libMegviiFacepp-0.5.2.so" "${2}"
+        "${PATCHELF}" --remove-needed "libmegface.so" "${2}"
+        "${PATCHELF}" --add-needed "libshim_megvii.so" "${2}"
+    ;;
     vendor/etc/init/vendor.sensors.qti.rc )
     echo "    disabled" >> "${2}"
     ;;
