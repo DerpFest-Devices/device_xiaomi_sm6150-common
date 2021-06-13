@@ -191,8 +191,6 @@ on late-fs
     start vendor.hwcomposer-2-4
     start vendor.qti.hardware.display.allocator
 
-    wait_for_prop hwservicemanager.ready true
-    exec_start wait_for_keymaster
     mount_all --late
 
     # turn off vblank irq immediately after turning off
