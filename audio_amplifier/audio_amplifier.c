@@ -55,7 +55,9 @@ static struct pcm_config pcm_config_tfa98xx = {
     .avail_min = 0,
 };
 
-int tfa98xx_feedback(void* adev, uint32_t snd_device, bool enable) {
+static int amp_set_feedback(amplifier_device_t* device, void* adev, uint32_t snd_device, bool enable) {
+    if (!device) return 0;
+
     tfa_dev->adev = (struct audio_device*)adev;
     int pcm_dev_tx_id = 0, rc = 0;
 
@@ -120,11 +122,6 @@ disable:
         free(tfa_dev->usecase_tx);
     }
     return rc;
-}
-
-static int amp_set_feedback(amplifier_device_t* device, void* adev, uint32_t devices, bool enable) {
-    if (device) tfa98xx_feedback(adev, devices, enable);
-    return 0;
 }
 
 static int amp_dev_close(hw_device_t* device) {
