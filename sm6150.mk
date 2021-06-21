@@ -305,6 +305,7 @@ PRODUCT_PACKAGES += \
     fstab.default \
     fstab.emmc \
     init.insmod.sh \
+    init.mi.btmac.sh \
     init.mi.usb.sh \
     init.power.rc \
     init.qcom.rc \
