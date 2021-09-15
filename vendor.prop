@@ -89,8 +89,7 @@ vendor.qcom.bluetooth.soc=cherokee
 camera.disable_zsl_mode=1
 
 # Chipset
-ro.soc.manufacturer=Qualcomm
-ro.soc.model=SM7150
+ro.soc.manufacturer=QTI
 
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts

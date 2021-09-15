@@ -23,6 +23,12 @@ sh_binary {
     vendor: true,
 }
 
+sh_binary {
+    name: "init.qti.early_init.sh",
+    src: "init.qti.early_init.sh",
+    vendor: true,
+}
+
 prebuilt_etc {
     name: "init.qcom.rc",
     src: "init.qcom.rc",
