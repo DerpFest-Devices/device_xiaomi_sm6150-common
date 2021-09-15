@@ -49,6 +49,9 @@ on early-init
     #Disable UFS clock scaling
     write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 0
 
+    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qti.early_init.sh
+    setprop ro.soc.model ${ro.vendor.qti.soc_model}
+
 on init
     # Loading kernel modules in background
     start insmod_sh
