@@ -216,10 +216,8 @@ SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 # Soong
 SOONG_CONFIG_NAMESPACES += xiaomiVars
 SOONG_CONFIG_xiaomiVars += \
-    fod_pos_y \
     uses_fod_extension
 SOONG_CONFIG_xiaomiVars_uses_fod_extension := false
-SOONG_CONFIG_xiaomiVars_fod_pos_y := 0
 
 # WiFi
 BOARD_HOSTAPD_DRIVER := NL80211
