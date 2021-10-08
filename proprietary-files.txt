@@ -56,7 +56,6 @@ vendor/lib/libaudioparsers.so|25cd3ce7766eb5bb0d516668fedcc8f82788586a
 vendor/lib/libdrc.so|b066f176f119847059c5aa148f73e1b042fbeab3
 vendor/lib/libhdmipassthru.so|068a1629fe4995fcbdcf105460b6b913c7b357f8
 vendor/lib/libqtigef.so|fdfa65bca9034596438331ecb99c132eb401c32f
-vendor/lib/libssrec.so|ee7cfdae633bb8eda5d3e78d9adf01176480c261
 vendor/lib/libsurround_3mic_proc.so|e8e086123e0c1dc17f008f97edb3611cd4c702e1
 
 # Audio FX modules - from LA.UM.9.1.r1-10900-SMxxx0.0
