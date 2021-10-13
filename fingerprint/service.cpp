@@ -22,7 +22,7 @@ using android::hardware::configureRpcThreadpool;
 using android::hardware::joinRpcThreadpool;
 
 // Generated HIDL files
-using android::hardware::biometrics::fingerprint::V2_1::implementation::BiometricsFingerprint;
+using android::hardware::biometrics::fingerprint::V2_3::implementation::BiometricsFingerprint;
 
 using android::status_t;
 
@@ -36,7 +36,7 @@ status_t BiometricsFingerprint::registerAsSystemService() {
     } else {
         ALOGI("Successfully registered IBiometricsFingerprint");
     }
-#ifdef USES_FOD_EXTENSION
+#ifdef USES_UDFPS
 
     ret = IXiaomiFingerprint::registerAsService();
     if (ret != 0) {

@@ -21,8 +21,52 @@ namespace android {
 namespace hardware {
 namespace biometrics {
 namespace fingerprint {
-namespace V2_1 {
+namespace V2_3 {
 namespace implementation {
+
+#ifdef USES_UDFPS
+
+#define FINGERPRINT_ACQUIRED_VENDOR 6
+
+#define COMMAND_NIT 10
+#define PARAM_NIT_630_FOD 1
+#define PARAM_NIT_NONE 0
+
+#define Touch_Fod_Enable 10
+#define Touch_Aod_Enable 11
+
+#define FOD_UI_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display/fod_ui"
+
+namespace {
+
+template <typename T>
+static void set(const std::string& path, const T& value) {
+    std::ofstream file(path);
+    file << value;
+}
+
+static bool readBool(int fd) {
+    char c;
+    int rc;
+
+    rc = lseek(fd, 0, SEEK_SET);
+    if (rc) {
+        ALOGE("failed to seek fd, err: %d", rc);
+        return false;
+    }
+
+    rc = read(fd, &c, sizeof(char));
+    if (rc != 1) {
+        ALOGE("failed to read bool from fd, err: %d", rc);
+        return false;
+    }
+
+    return c != '0';
+}
+
+} // anonymous namespace
+
+#endif
 
 // Supported fingerprint HAL version
 static const uint16_t kVersion = HARDWARE_MODULE_API_VERSION(2, 1);
@@ -37,6 +81,35 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevi
     if (!mDevice) {
         ALOGE("Can't open HAL module");
     }
+
+#ifdef USES_UDFPS
+
+std::thread([this]() {
+        int fd = open(FOD_UI_PATH, O_RDONLY);
+        if (fd < 0) {
+            ALOGE("failed to open fd, err: %d", fd);
+            return;
+        }
+
+        struct pollfd fodUiPoll = {
+                .fd = fd,
+                .events = POLLERR | POLLPRI,
+                .revents = 0,
+        };
+
+        while (true) {
+            int rc = poll(&fodUiPoll, 1, -1);
+            if (rc < 0) {
+                ALOGE("failed to poll fd, err: %d", rc);
+                continue;
+            }
+            xiaomiFingerprintService = IXiaomiFingerprint::getService();
+            xiaomiFingerprintService->extCmd(COMMAND_NIT, readBool(fd) ? PARAM_NIT_630_FOD : PARAM_NIT_NONE);
+        }
+    }).detach();
+
+#endif
+
 }
 
 BiometricsFingerprint::~BiometricsFingerprint() {
@@ -378,14 +451,65 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t* msg) {
     }
 }
 
-#ifdef USES_FOD_EXTENSION
+#ifdef USES_UDFPS
+
+/**
+ * Returns whether the fingerprint sensor is an under-display fingerprint
+ * sensor.
+ * @param sensorId the unique sensor ID for which the operation should be
+ * performed.
+ * @return isUdfps indicating whether the specified sensor is an
+ * under-display fingerprint sensor.
+ */
+Return<bool> BiometricsFingerprint::isUdfps(uint32_t /* sensorId */) {
+    return true;
+}
+
+/**
+ * Notifies about a touch occurring within the under-display fingerprint
+ * sensor area.
+ *
+ * It it assumed that the device can only have one active under-display
+ * fingerprint sensor at a time.
+ *
+ * If multiple fingers are detected within the sensor area, only the
+ * chronologically first event will be reported.
+ *
+ * @param x The screen x-coordinate of the center of the touch contact area, in
+ * display pixels.
+ * @param y The screen y-coordinate of the center of the touch contact area, in
+ * display pixels.
+ * @param minor The length of the minor axis of an ellipse that describes the
+ * touch area, in display pixels.
+ * @param major The length of the major axis of an ellipse that describes the
+ * touch area, in display pixels.
+ */
+Return<void>  BiometricsFingerprint::onFingerDown(uint32_t /* x */, uint32_t /* y */, float /* minor */, float /* major */) {
+    TouchFeatureService = ITouchFeature::getService();
+    TouchFeatureService->resetTouchMode(Touch_Fod_Enable);
+    return Void();
+}
+
+/**
+ * Notifies about a finger leaving the under-display fingerprint sensor area.
+ *
+ * It it assumed that the device can only have one active under-display
+ * fingerprint sensor at a time.
+ *
+ * If multiple fingers have left the sensor area, only the finger which
+ * previously caused a "finger down" event will be reported.
+ */
+Return<void>  BiometricsFingerprint::onFingerUp() {
+    return Void();
+}
+
 Return<int32_t> BiometricsFingerprint::extCmd(int32_t cmd, int32_t param) {
     return mDevice->extCmd(mDevice, cmd, param);
 }
 #endif
 
 }  // namespace implementation
-}  // namespace V2_1
+}  // namespace V2_3
 }  // namespace fingerprint
 }  // namespace biometrics
 }  // namespace hardware
