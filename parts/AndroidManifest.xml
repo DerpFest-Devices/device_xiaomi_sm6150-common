@@ -50,13 +50,13 @@
         <activity
             android:name=".doze.DozeSettingsActivity"
             android:label="@string/ambient_display_title"
-            android:theme="@style/Theme.Main">
+            android:theme="@style/Theme.SubSettingsBase">
         </activity>
 
         <activity
             android:name=".thermal.ThermalActivity"
             android:label="@string/thermal_title"
-            android:theme="@style/Theme.Main">
+            android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -84,7 +84,7 @@
         <activity
             android:name=".popupcamera.PopupCameraSettingsActivity"
             android:label="@string/popup_title"
-            android:theme="@style/Theme.Main"
+            android:theme="@style/Theme.SubSettingsBase"
             android:enabled="false">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
