@@ -168,7 +168,6 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.3 \
     android.hardware.drm@1.3.vendor \
     android.hardware.drm@1.3-service.clearkey
 
@@ -203,11 +202,8 @@ PRODUCT_PACKAGES += \
     libgnss
 
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1 \
     android.hardware.gnss@2.1.vendor \
-    android.hardware.gnss.measurement_corrections@1.1 \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
-    android.hardware.gnss.visibility_control@1.0 \
     android.hardware.gnss.visibility_control@1.0.vendor
 
 PRODUCT_COPY_FILES += \
@@ -219,9 +215,7 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-service
 
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0 \
     android.hardware.gatekeeper@1.0.vendor \
-    android.hardware.keymaster@4.1 \
     android.hardware.keymaster@4.1.vendor
 
 # Netd
@@ -329,18 +323,13 @@ PRODUCT_PACKAGES += \
 
 #Secure element
 PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.2 \
     android.hardware.secure_element@1.2.vendor
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio.deprecated@1.0 \
     android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.radio.config@1.2 \
     android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio@1.5 \
     android.hardware.radio@1.5.vendor \
-    android.hardware.secure_element@1.1 \
     libavservices_minijail.vendor \
     libjson \
     libprotobuf-cpp-full \
