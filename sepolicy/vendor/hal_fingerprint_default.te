@@ -29,3 +29,7 @@ set_prop(hal_fingerprint_default, vendor_fp_prop)
 get_prop(system_server, vendor_fp_prop);
 
 allow hal_fingerprint_default vendor_hal_perf_hwservice:hwservice_manager find;
+
+binder_call(hal_fingerprint_default, hal_touchfeature_default)
+
+hal_client_domain(hal_fingerprint_default, hal_touchfeature)
