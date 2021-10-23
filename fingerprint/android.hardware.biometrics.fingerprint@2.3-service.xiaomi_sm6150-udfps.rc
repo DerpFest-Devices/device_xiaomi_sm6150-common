@@ -7,7 +7,6 @@ on boot
     chmod 0666 /dev/input/event2
 
 on post-fs-data
-    mkdir /data/vendor/fpc 0770 system system
     mkdir /data/vendor/goodix 0770 system system
     mkdir /data/vendor/goodix/gf_data/authenticate 0770 system system
     mkdir /data/vendor/goodix/gf_data/enroll 0770 system system
