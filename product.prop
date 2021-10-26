@@ -26,12 +26,6 @@ persist.vendor.cne.feature=1
 persist.data.df.dev_name=rmnet_usb0
 persist.vendor.data.profile_update=true
 
-# Disable blur by default
-persist.sys.sf.disable_blurs=1
-
-# Gboard
-ro.com.google.ime.kb_pad_port_b=1
-
 # Graphics
 debug.sf.latch_unsignaled=1
 persist.demo.hdmirotationlock=false
