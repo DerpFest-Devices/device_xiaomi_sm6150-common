@@ -348,9 +348,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/xiaomi
 
-PRODUCT_BOARD_PLATFORM := sm6150
-PRODUCT_USES_QCOM_HARDWARE := true
-
 # Telephony
 PRODUCT_PACKAGES += \
     qti_telephony_hidl_wrapper.xml \
