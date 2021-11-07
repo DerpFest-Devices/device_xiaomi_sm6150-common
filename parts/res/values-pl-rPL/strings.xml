@@ -15,6 +15,9 @@
      limitations under the License.
 -->
 <resources>
+    <!--  Ambient settings  -->
+    <string name="ambient_enable">Używaj ekranu zgodnego z otoczeniem</string>
+
     <!-- Thermal Profiles -->
     <string name="thermal_title">Profile termiczne</string>
     <string name="thermal_summary">Dostosuj profile termiczne dla aplikacji, aby uzyskać optymalną wydajność</string>
