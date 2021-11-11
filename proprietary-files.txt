@@ -240,6 +240,8 @@ vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 vendor/lib64/libbase64.so
 vendor/lib64/libcpion.so
 vendor/lib64/librmp.so
+vendor/lib64/libminksocket.so
+vendor/lib64/libtrustedapploader.so
 vendor/lib64/libwvhidl.so
 vendor/lib64/mediadrm/libwvdrmengine.so
 
@@ -249,10 +251,8 @@ vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc|fbf2bb38ca6bdddf98c7123da
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|f060101b26d3674bb173e5fc95e118f56a8ac15d
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so|0af387d416acf6d697b9edd4090e3a6941696970
 
-# DRM - Widevine L1 - from davinci-user 11 RKQ1.200826.002 V12.1.2.0.RFJMIXM release-keys
-vendor/lib64/libminksocket.so|0722b9042892e83d4c615e0f70e4ad040365b170
+# DRM - Widevine L1  - from davinci-user 11 RKQ1.200826.002 V12.1.2.0.RFJMIXM release-keys
 vendor/lib64/liboemcrypto.so|6b8c5ab8cb16b7f42071ddc59ac868fa684cff4e
-vendor/lib64/libtrustedapploader.so|53f72443cbbdec707658ffd46fcf418361315a06
 
 # Firmware
 vendor/firmware/a615_zap.b00
@@ -800,7 +800,6 @@ vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so|fefea0a3279f85
 # WiFi Display - HDCP - from LA.UM.9.1.r1-10900-SMxxx0.0
 vendor/bin/wfdhdcphalservice|c459a9dce083f9a2b2d8c7c49903514b87528fda
 vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc|c266f08783a17f6583e3f22c85e55b0c200442ea
-vendor/lib64/libhdcpsrm.so|5058280e6273008851983ed4389f86fad9de68d4
 vendor/lib/libhdcp1prov.so|218ceb9d2809a670cc6d4284b71fcc7f5a3c5903
 vendor/lib/libhdcp2p2prov.so|ccb3bffc88e46c9f9e63c3944461470d36bfafac
 vendor/lib/libhdcpsrm.so|fe959f9d6c73e4857b1edd984a41ff59a89e02d3
