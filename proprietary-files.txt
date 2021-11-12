@@ -505,7 +505,6 @@ vendor/lib64/libqmiservices.so
 # Radio
 -system_ext/app/DeviceInfo/DeviceInfo.apk
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
--system_ext/app/datastatusnotification/datastatusnotification.apk
 -system_ext/app/embms/embms.apk
 system_ext/etc/permissions/embms.xml
 system_ext/etc/permissions/qcrilhook.xml
@@ -590,6 +589,9 @@ vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 vendor/radio/qcril_database/qcril.db
+
+# Radio - Telephony - from coral - google/coral/coral:12/SPB5.210812.002/7671067:user/release-keys
+-system_ext/app/datastatusnotification/datastatusnotification.apk|f33ce45ec04a67b88e9f4da52378153c77d21e77
 
 # Telephony - from smali edit: https://gist.github.com/PIPIPIG233666/72806386c8b93729ce7f2b2c263d8889
 system_ext/framework/qti-telephony-common.jar|d87f999bb2fc9b0d3a6750b54de57b86ada5ff64
