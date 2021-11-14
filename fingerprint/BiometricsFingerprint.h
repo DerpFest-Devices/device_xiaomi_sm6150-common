@@ -18,7 +18,11 @@
 #ifndef ANDROID_HARDWARE_BIOMETRICS_FINGERPRINT_V2_3_BIOMETRICSFINGERPRINT_H
 #define ANDROID_HARDWARE_BIOMETRICS_FINGERPRINT_V2_3_BIOMETRICSFINGERPRINT_H
 
+#ifdef USES_UDFPS
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.xiaomi_sm6150-udfps"
+#else
 #define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.xiaomi_sm6150"
+#endif
 
 #include "fingerprint.h"
 

@@ -14,7 +14,7 @@
 // limitations under the License.
 
 soong_config_module_type {
-    name: "fingerprint_ext_defaults",
+    name: "udfps_defaults",
     module_type: "cc_defaults",
     config_namespace: "xiaomiVars",
     bool_variables: ["uses_udfps"],
@@ -24,26 +24,25 @@ soong_config_module_type {
     ],
 }
 
-fingerprint_ext_defaults {
-    name: "fingerprint_ext",
+udfps_defaults {
+    name: "udfps",
     soong_config_variables: {
         uses_udfps: {
             cflags: ["-DUSES_UDFPS"],
             shared_libs: [
                 "vendor.xiaomi.hardware.fingerprintextension@1.0",
-		"vendor.goodix.hardware.biometrics.fingerprint@2.1",
-        	"vendor.xiaomi.hardware.fingerprintextension@1.0",
-        	"vendor.xiaomi.hardware.touchfeature@1.0",
+                "vendor.goodix.hardware.biometrics.fingerprint@2.1",
+                "vendor.xiaomi.hardware.touchfeature@1.0",
             ],
         },
     },
 }
 
 cc_defaults {
-    name: "sm6150-common-fingerprint_defaults",
+    name: "sm6150-fingerprint_defaults",
     defaults: [
         "hidl_defaults",
-        "fingerprint_ext",
+        "udfps",
     ],
     relative_install_path: "hw",
     srcs: [
@@ -66,14 +65,14 @@ cc_defaults {
 
 cc_binary {
     name: "android.hardware.biometrics.fingerprint@2.3-service.xiaomi_sm6150",
-    defaults: ["sm6150-common-fingerprint_defaults"],
+    defaults: ["sm6150-fingerprint_defaults"],
     vintf_fragments: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_sm6150.xml"],
     init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_sm6150.rc"],
 }
 
 cc_binary {
     name: "android.hardware.biometrics.fingerprint@2.3-service.xiaomi_sm6150-udfps",
-    defaults: ["sm6150-common-fingerprint_defaults"],
+    defaults: ["sm6150-fingerprint_defaults"],
     vintf_fragments: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_sm6150-udfps.xml"],
     init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_sm6150-udfps.rc"],
     cflags: ["-DUSES_UDFPS"],

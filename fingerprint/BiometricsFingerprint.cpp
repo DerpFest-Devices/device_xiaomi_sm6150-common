@@ -84,6 +84,8 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevi
 
 #ifdef USES_UDFPS
 
+TouchFeatureService = ITouchFeature::getService();
+
 std::thread([this]() {
         int fd = open(FOD_UI_PATH, O_RDONLY);
         if (fd < 0) {
@@ -103,8 +105,7 @@ std::thread([this]() {
                 ALOGE("failed to poll fd, err: %d", rc);
                 continue;
             }
-            xiaomiFingerprintService = IXiaomiFingerprint::getService();
-            xiaomiFingerprintService->extCmd(COMMAND_NIT, readBool(fd) ? PARAM_NIT_630_FOD : PARAM_NIT_NONE);
+            extCmd(COMMAND_NIT, readBool(fd) ? PARAM_NIT_630_FOD : PARAM_NIT_NONE);
         }
     }).detach();
 
@@ -485,7 +486,6 @@ Return<bool> BiometricsFingerprint::isUdfps(uint32_t /* sensorId */) {
  * touch area, in display pixels.
  */
 Return<void>  BiometricsFingerprint::onFingerDown(uint32_t /* x */, uint32_t /* y */, float /* minor */, float /* major */) {
-    TouchFeatureService = ITouchFeature::getService();
     TouchFeatureService->resetTouchMode(Touch_Fod_Enable);
     return Void();
 }
@@ -504,6 +504,7 @@ Return<void>  BiometricsFingerprint::onFingerUp() {
 }
 
 Return<void> BiometricsFingerprint::onShowUdfpsOverlay() {
+    TouchFeatureService->setTouchMode(Touch_Fod_Enable, 1);
     return Void();
 }
 
