@@ -107,6 +107,8 @@ struct BiometricsFingerprint : public IBiometricsFingerprint {
     Return<void> onFingerDown(uint32_t x, uint32_t y, float minor, float major) override;
     Return<void> onFingerUp() override;
     Return<int32_t> extCmd(int32_t cmd, int32_t param) override;
+    Return<void> onShowUdfpsOverlay() override;
+    Return<void> onHideUdfpsOverlay() override;
 private:
     sp<ITouchFeature> TouchFeatureService;
     sp<IXiaomiFingerprint> xiaomiFingerprintService;
