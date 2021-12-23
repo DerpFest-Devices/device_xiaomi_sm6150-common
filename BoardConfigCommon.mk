@@ -4,6 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+BUILD_BROKEN_DUP_SYSPROP := true
 BUILD_BROKEN_ENFORCE_SYSPROP_OWNER := true
 
 BOARD_VENDOR := xiaomi
