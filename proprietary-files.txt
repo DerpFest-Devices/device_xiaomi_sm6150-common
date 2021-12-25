@@ -702,7 +702,6 @@ vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|1b04b9aca3b02e3bf5c7ab996a
 vendor/lib64/vendor.qti.hardware.soter@1.0.so|9424d8a625bbc9e399597ecb0ac80402fae7782c
 
 # Thermal - from LA.UM.9.1.r1-10900-SMxxx0.0
-vendor/etc/init/init_thermal-engine.rc|a0310f09da9f09c67e110607b73aec9f9f981c4c
 vendor/lib64/libthermalclient.so|2fe5d8e4d3413795626a4c4fb6f0e4b6bf775ebe
 
 # Time - from LA.UM.9.1.r1-10900-SMxxx0.0
