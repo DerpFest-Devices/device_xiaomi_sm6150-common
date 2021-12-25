@@ -114,16 +114,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>legacy/0</instance>
         </interface>
     </hal>
-    <!-- keymaster -->
-    <hal format="hidl">
-       <name>android.hardware.keymaster</name>
-       <transport>hwbinder</transport>
-       <version>4.0</version>
-       <interface>
-           <name>IKeymasterDevice</name>
-           <instance>default</instance>
-       </interface>
-    </hal>
     <!--  Soter service -->
     <hal format="hidl">
         <name>vendor.qti.hardware.soter</name>

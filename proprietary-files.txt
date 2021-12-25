@@ -378,14 +378,15 @@ vendor/lib64/libsdm-disp-vndapis.so|4fbf76da3a9eb5d227f948521bd4c80842446bb4
 vendor/lib64/libsdmextension.so|76ef1430f700480509b5f991e031447fea9ddb01
 vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
 
-# Keystore - from LA.UM.9.1.r1-07700-SMxxx0.0
-vendor/bin/hw/android.hardware.keymaster@4.0-service-qti|2eedb6b2c2e0bcb54d0aae1e19ccfa2c8fc0f116
-vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc|c8999fb1bccbef81e6b362059e9a6ebd023de98f
-vendor/lib64/libkeymasterdeviceutils.so|323603c6199f2cb3d15883c625bae7cd1d039f81
-vendor/lib64/libkeymasterprovision.so|d5fb11199f80417e3cca6a147a4072e8d5b40ec6
-vendor/lib64/libkeymasterutils.so|ae5c51cc7be40b7fd052bc8debf89723f5646eae
-vendor/lib64/libqcbor.so|df6a3f00d7d49e482e0ca2937f5bd708fba32ae6
-vendor/lib64/libqtikeymaster4.so|69018deb5c3025f5641e1adaf452cc0687ed11ba
+# Keystore - from LA.UM.9.1.r1-10900-SMxxx0.0
+vendor/bin/hw/android.hardware.keymaster@4.1-service-qti|0e0aa56f9ad9b1832eeb39db82eed1f021d7e244
+vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc|f6907552961ba772c1ad5b493913a60d65abedb4
+-vendor/etc/vintf/manifest/android.hardware.keymaster@4.1-service-default-qti.xml|478d11fc12dd7c6a85b543cf163bec217aea3148
+vendor/lib64/libkeymasterdeviceutils.so|6fd0b0e1b30c4e6c5272794896306596880c657b
+vendor/lib64/libkeymasterprovision.so|425996418aeceff1adf84fe16722eab3ca487ac1
+vendor/lib64/libkeymasterutils.so|7e42e00998259abfeaf6bca3ec82d37f54dd9ff9
+vendor/lib64/libqcbor.so|7da5294a577f5a71ede5b3804a026bf69bd025ee
+vendor/lib64/libqtikeymaster4.so|327715d70e914e5c4eae2fbee039e24bb81d9157
 
 # Listen - from LA.UM.9.1.r1-10900-SMxxx0.0
 vendor/lib/hw/sound_trigger.primary.sm6150.so|d2959b51e0e2587d0d7742368b72f5d8c1ddf3aa
