@@ -200,6 +200,7 @@ BOARD_SEPOLICY_M4DEFS += \
     persist_sensors_file=vendor_persist_sensors_file \
     public_vendor_default_prop=vendor_public_vendor_default_prop \
     sensors_prop=vendor_sensors_prop \
+    sysfs_battery_supply=vendor_sysfs_battery_supply \
     sysfs_boot_adsp=vendor_sysfs_boot_adsp \
     sysfs_devfreq=vendor_sysfs_devfreq \
     sysfs_fingerprint=vendor_sysfs_fingerprint \
