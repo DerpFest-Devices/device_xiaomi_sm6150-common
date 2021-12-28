@@ -595,7 +595,7 @@ vendor/radio/qcril_database/qcril.db
 -system_ext/app/datastatusnotification/datastatusnotification.apk|f33ce45ec04a67b88e9f4da52378153c77d21e77
 
 # Telephony - from smali edit: https://gist.github.com/PIPIPIG233666/72806386c8b93729ce7f2b2c263d8889
-system_ext/framework/qti-telephony-common.jar|d87f999bb2fc9b0d3a6750b54de57b86ada5ff64
+system_ext/framework/qti-telephony-common.jar|3964e0da87e2cc13569f02d9d5cde4e7ffaaf780
 
 # Radio - IMS
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
