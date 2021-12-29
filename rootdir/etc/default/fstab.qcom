@@ -33,15 +33,15 @@
 # Currently we dont have e2fsck compiled. So fs check would failed.
 
 #<src>                                                 <mnt_point>               <type>  <mnt_flags and options>
-/dev/block/bootdevice/by-name/system                    /                        ext4    ro,barrier=1,discard                                 wait,avb
-/dev/block/bootdevice/by-name/vendor                    /vendor                  ext4    ro,barrier=1                                                                                      wait,recoveryonly
+/dev/block/bootdevice/by-name/system                    /                        ext4    ro,barrier=1,discard                                 wait,avb,readahead_size_kb=128
+/dev/block/bootdevice/by-name/vendor                    /vendor                  ext4    ro,barrier=1                                                                                      wait,recoveryonly,readahead_size_kb=128
 /dev/block/bootdevice/by-name/boot                      /boot                    emmc    defaults                                                                                          recoveryonly
 /dev/block/bootdevice/by-name/recovery                  /recovery                emmc    defaults                                                                                          recoveryonly
-/dev/block/bootdevice/by-name/cust                      /system_ext              ext4    ro,noatime,nodev,barrier=1                           wait,recoveryonly
+/dev/block/bootdevice/by-name/cust                      /system_ext              ext4    ro,noatime,nodev,barrier=1                           wait,recoveryonly,readahead_size_kb=128
 /dev/block/bootdevice/by-name/cache                     /cache                   ext4    nosuid,noatime,nodev,barrier=1                       wait
 
 # Add fs_mgr flag - sysfs_path=/sys/devices/platform/soc/xxxx.[ufshc|sdhci] to userdata entry, based on UFS|eMMC device.
-/dev/block/bootdevice/by-name/userdata                  /data                    f2fs    noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier,inlinecrypt    latemount,wait,check,formattable,fileencryption=ice,wrappedkey,quota
+/dev/block/bootdevice/by-name/userdata                  /data                    f2fs    noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier,inlinecrypt    latemount,wait,check,formattable,fileencryption=ice,wrappedkey,quota,readahead_size_kb=128
 /dev/block/by-name/metadata                             /metadata                ext4    noatime,nosuid,nodev,discard                         wait,check,formattable,wrappedkey
 /devices/platform/soc/8804000.sdhci/mmc_host*           /storage/sdcard1         vfat    nosuid,nodev                                         wait,voldmanaged=sdcard1:auto,encryptable=footer
 /devices/platform/soc/1da4000.ufshc_card/host*          /storage/sdcard1         vfat    nosuid,nodev                                         wait,voldmanaged=sdcard1:auto,encryptable=footer
