@@ -502,16 +502,22 @@ Return<void>  BiometricsFingerprint::onFingerDown(uint32_t /* x */, uint32_t /* 
 Return<void>  BiometricsFingerprint::onFingerUp() {
     return Void();
 }
+#endif
 
 Return<void> BiometricsFingerprint::onShowUdfpsOverlay() {
+    #ifdef USES_UDFPS
     TouchFeatureService->setTouchMode(Touch_Fod_Enable, 1);
     return Void();
+    #else
+    return Void();
+    #endif
 }
 
 Return<void> BiometricsFingerprint::onHideUdfpsOverlay() {
     return Void();
 }
 
+#ifdef USES_UDFPS
 Return<int32_t> BiometricsFingerprint::extCmd(int32_t cmd, int32_t param) {
     return mDevice->extCmd(mDevice, cmd, param);
 }
