@@ -333,6 +333,7 @@ vendor/lib64/libllvm-qcom.so|a9bc63754e842f7ce645c1dcd912ea0f89127bed
 vendor/lib64/libpvr.so|0d293cfcac615cfadd41aeeba36a336869e51edc
 
 # Graphics (Adreno - updatable) - from LA.UM.9.1.r1-10900-SMxxx0.0
+-vendor/app/com.qualcomm.qti.gpudrivers.sm6150.api30/com.qualcomm.qti.gpudrivers.sm6150.api30.apk|c3601f567e672f5493fd8015d858d78399b891f2
 vendor/lib/egl/eglSubDriverAndroid.so|c37d7fd3383e16617dcb874eceffee6b5a3c67bf
 vendor/lib/egl/libEGL_adreno.so|b66364c940c6174910a6807322193b3fb0f5d6c7
 vendor/lib/egl/libGLESv1_CM_adreno.so|715f3463528f1e74ffa02627ee5916a09e0748f5
@@ -359,9 +360,6 @@ vendor/lib64/libadreno_utils.so|57cb6438de8bc67d3006c3179074b2d9540e800f
 vendor/lib64/libgpudataproducer.so|38c41d92fae2bcad1fea2d367d01946bb0ae3f85
 vendor/lib64/libgsl.so|efac22df1084af13fa63cefa0435503250e3737d
 vendor/lib64/libllvm-glnext.so|7ed462c35f1322dfa0b29f030befd763c819f0a8
-
-# Graphics (Adreno - updatable apk) - from mojito-user 11 RKQ1.201022.002 V12.0.5.0.RKGMIXM release-keys
--vendor/app/com.qualcomm.qti.gpudrivers.sm6150.api30/com.qualcomm.qti.gpudrivers.sm6150.api30.apk|c3601f567e672f5493fd8015d858d78399b891f2
 
 # Graphics (DRM) - from LA.UM.9.1.r1-10900-SMxxx0.0
 vendor/lib64/libsdedrm.so|c23f2440f01e7abab3b1d119541a6ee2309a32de
