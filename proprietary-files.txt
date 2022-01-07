@@ -119,6 +119,8 @@ system_ext/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar|4b1f2162233adedc
 -system_ext/lib64/com.quicinc.cne.constants@1.0.so|11156088eab8eee6116e8849538ebf782563cafc
 -system_ext/lib64/com.quicinc.cne.constants@2.0.so|ceb4db415e92c8fcb5e2b0e7301b4453c41ed583
 -system_ext/lib64/com.quicinc.cne.constants@2.1.so|506e975e88003c483ab0ab39099bc2e7d7ea3112
+system_ext/lib64/vendor.qti.data.factory@2.4.so|1b735f0430b2c67bf943b8c730388fa0da24c6ae
+system_ext/lib64/vendor.qti.data.factory@2.5.so|8d505860ec8de7c54ef636998acefc1cfd71515c
 system_ext/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so|3883d1632c1ca6341ed12810e49c03ce54b56f16
 system_ext/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so|7518bc73394f8194e92a0028ad13712f8987d12d
 system_ext/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so|59a27cae5b460ae4f4c9a8e029ec3e0e4abe42f0
@@ -645,6 +647,7 @@ system_ext/lib64/vendor.qti.ims.callcapability@1.0.so|1429bb929a0cd03bc1dee0192d
 system_ext/lib64/vendor.qti.ims.callinfo@1.0.so|528446b14c9db5808e4fcec973a094eb40780a8f
 system_ext/lib64/vendor.qti.ims.factory@1.0.so|7d468f0636ce9671d23492b06d0ab16363f52ae1
 system_ext/lib64/vendor.qti.ims.factory@1.1.so|a3f670e0dce45a8371300f2919c806a2dc5e2b80
+system_ext/lib64/vendor.qti.ims.factory@2.0.so|82d99fc4824db349a5a390b68f106978142ae416
 system_ext/lib64/vendor.qti.ims.rcsconfig@1.0.so|55e93923ac415862b15a7777220e100b8484e5ba
 system_ext/lib64/vendor.qti.ims.rcsconfig@1.1.so|2a7af391c47b855be106f256d3e9a6e87838b9d5
 system_ext/lib64/vendor.qti.ims.rcsconfig@2.0.so|1efe54fda3b333b7cf5ec25c6a7d91f375c2c913
