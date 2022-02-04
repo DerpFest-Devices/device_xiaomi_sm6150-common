@@ -722,12 +722,12 @@ vendor/lib64/libsns_low_lat_stream_stub.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libssc_default_listener.so
 
-# Soter - from mojito-user 11 RKQ1.201022.002 V12.5.4.0.RKGMIXM release-keys
--app/SoterService/SoterService.apk:vendor/app/SoterService/SoterService.apk|9d41ded29f97671f28874f1f4c5921844bc46a3a
-vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|a6ea6031c27889797b96fe29ba100924b79fe3fb
+# Soter - from Redmi/phoenix/phoenix:12/RKQ1.210614.002/22.1.19:user/release-keys
+-app/SoterService/SoterService.apk:vendor/app/SoterService/SoterService.apk|8b7f44699f1dc3d7f332fc4a465b889402793c6c
+vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|8e315a85eeeb94a51f1533c80212d2fc0ec88760
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
-vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|1b04b9aca3b02e3bf5c7ab996a2a14d1890e5f94
-vendor/lib64/vendor.qti.hardware.soter@1.0.so|9424d8a625bbc9e399597ecb0ac80402fae7782c
+vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|dcdca96d86411b7cfe7200c07570a341d35e5607
+vendor/lib64/vendor.qti.hardware.soter@1.0.so|5496f7816036ef71aec0116864032f8a6078aee7
 
 # Thermal - from LA.UM.9.1.r1-10900-SMxxx0.0
 vendor/lib64/libthermalclient.so|2fe5d8e4d3413795626a4c4fb6f0e4b6bf775ebe
