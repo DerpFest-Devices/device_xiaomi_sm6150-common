@@ -65,15 +65,20 @@ system_ext/framework/audiosphere.jar|98d17293550d99e59d1edd8582ed4551dc167249
 # Audio FX modules (vendor) - from LA.UM.9.1.r1-10900-SMxxx0.0
 vendor/lib/soundfx/libasphere.so|b2daeb875914a33575c7d7a67429f25d09d35489
 
-# Bluetooth - from mojito-user 11 RKQ1.201022.002 V12.5.4.0.RKGMIXM release-keys
-vendor/lib64/libbt-hidlclient.so|c0b65ec61252af17d10f0d02063bc5c5e0366b91
-vendor/lib64/libbtnv.so|07e031527e60ce5e62a5017fd1d7ff83ef1aafcf
+# Bluetooth - from LA.UM.9.1.r1-10900-SMxxx0.0
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|af37592fc9b0b4e83449458a0fff1738135c9087
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|f4ee3b2da2b08647447869ade86ec63f7340accc
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|b710978f90d0e37d02a8324d3a982583bdc43b58
+vendor/lib64/libbt-hidlclient.so|d587a008c01270528465a9b6e001efb700ab6243
+vendor/lib64/libbtnv.so|b7e9c2dc35ce9eb959d7060963a9b3b008e59764
 
-# Bluetooth (A2DP) - from mojito-user 11 RKQ1.201022.002 V12.5.4.0.RKGMIXM release-keys
-vendor/lib/hw/audio.bluetooth_qti.default.so|b660ba1337b2415d85bf319de258bde60154247a
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|4bed8d0cc4d2747a6f48fbbff5cd01dbc42c28d8
-vendor/lib/btaudio_offload_if.so|29d13cf463ff767ef20ee473a4a13e8167f3326e
-vendor/lib/libbluetooth_audio_session_qti.so|c1f6889d34c5506c957d6ffde9c30a3e09180493
+# Bluetooth (A2DP) - from LA.UM.9.1.r1-10900-SMxxx0.0
+vendor/lib/hw/audio.bluetooth_qti.default.so|4c5f66014e164e0cc15b86e433edbc1fd927ae20
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|5a42ba0026ff2635499abad6a1916a23a27d445c
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so|4d7232ed02f6558e8c76e3374b1a1f0a16e53802
+vendor/lib/btaudio_offload_if.so|78e1217c78dfd41e8cb722910e4c4a88f1553c76
+vendor/lib/libbluetooth_audio_session_qti.so|1cd0464590ca52462353dcdd4d2ff1c144f5cb3f
+vendor/lib/libbluetooth_audio_session_qti_2_1.so|366a3e00da3b9cdf35bf553eab8712d3eaf3b34a
 
 # Bluetooth (libaptx) - from Pixel 4A RP1A.200720.011
 system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
@@ -84,13 +89,16 @@ vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Encoder.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
 
-# Bluetooth (Configstore) - from mojito-user 11 RKQ1.201022.002 V12.5.4.0.RKGMIXM release-keys
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|0abafcc0c404b67bb0d87128a87cc9deabe54935
+# Bluetooth (Configstore) - from LA.UM.9.1.r1-10900-SMxxx0.0
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|d28d3039d4aeba172827221fd5175b326251e683
 
-# Bluetooth (SAR) - from mojito-user 11 RKQ1.201022.002 V12.5.4.0.RKGMIXM release-keys
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|a97a6c330c932176acee0bce820c6e737778aed4
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|d1443e04e24cb45dd06f5d222b22a699c9e82cb1
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|1671815a79dab0fde9248d0851085ec1ab314f64
+# Bluetooth (Dependency) - from LA.UM.9.1.r1-10900-SMxxx0.0
+vendor/lib64/libsoc_helper.so|ab2a9e1b13c648002256979fd816e2c03c7ed9a2
+
+# Bluetooth (SAR) - from LA.UM.9.1.r1-10900-SMxxx0.0
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|e02fc5b9c1a29de1262ebdd985c51f1fc219041c
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|bef043fd17661bc61f3f03dbf355dd5af195ab50
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|8c14f8120a37db2eb95239c6caa33d881a9b3ad0
 
 # CDSP - from LA.UM.9.1.r1-10900-SMxxx0.0
 vendor/bin/cdsprpcd|ea126ed2f1b11622547239f331b8013320c59ad2
