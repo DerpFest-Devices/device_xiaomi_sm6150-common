@@ -364,7 +364,6 @@ PRODUCT_PACKAGES += \
     extphonelib_product.xml \
     qti-telephony-hidl-wrapper \
     qti-telephony-hidl-wrapper-prd \
-    qti-telephony-hidl-wrapper-prd.xml \
     qti-telephony-utils \
     qti_telephony_hidl_wrapper.xml \
     qti_telephony_utils.xml \
