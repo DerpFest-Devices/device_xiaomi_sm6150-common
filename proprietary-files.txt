@@ -459,14 +459,14 @@ vendor/lib/libFlacSwDec.so|6b17d0965c9f8bddab3ffd59e7bb16e92bb68d85
 -vendor/lib/libMpeg4SwEncoder.so|3b2d036fefbaa71ea5aba4eda7ab6885bc5f8040
 vendor/lib/libdsd2pcm.so|c5ab1afd7a5a23bf83d80b5ac74247c3dd2085af
 
-# Mlipay
-vendor/bin/mlipayd@1.1
-vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
--vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml
-vendor/lib64/libmlipay.so
-vendor/lib64/libmlipay@1.1.so
-vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so
-vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so
+# Mlipay - from Redmi/sweet_global/sweet:12/RKQ1.210614.002/V13.0.2.0.SKFMIXM:user/release-keys
+vendor/bin/mlipayd@1.1|1e15d7bf28d796083929de505ca283a0726dea70
+vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc|b5ab5bcd031fe4d9781b5911c0595eaeac8b80ea
+-vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml|27aaea2ab58ace6555a634dc60ea062736342eb4
+vendor/lib64/libmlipay.so|7e2b2f47dfd6d3593bad8296e08505a3a2a76992
+vendor/lib64/libmlipay@1.1.so|625c0d306552dda026418705bfc4ea53713f42af
+vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so|964b0f4dab32e0b7d2a1323687eac6f14c1d0df0
+vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so|7abe9fa2df4e58d6b3e67b88c26f85693ee06418
 
 # Peripheral - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/bin/pm-proxy|0704192692efb4b79e8cb1a2252625ad24468805
