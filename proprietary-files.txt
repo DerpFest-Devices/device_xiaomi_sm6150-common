@@ -260,12 +260,12 @@ vendor/lib64/libsi.so|77faf2818d08764f1c408f2ba26bfdbb5a0e8afb
 vendor/lib64/libssd.so|0a461a98eb314fe6e79bfe08457a88e48c52550a
 vendor/lib64/libtrustedapploader.so|e9ebd0130381cf60219d4c511a8e6908684cb7ab
 
-# DRM - Widevine
-vendor/bin/hw/android.hardware.drm@1.3-service.widevine
-vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
-vendor/lib64/mediadrm/libwvdrmengine.so
-vendor/lib64/libwvhidl.so
+# DRM - Widevine - from Redmi/sweet_global/sweet:12/RKQ1.210614.002/V13.0.2.0.SKFMIXM:user/release-keys
+vendor/bin/hw/android.hardware.drm@1.3-service.widevine|2158f47423c723a9da29bb81bb16987a1e715c21
+vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|aa9480824c939db0ece69b0923c7f33b338895e0
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
+vendor/lib64/mediadrm/libwvdrmengine.so|9692c6484923618f4063a25d4da3d1d5f133a6b1
+vendor/lib64/libwvhidl.so|ed08a0c11b4633f6b963fb304369dab98850855d
 
 # DSP - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/bin/dspservice|a7344fc3d27a49df30858ebc3f73ee5818e752d4
@@ -273,8 +273,8 @@ vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc|fbf2bb38ca6bdddf98c7123da
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|f060101b26d3674bb173e5fc95e118f56a8ac15d
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so|0af387d416acf6d697b9edd4090e3a6941696970
 
-# DRM - Widevine L1  - from davinci-user 11 RKQ1.200826.002 V12.1.2.0.RFJMIXM release-keys
-vendor/lib64/liboemcrypto.so|6b8c5ab8cb16b7f42071ddc59ac868fa684cff4e
+# DRM - Widevine L1  - from Redmi/sweet_global/sweet:12/RKQ1.210614.002/V13.0.2.0.SKFMIXM:user/release-keys
+vendor/lib64/liboemcrypto.so|5aa09ccd47c10e5f2d0ec0831260182ac2f9e6ec
 
 # Firmware
 vendor/firmware/a615_zap.b00
