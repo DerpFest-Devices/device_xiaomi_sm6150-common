@@ -161,10 +161,13 @@ audio.offload.video=true
 debug.stagefright.omx_default_rank=0
 vendor.media.target.version=2
 
-# Netmgr
+# Netmgrd
 persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
 ro.vendor.use_data_netmgrd=true
+
+# Netflix
+ro.netflix.bsp_rev=Q6150-17263-1
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
