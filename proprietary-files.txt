@@ -46,21 +46,22 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so|7c89039a1d670ff6f92ada82bd1ff2c236
 # ANT+ - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|0f8f5c3081d0ef745e0896b1fceea15f52fe3b21
 
-# Audio - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
-vendor/lib/libadiertac.so|343d6772f7db8e3c2f0d48b37f858fc8c73254fa
-vendor/lib/libaudcal.so|7d6e782971519eb41752e21859991d11fb7f039c
-vendor/lib/libaudioparsers.so|0ba196b80a3c0ceced40f8c6d4b57bd28f0bd066
-vendor/lib/libdrc.so|b066f176f119847059c5aa148f73e1b042fbeab3
-vendor/lib/libhdmipassthru.so|068a1629fe4995fcbdcf105460b6b913c7b357f8
-vendor/lib/libqtigef.so|fdfa65bca9034596438331ecb99c132eb401c32f
-vendor/lib/libsurround_3mic_proc.so|e8e086123e0c1dc17f008f97edb3611cd4c702e1
+# Audio - from davinci-user-11-RKQ1.200826.002-V12.5.2.0.RFJCNXM-release-keys
+vendor/lib/libadiertac.so|4fbcedc4e3258487e49e912838470f39c5e4e25a
+vendor/lib/libaudcal.so|827fbc6fb4cfd96de86c692ebcafe3ed8660249b
+vendor/lib/libaudioparsers.so|b786d5a2a8f94edb11b5334bbe981dbd2633325f
+vendor/lib/libdrc.so|e27974e53efe0456cba96f6910ad977c6351d0b7
+vendor/lib/libhdmipassthru.so|adc8690952cacf8eb2c141a9b977cfd5ba5f19ea
+vendor/lib/libqtigef.so|5274b67a13e3211cc581385189560fd1e2572d44
+vendor/lib/libssrec.so|aa790d85040349bc477ca5056c650ce970409c6e
+vendor/lib/libsurround_3mic_proc.so|1d425b4b0d89f68e0f0112e8f2f73b1cd5b6dea2
 
 # Audio FX modules (system) - from LA.QSSI.12.0.r1-05800.01-qssi.0
 system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e49c
 system_ext/framework/audiosphere.jar|98d17293550d99e59d1edd8582ed4551dc167249
 
-# Audio FX modules (vendor) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
-vendor/lib/soundfx/libasphere.so|b2daeb875914a33575c7d7a67429f25d09d35489
+# Audio FX modules (vendor) - from davinci-user-11-RKQ1.200826.002-V12.5.2.0.RFJCNXM-release-keys
+vendor/lib/soundfx/libasphere.so|44cd20e13920888b29d3b2e4bb0b2559a746bf8f
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
@@ -239,9 +240,9 @@ vendor/lib64/libSecureUILib.so|e82ac768e72387babc4e940d4082ef41bf102bc3
 vendor/lib64/libStDrvInt.so|c6866bfa63fa8ea4ac7ce8f3ea7daeabba90ae03
 vendor/lib64/libbase64.so|fa0f461914c0adda22c734c755512fdaf897eeaa
 vendor/lib64/libcpion.so|04577591c6e772730453da2c9ba4b94a5edd9b1a
-vendor/lib64/libminksocket.so|8be2d23ce69429813daedfbe5113345cda5da973
 vendor/lib64/libdrmfs.so|a21f9505fac81e4f0a307d7f7a51efab61d9d0cb
 vendor/lib64/libdrmtime.so|6b51dbccd8d1bfa0c5aa72948f3a6cd079eee426
+vendor/lib64/libminksocket.so|8be2d23ce69429813daedfbe5113345cda5da973
 vendor/lib64/libops.so|4d1c1e9a8dce82b6d20dd1cdc05121e731e7ab5d
 vendor/lib64/libqisl.so|c79719eebc094c2af9561e8df2c158638b111b70
 vendor/lib64/librmp.so|3c40d44ec285ac1cbb86721849aa45f623c735e7
