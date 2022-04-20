@@ -28,7 +28,7 @@ namespace lineage {
 namespace livedisplay {
 
 static constexpr const char* kAntiFlickerStatusPath =
-        "/sys/devices/platform/soc/soc:qcom,dsi-display/dc_enable";
+        "/sys/devices/platform/soc/soc:qcom,dsi-display/anti_flicker";
 
 ndk::ScopedAStatus AntiFlicker::getEnabled(bool* aidl_return) {
     std::string buf;
