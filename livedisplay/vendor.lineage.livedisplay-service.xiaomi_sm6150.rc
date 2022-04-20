@@ -1,8 +1,8 @@
 on boot
-    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/dc_enable
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/anti_flicker
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/hbm
 
-    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display/dc_enable
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display/anti_flicker
     chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display/hbm
 
 service vendor.livedisplay-hal /vendor/bin/hw/vendor.lineage.livedisplay-service.xiaomi_sm6150
