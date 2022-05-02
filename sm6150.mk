@@ -215,6 +215,10 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor \
     android.hardware.keymaster@4.1.vendor
 
+# Mlipay
+PRODUCT_PACKAGES += \
+    vendor.xiaomi.hardware.mlipay@1.1.vendor:64
+
 # Netd
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
