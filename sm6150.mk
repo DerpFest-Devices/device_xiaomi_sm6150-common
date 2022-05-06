@@ -308,7 +308,6 @@ PRODUCT_PACKAGES += \
     fstab.default \
     fstab.emmc \
     init.insmod.sh \
-    init.mi.usb.sh \
     init.power.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
@@ -373,6 +372,9 @@ PRODUCT_PACKAGES += \
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
+
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/usb/etc
 
 # Vibrator
 PRODUCT_PACKAGES += \
