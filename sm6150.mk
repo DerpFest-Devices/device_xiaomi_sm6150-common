@@ -399,5 +399,17 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
+# WiFi Display
+PRODUCT_PACKAGES += \
+    libavservices_minijail_32 \
+    libdisplayconfig.system.qti \
+    libnl \
+    libqdMetaData \
+    libqdMetaData.system \
+    libwfdaac_vendor
+
+PRODUCT_BOOT_JARS += \
+    WfdCommon
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/sm6150-common/sm6150-common-vendor.mk)
