@@ -316,7 +316,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librecovery_updater_xiaomi
 
-#Secure element
+# Secure element
 PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2.vendor
 
