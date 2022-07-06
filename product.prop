@@ -1,5 +1,4 @@
 # App
-persist.device_config.runtime_native_boot.iorap_perfetto_enable=true
 ro.launcher.blur.appLaunch=0
 
 # Bluetooth
@@ -51,9 +50,6 @@ ro.config.low_ram=false
 # Media
 media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.media.recorder-max-base-layer-fps=60
-
-# Perfetto
-persist.device_config.runtime_native_boot.iorap_readahead_enable=true
 
 # Radio
 DEVICE_PROVISIONED=1
