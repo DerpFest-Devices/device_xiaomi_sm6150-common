@@ -46,22 +46,22 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so|7c89039a1d670ff6f92ada82bd1ff2c236
 # ANT+ - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|0f8f5c3081d0ef745e0896b1fceea15f52fe3b21
 
-# Audio - from davinci-user-11-RKQ1.200826.002-V12.5.2.0.RFJCNXM-release-keys
-vendor/lib/libadiertac.so|4fbcedc4e3258487e49e912838470f39c5e4e25a
-vendor/lib/libaudcal.so|827fbc6fb4cfd96de86c692ebcafe3ed8660249b
-vendor/lib/libaudioparsers.so|b786d5a2a8f94edb11b5334bbe981dbd2633325f
-vendor/lib/libdrc.so|e27974e53efe0456cba96f6910ad977c6351d0b7
-vendor/lib/libhdmipassthru.so|adc8690952cacf8eb2c141a9b977cfd5ba5f19ea
-vendor/lib/libqtigef.so|5274b67a13e3211cc581385189560fd1e2572d44
-vendor/lib/libssrec.so|aa790d85040349bc477ca5056c650ce970409c6e
-vendor/lib/libsurround_3mic_proc.so|1d425b4b0d89f68e0f0112e8f2f73b1cd5b6dea2
+# Audio
+vendor/lib/libadiertac.so
+vendor/lib/libaudcal.so
+vendor/lib/libaudioparsers.so
+vendor/lib/libdrc.so
+vendor/lib/libhdmipassthru.so
+vendor/lib/libqtigef.so
+vendor/lib/libssrec.so
+vendor/lib/libsurround_3mic_proc.so
 
 # Audio FX modules (system) - from LA.QSSI.12.0.r1-07100-qssi.0
 system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e49c
 system_ext/framework/audiosphere.jar|fc609d51ef6e7026db415e4abde59b40e515a4fe
 
-# Audio FX modules (vendor) - from davinci-user-11-RKQ1.200826.002-V12.5.2.0.RFJCNXM-release-keys
-vendor/lib/soundfx/libasphere.so|44cd20e13920888b29d3b2e4bb0b2559a746bf8f
+# Audio FX modules (vendor)
+vendor/lib/soundfx/libasphere.so
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
