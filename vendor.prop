@@ -30,6 +30,7 @@ vendor.audio.feature.battery_listener.enable=false
 vendor.audio.feature.compr_cap.enable=false
 vendor.audio.feature.compress_in.enable=false
 vendor.audio.feature.compress_meta_data.enable=true
+vendor.audio.feature.compr_voip.enable=false
 vendor.audio.feature.concurrent_capture.enable=false
 vendor.audio.feature.custom_stereo.enable=true
 vendor.audio.feature.deepbuffer_as_primary.enable=false
