@@ -101,6 +101,9 @@ function blob_fixup() {
     vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc )
         sed -i "s|writepid /dev/cpuset/foreground/tasks|task_profiles ProcessCapacityHigh|g" "${2}"
     ;;
+    vendor/lib64/camera/components/com.qti.node.watermark.so)
+        $PATCHELF_TOOL --add-needed "libpiex_shim.so" "${2}"
+    ;;
     esac
 }
 
