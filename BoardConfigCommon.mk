@@ -188,8 +188,6 @@ TARGET_SEPOLICY_DIR := msmsteppe
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 BOARD_SEPOLICY_M4DEFS += \
-    debugfs_clk=vendor_debugfs_clk \
-    debugfs_ipc=vendor_debugfs_ipc \
     latency_device=vendor_latency_device \
     nfc_vendor_data_file=vendor_nfc_vendor_data_file \
     persist_audio_file=vendor_persist_audio_file \
