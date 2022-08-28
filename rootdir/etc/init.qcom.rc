@@ -42,9 +42,6 @@ on early-init
     setprop ro.soc.model ${ro.vendor.qti.soc_model}
 
 on init
-    # Loading kernel modules in background
-    start insmod_sh
-
     # Disable powersaving
     write /sys/module/lpm_levels/parameters/sleep_disabled 1
 
@@ -185,12 +182,6 @@ on post-fs
     setrlimit 8 67108864 67108864
 
 on late-fs
-    # Start services for bootanim
-    start surfaceflinger
-    start bootanim
-    start vendor.hwcomposer-2-4
-    start vendor.qti.hardware.display.allocator
-
     mount_all --late
 
     # turn off vblank irq immediately after turning off
@@ -200,8 +191,11 @@ on late-fs
     write /sys/module/kdebuginfo/parameters/build_info "${ro.product.name}-${ro.build.type} ${ro.build.version.incremental}"
 
 on early-boot
-    # Wait for devices
-    wait_for_prop vendor.all.devices.ready 1
+    # Allow subsystem (modem etc) debugging
+    write /sys/kernel/boot_adsp/boot 1
+    write /sys/kernel/boot_cdsp/boot 1
+    write /sys/devices/virtual/npu/msm_npu/boot 1
+    write /sys/devices/virtual/cvp/cvp/boot 1
 
     setprop ro.vendor.alarm_boot false
 
@@ -615,13 +609,6 @@ on property:sys.boot_completed=1
 
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
-
-service insmod_sh /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.cfg
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
 
 on property:ro.vendor.radio.noril=*
     setprop ro.radio.noril ${ro.vendor.radio.noril}

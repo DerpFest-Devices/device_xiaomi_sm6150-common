@@ -24,9 +24,6 @@ ro.boot.hwversion                   u:object_r:vendor_public_vendor_default_prop
 ro.carrier.name                     u:object_r:vendor_public_vendor_default_prop:s0
 ro.miui.cust_variant                u:object_r:vendor_public_vendor_default_prop:s0
 
-# Init
-vendor.all.devices.ready        u:object_r:vendor_device_prop:s0
-
 # Mlipay
 persist.vendor.sys.pay     u:object_r:vendor_tee_listener_prop:s0
 
