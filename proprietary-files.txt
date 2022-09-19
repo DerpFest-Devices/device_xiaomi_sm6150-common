@@ -592,7 +592,6 @@ vendor/etc/init/wfdvndservice.rc|42e28fb8e0bf00620d7b9939b5bd3164ca671033
 vendor/etc/seccomp_policy/wfdhdcphalservice.policy|23b46af886f3233c2bddff87507ae8d37c31c022
 vendor/etc/seccomp_policy/wfdvndservice.policy|b46f0c22a1f9b65c6750205e161c0a3f84ac716b
 vendor/etc/seccomp_policy/wifidisplayhalservice.policy|698f46d3a3b89be125e2fe88439c770e5c647037
-vendor/etc/wfdconfig.xml|9e13371f7ae509cc0bbb3f2ace93c5ea5d87bf0f
 vendor/lib/libFileMux_proprietary.so|b1e2801f2be356ff88bf5d6269ef7f9c655dff67
 vendor/lib/libmmrtpdecoder_proprietary.so|d15b2eed6333693d40cd3d96e56873f707e889ff
 vendor/lib/libmmrtpencoder_proprietary.so|997e08f2c9bd8ca971105f7afacc886853e2abae
@@ -618,6 +617,9 @@ vendor/lib/libwfduibcsrcinterface_proprietary.so|826a3a7c9f81e63abe1cf805e6abca2
 vendor/lib/libwfdutils_proprietary.so|44bbe06b1f21d93ee21aca67b964e3c8e0ef8f78
 vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so;MODULE_SUFFIX=_vendor|1c38bab7199c0ebd418749b16dc8e10610eaf17c
 vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so|a964ebf868307e4ef84c614154184d9c3afe8c86
+
+# WiFi Display (wfdconfig) - from Redmi/curtana_global/curtana:12/RKQ1.211019.001/V13.0.2.0.SJWMIXM:user/release-keys
+vendor/etc/wfdconfig.xml|de5e4d403a6cebca99fbd56fb8814319114fc523
 
 # Xiaomi MAC
 vendor/bin/nv_mac
