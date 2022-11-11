@@ -390,7 +390,6 @@ vendor/lib64/libqcbor.so|7da5294a577f5a71ede5b3804a026bf69bd025ee
 vendor/lib64/libqtikeymaster4.so|cb423cacf556d81b73542c15392a075ee2ab4def
 
 # Listen - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
-vendor/lib/hw/sound_trigger.primary.sm6150.so|b6512dcb2995cb7f3cdfe8d769f7cf0688c26b29
 vendor/lib/libadpcmdec.so|297d8fecff85b6dc67ff19e788bcf3f1286014a0
 vendor/lib/libcapiv2svacnn.so|c897fbba664fcb0ea1951d3220d8db54ae0d7995
 vendor/lib/libcapiv2vop.so|1cceaefcc1ca55de5bc932a846091e6702c5d508
