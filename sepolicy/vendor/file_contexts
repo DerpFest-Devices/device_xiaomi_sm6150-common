@@ -62,3 +62,6 @@
 
 # Touchfeature
 /dev/xiaomi-touch          u:object_r:touchfeature_device:s0
+
+# UFS discard_max_bytes
+/sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/discard_max_bytes u:object_r:vendor_sysfs_mmc_host:s0
