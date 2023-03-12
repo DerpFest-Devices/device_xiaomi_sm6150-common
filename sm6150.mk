@@ -313,7 +313,6 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.mi.usb.sh \
     init.qti.early_init.sh \
     init.power.rc \
     init.qcom.rc \
@@ -321,6 +320,9 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh \
     init.recovery.qcom.rc \
     ueventd.qcom.rc
+
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/usb/etc
 
 # Recovery
 PRODUCT_PACKAGES += \
