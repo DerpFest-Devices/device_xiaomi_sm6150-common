@@ -1,0 +1,29 @@
+/*
+ * Copyright (C) 2023 Paranoid Android
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package com.xiaomi.settings;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
+
+import com.xiaomi.settings.dolby.DolbyUtils;
+
+public class BootCompletedReceiver extends BroadcastReceiver {
+
+    private static final String TAG = "XiaomiDolby";
+    private static final boolean DEBUG = true;
+
+    @Override
+    public void onReceive(final Context context, Intent intent) {
+        if (!intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
+            return;
+        }
+        if (DEBUG) Log.d(TAG, "Received boot completed intent");
+        DolbyUtils.getInstance(context).onBootCompleted();
+    }
+}
