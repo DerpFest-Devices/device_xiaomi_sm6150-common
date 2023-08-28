@@ -149,7 +149,7 @@ SOONG_CONFIG_NAMESPACES += xiaomiSm6150Vars
 SOONG_CONFIG_xiaomiSm6150Vars += \
     livedisplay_support_anti_flicker \
     livedisplay_support_sunlight_enhancement
-SOONG_CONFIG_xiaomiSm6150Vars_livedisplay_support_anti_flicker ?= false
+SOONG_CONFIG_xiaomiSm6150Vars_livedisplay_support_anti_flicker ?= true
 SOONG_CONFIG_xiaomiSm6150Vars_livedisplay_support_sunlight_enhancement ?= true
 
 # Verified Boot
