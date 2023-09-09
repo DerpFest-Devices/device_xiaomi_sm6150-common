@@ -11,3 +11,4 @@ vendor.xiaomi.hardware.mlipay::IMlipayService                                 u:
 vendor.xiaomi.hardware.motor::IMotor                                u:object_r:hal_motor_hwservice:s0
 vendor.xiaomi.hardware.touchfeature::ITouchFeature               u:object_r:hal_touchfeature_hwservice:s0
 vendor.qti.hardware.radio.qcriNvOpt::IqcriNvOpt					u:object_r:hal_rilnv_hwservice:s0
+vendor.dolby.hardware.dms::IDms                                       u:object_r:hal_dms_hwservice:s0

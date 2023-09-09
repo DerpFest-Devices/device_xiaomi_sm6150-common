@@ -56,7 +56,6 @@ vendor/lib/libaudcal.so
 vendor/lib/libaudioparsers.so
 vendor/lib/libdrc.so
 vendor/lib/libhdmipassthru.so
-vendor/lib/libqtigef.so
 vendor/lib/libssrec.so
 vendor/lib/libsurround_3mic_proc.so
 
@@ -203,6 +202,32 @@ vendor/lib64/vendor.qti.latency@2.1.so|47f0d25338274af94764be9d39eabef8cf5ca790
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service|81be3e1c39280c1bed769ff4e3bee25b4ef1195e
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc|4ede0250585a44b01d351bbc301d7a13cc3d783d
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|12d4edcd852196a531f688ed74d86ea10c4acb43
+
+# Dolby - from nabu V14.0.7.0.TKXCNXM
+vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|8135f86a958b701617f1c33f2b5b54b2958aa0db
+vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc|29296ebfe89b2697fec573be73cc3757fd97bed6
+vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml|c8095f649de19b80271fb429b4b6b439297a0678
+vendor/etc/media_codecs_dolby_audio.xml|a794eb15fc198d0285510260025cd99b53fa174f
+vendor/lib/soundfx/libeffectproxy.so|4cdb9da7c4293dbdf255c24c87c7a5e18aec99a2
+vendor/lib/soundfx/libswdap.so|bf3e80c47ab14dd3f461526c1aba9ad30aded03d
+vendor/lib/soundfx/libswgamedap.so|aa7fc2b58c2fdd90d54f38066ce22b0c3df61c5f
+vendor/lib/libdapparamstorage.so|1f95652cfc889b66a0eb6bc3d71f647851f41c3d
+vendor/lib/libdeccfg.so|7fced6479c0f12d7585b43c9550fdb14e1a3578c
+vendor/lib/libqtigef.so|35dc9d1e0fcae320e38296e67a6e8e214b021575
+vendor/lib/libstagefright_soft_ac4dec.so|950a27a045f1d69f4ad50cc31e99eabd8de28f05
+vendor/lib/libstagefright_soft_ddpdec.so|c8ff412cef9e252d60c78e8d607f6ebf6f2a09ba
+vendor/lib/vendor.dolby.hardware.dms@2.0.so|da5277dbeded94c17cf2cbc0f3412b3fcd475f58
+vendor/lib64/soundfx/libeffectproxy.so|167dbcc5cc42c87db8130964a0d69ce39df9589e
+vendor/lib64/soundfx/libswdap.so|849b8297a0a1a0de22da7e30bd0034a77e275c44
+vendor/lib64/soundfx/libswgamedap.so|935b0360d2ff8d905ccf24a17fd57e1c2454a199
+vendor/lib64/libdapparamstorage.so|85e56a8415e0bd4033fa6b770f8dac580d6983de
+vendor/lib64/libdeccfg.so|c02cf6379cf4b4c91a4b1f371375ef76c22b8331
+vendor/lib64/libdlbdsservice.so|6a0ab8578d458141290d4c72717273a3113cbd63
+vendor/lib64/libqtigef.so|f35d4922d0d2c08509e79ac265eab44eda4eff0d
+vendor/lib64/libstagefright_soft_ac4dec.so|1489de73c98dee3168e0761dd37572d956d12a2d
+vendor/lib64/libstagefright_soft_ddpdec.so|b886bcb65ee65068871230dbecee2d93b0e1695e
+vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so|837272d231c9a2de863653c486acf8aee1c04d30
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so|0ca0f1a99ea973b4977a60a8a94b8ddd03635531
 
 # DPM (system) - from LA.QSSI.14.0.r1-10000.01-qssi.0
 system/framework/tcmclient.jar|4e1dfaa243c67fec31b5a44086c9c417892761ae

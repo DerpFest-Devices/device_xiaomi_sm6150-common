@@ -10,6 +10,7 @@
 /vendor/bin/remosaic_daemon     u:object_r:remosaic_daemon_exec:s0
 
 # Data files
+/data/vendor/dolby(/.*)? 	u:object_r:vendor_data_file:s0
 /data/vendor/goodix(/.*)?       u:object_r:fingerprint_data_file:s0
 /data/vendor/fpc(/.*)?          u:object_r:fingerprint_data_file:s0
 /data/vendor/fpdump(/.*)?       u:object_r:fingerprint_data_file:s0
@@ -34,6 +35,7 @@
 /sys/devices/platform/soc/soc:qcom,dsi-display/anti_flicker      u:object_r:sysfs_anti_flicker:s0
 
 # HALs
+/vendor/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service 						u:object_r:hal_dms_default_exec:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.xiaomi_sm6150                   u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/android\.hardware\.lights-service\.xiaomi_sm6150                                         u:object_r:hal_light_default_exec:s0
 /vendor/bin/hw/android\.hardware\.power-service\.xiaomi-libperfmgr                                      u:object_r:hal_power_default_exec:s0
