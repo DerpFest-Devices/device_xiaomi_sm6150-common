@@ -20,10 +20,12 @@
 
     <!-- Dolby Atmos -->
     <string name="dolby_title">Dolby Atmos</string>
-    <string name="dolby_enable">Enable</string>
-    <string name="dolby_summary">Surround sound</string>
+    <string name="dolby_enable">Use Dolby Atmos</string>
     <string name="dolby_preset_title">Choose a preset</string>
     <string name="dolby_profile_title">Choose a profile</string>
+    <string name="dolby_off">Off</string>
+    <string name="dolby_on">On</string>
+    <string name="dolby_on_with_profile">On (%1$s)</string>
 
     <!-- Dolby Atmos: Sound Profiles -->
     <string name="dolby_profile_dynamic">Dynamic</string>
