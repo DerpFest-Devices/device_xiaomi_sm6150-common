@@ -5,7 +5,7 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.xiaomi.settings"
+    package="com.xiaomi.dolby"
     android:versionCode="1"
     android:versionName="1.0"
     android:sharedUserId="android.uid.system">
@@ -31,7 +31,7 @@
         </receiver>
 
         <activity
-            android:name=".dolby.DolbyActivity"
+            android:name=".DolbyActivity"
             android:exported="true"
             android:label="@string/dolby_title"
             android:theme="@style/Theme.SubSettingsBase">
@@ -46,7 +46,7 @@
         </activity>
 
         <service
-            android:name=".dolby.DolbyTileService"
+            android:name=".DolbyTileService"
             android:exported="true"
             android:icon="@drawable/ic_dolby_qs"
             android:label="@string/dolby_title"

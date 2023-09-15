@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.xiaomi.settings.dolby;
+package com.xiaomi.dolby;
 
 import android.content.Context;
 import android.content.Intent;

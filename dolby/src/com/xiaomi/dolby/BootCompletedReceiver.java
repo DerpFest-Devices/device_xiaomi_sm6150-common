@@ -4,14 +4,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package com.xiaomi.settings;
+package com.xiaomi.dolby;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-import com.xiaomi.settings.dolby.DolbyUtils;
+import com.xiaomi.dolby.DolbyUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
