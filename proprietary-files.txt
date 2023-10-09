@@ -643,6 +643,7 @@ system_ext/lib64/lib-imsvtextutils.so|19b0a5b9119388e735729e9a86ee7ee0a1355077
 system_ext/lib64/lib-imsvtutils.so|3b29b11cd751b12e1ab0664f7c5f683b2eda4ba6
 system_ext/lib64/libimscamera_jni.so|85f58c7cc4b84ca953f1d5e24500cc816a921b3d
 system_ext/lib64/libimsmedia_jni.so|13db7c0725cf7982e60a8cec1c8d7ece80ccda78
+system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so|bb32703c026364da33ca1b4f83c839e1e312ae9b
 system_ext/lib64/vendor.qti.ims.callcapability@1.0.so|e3d9718062868d445b213ea5cc9939b9ca1de68b
 system_ext/lib64/vendor.qti.ims.callinfo@1.0.so|bab149dd7c7f202c1feece6fdf030383c0111e59
 system_ext/lib64/vendor.qti.ims.factory@1.0.so|d5c51fd2d5f864aa85b1f6a76ebe0fef743ad6f8
