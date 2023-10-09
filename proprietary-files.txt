@@ -511,7 +511,6 @@ vendor/lib64/libqmi_legacy.so
 vendor/lib64/libqmiservices.so
 
 # Radio (system) - from qssi-user-14-UKQ1.230804.001-2309192131-release-keys
-system_ext/app/QtiTelephony/QtiTelephony.apk|9fc28c8e491f822f0589ca2588d448cf0f8b8086
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|2f80916a0774012f5180373260a4ecd4b45e012b
 system_ext/etc/permissions/qcrilhook.xml|30397e293b2c40e6b7a1d11c2a615cdd05de625a
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml|a7e114ea1e6909685ce49717a2b5b66d8275d419
