@@ -50,4 +50,32 @@
         <item>50,34,18,2,-14,-6,2,-2,-6,-26,-46,-26,-6,-2,2,2,2,2,2,2</item>
         <item>40,24,8,8,8,-4,-16,-12,-8,-32,-56,-24,8,8,8,8,8,8,8,8</item>
     </string-array>
+
+    <string-array name="dolby_dialogue_entries">
+        <item>@string/dolby_off</item>
+        <item>@string/dolby_low</item>
+        <item>@string/dolby_medium</item>
+        <item>@string/dolby_high</item>
+    </string-array>
+
+    <string-array name="dolby_dialogue_values">
+        <item>2</item>
+        <item>6</item>
+        <item>9</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="dolby_stereo_entries">
+        <item>@string/dolby_off</item>
+        <item>@string/dolby_low</item>
+        <item>@string/dolby_medium</item>
+        <item>@string/dolby_high</item>
+    </string-array>
+
+    <string-array name="dolby_stereo_values">
+        <item>4</item>
+        <item>24</item>
+        <item>44</item>
+        <item>64</item>
+    </string-array>
 </resources>

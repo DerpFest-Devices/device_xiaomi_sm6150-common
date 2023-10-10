@@ -41,10 +41,13 @@ public class DolbySettingsFragment extends PreferenceFragment implements
     public static final String PREF_ENABLE = "dolby_enable";
     public static final String PREF_PRESET = "dolby_preset";
     public static final String PREF_PROFILE = "dolby_profile";
+    public static final String PREF_DIALOGUE = "dolby_dialogue";
+    public static final String PREF_STEREO = "dolby_stereo";
+    public static final String PREF_BASS = "dolby_bass";
 
     private MainSwitchPreference mSwitchBar;
-    private ListPreference mPresetPref;
-    private ListPreference mProfilePref;
+    private ListPreference mPresetPref, mProfilePref, mDialoguePref, mStereoPref;
+    private SwitchPreference mBassPref;
 
     private DolbyUtils mDolbyUtils;
 
@@ -67,6 +70,18 @@ public class DolbySettingsFragment extends PreferenceFragment implements
         mProfilePref.setOnPreferenceChangeListener(this);
         mProfilePref.setEnabled(dsOn);
         mProfilePref.setValue(Integer.toString(mDolbyUtils.getProfile()));
+
+        mDialoguePref = (ListPreference) findPreference(PREF_DIALOGUE);
+        mDialoguePref.setOnPreferenceChangeListener(this);
+        mDialoguePref.setEnabled(dsOn);
+
+        mStereoPref = (ListPreference) findPreference(PREF_STEREO);
+        mStereoPref.setOnPreferenceChangeListener(this);
+        mStereoPref.setEnabled(dsOn);
+
+        mBassPref = (SwitchPreference) findPreference(PREF_BASS);
+        mBassPref.setOnPreferenceChangeListener(this);
+        mBassPref.setEnabled(dsOn);
     }
 
     @Override
@@ -77,6 +92,15 @@ public class DolbySettingsFragment extends PreferenceFragment implements
                 return true;
             case PREF_PROFILE:
                 mDolbyUtils.setProfile(Integer.parseInt((newValue.toString())));
+                return true;
+            case PREF_DIALOGUE:
+                mDolbyUtils.setDialogueEnhancerAmount(Integer.parseInt((newValue.toString())));
+                return true;
+            case PREF_STEREO:
+                mDolbyUtils.setStereoWideningAmount(Integer.parseInt((newValue.toString())));
+                return true;
+            case PREF_BASS:
+                mDolbyUtils.setBassEnhancerEnabled((Boolean) newValue);
                 return true;
             default:
                 return false;
@@ -90,5 +114,8 @@ public class DolbySettingsFragment extends PreferenceFragment implements
         mDolbyUtils.setDsOn(isChecked);
         mPresetPref.setEnabled(isChecked);
         mProfilePref.setEnabled(isChecked);
+        mDialoguePref.setEnabled(isChecked);
+        mStereoPref.setEnabled(isChecked);
+        mBassPref.setEnabled(isChecked);
     }
 }

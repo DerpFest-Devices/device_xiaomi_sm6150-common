@@ -29,8 +29,13 @@ public class DolbyAtmos extends AudioEffect {
     private static final int DAP_PARAM = 5;
     private static final int DAP_PARAM_PROFILE = 0xA000000;
     private static final int DAP_PARAM_VALUE = 0x1000000;
-    private static final int DAP_PARAM_GEQ = 110;
+    private static final int DAP_PARAM_HEADPHONE_VIRTUALIZER = 101;
     private static final int DAP_PARAM_VOLUME_LEVELER = 103;
+    private static final int DAP_PARAM_DIALOGUE_ENHANCER_ENABLE = 105;
+    private static final int DAP_PARAM_DIALOGUE_ENHANCER_AMOUNT = 108;
+    private static final int DAP_PARAM_GEQ = 110;
+    private static final int DAP_PARAM_BASS_ENHANCER = 111;
+    private static final int DAP_PARAM_STEREO_WIDENING = 113;
     private static final int DAP_PROFILES_COUNT = 9;
 
     public DolbyAtmos(int priority, int audioSession) {
@@ -110,5 +115,25 @@ public class DolbyAtmos extends AudioEffect {
 
     public void setVolumeLevelerEnabled(boolean enable) {
         setDapParameter(DAP_PARAM_VOLUME_LEVELER, new int[]{enable ? 1 : 0});
+    }
+
+    public void setBassEnhancerEnabled(boolean enable) {
+        setDapParameter(DAP_PARAM_BASS_ENHANCER, new int[]{enable ? 1 : 0});
+    }
+
+    public void setDialogueEnhancerEnabled(boolean enable) {
+        setDapParameter(DAP_PARAM_DIALOGUE_ENHANCER_ENABLE, new int[]{enable ? 1 : 0});
+    }
+
+    public void setDialogueEnhancerAmount(int amount) {
+        setDapParameter(DAP_PARAM_DIALOGUE_ENHANCER_AMOUNT, new int[]{amount});
+    }
+
+    public void setHeadphoneVirtualizerEnabled(boolean enable) {
+        setDapParameter(DAP_PARAM_HEADPHONE_VIRTUALIZER, new int[]{enable ? 1 : 0});
+    }
+
+    public void setStereoWideningAmount(int amount) {
+        setDapParameter(DAP_PARAM_STEREO_WIDENING, new int[]{amount});
     }
 }

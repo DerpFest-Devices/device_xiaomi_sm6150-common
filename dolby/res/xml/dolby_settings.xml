@@ -41,4 +41,30 @@
         android:summary="%s"
         android:icon="@drawable/ic_preset"/>
 
+    <PreferenceCategory
+        android:title="@string/dolby_category_advanced">
+
+        <ListPreference
+            android:key="dolby_dialogue"
+            android:entries="@array/dolby_dialogue_entries"
+            android:entryValues="@array/dolby_dialogue_values"
+            android:defaultValue="2"
+            android:title="@string/dolby_dialogue_enhancer"
+            android:summary="%s" />
+        
+        <ListPreference
+            android:key="dolby_stereo"
+            android:entries="@array/dolby_stereo_entries"
+            android:entryValues="@array/dolby_stereo_values"
+            android:defaultValue="4"
+            android:title="@string/dolby_stereo_widening"
+            android:summary="%s" />
+        
+        <SwitchPreference
+            android:key="dolby_bass"
+            android:title="@string/dolby_bass_enhancer"
+            android:defaultValue="false" />
+    
+    </PreferenceCategory>
+
 </PreferenceScreen>
