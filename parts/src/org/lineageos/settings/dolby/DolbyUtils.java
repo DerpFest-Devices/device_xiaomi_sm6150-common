@@ -187,4 +187,24 @@ public final class DolbyUtils {
         Log.i(TAG, "setPreset: " + Arrays.toString(gains));
         mDolbyAtmos.setGeqBandGains(gains);
     }
+
+    public void setBassEnhancerEnabled(boolean enable) {
+        checkEffect();
+        Log.i(TAG, "setBassEnhancerEnabled: " + enable);
+        mDolbyAtmos.setBassEnhancerEnabled(enable);
+    }
+
+    public void setDialogueEnhancerAmount(int amount) {
+        checkEffect();
+        Log.i(TAG, "setDialogueEnhancerAmount: " + amount);
+        mDolbyAtmos.setDialogueEnhancerEnabled(true);
+        mDolbyAtmos.setDialogueEnhancerAmount(amount);
+    }
+
+    public void setStereoWideningAmount(int amount) {
+        checkEffect();
+        Log.i(TAG, "setStereoWideningAmount: " + amount);
+        mDolbyAtmos.setHeadphoneVirtualizerEnabled(true);
+        mDolbyAtmos.setStereoWideningAmount(amount);
+    }
 }
