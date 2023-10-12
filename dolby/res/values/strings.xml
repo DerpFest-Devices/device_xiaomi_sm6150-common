@@ -21,18 +21,23 @@
     <!-- Dolby Atmos -->
     <string name="dolby_title">Dolby Atmos</string>
     <string name="dolby_enable">Use Dolby Atmos</string>
-    <string name="dolby_preset_title">Choose a preset</string>
     <string name="dolby_profile_title">Choose a profile</string>
+    <string name="dolby_preset">Equalizer preset</string>
     <string name="dolby_off">Off</string>
     <string name="dolby_on">On</string>
     <string name="dolby_low">Low</string>
     <string name="dolby_medium">Medium</string>
     <string name="dolby_high">High</string>
+    <string name="dolby_max">Max</string>
+    <string name="dolby_unknown">Unknown</string>
     <string name="dolby_on_with_profile">On (%1$s)</string>
-    <string name="dolby_bass_enhancer">Bass Enhancer</string>
-    <string name="dolby_dialogue_enhancer">Dialogue Enhancer</string>
-    <string name="dolby_stereo_widening">Stereo Widening</string>
-    <string name="dolby_category_advanced">Advanced</string>
+    <string name="dolby_category_settings">Settings</string>
+    <string name="dolby_bass_enhancer">Bass enhancer</string>
+    <string name="dolby_dialogue_enhancer">Dialogue enhancer</string>
+    <string name="dolby_virtualizer">Surround virtualizer</string>
+    <string name="dolby_connect_headphones">Connect headphones</string>
+    <string name="dolby_reset_profile">Reset to defaults</string>
+    <string name="dolby_reset_profile_toast">Succesfully reset settings for %1$s profile</string>
 
     <!-- Dolby Atmos: Sound Profiles -->
     <string name="dolby_profile_dynamic">Dynamic</string>
