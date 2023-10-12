@@ -16,19 +16,25 @@
 
 package org.lineageos.settings.dolby;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.SharedPreferences;
+import android.media.AudioAttributes;
+import android.media.AudioDeviceAttributes;
+import android.media.AudioDeviceCallback;
+import android.media.AudioDeviceInfo;
+import android.media.AudioManager;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.widget.Switch;
+import android.widget.Toast;
 
-import androidx.preference.Preference;
 import androidx.preference.ListPreference;
+import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
+
+import java.util.Arrays;
+import java.util.List;
 
 import com.android.settingslib.widget.MainSwitchPreference;
 import com.android.settingslib.widget.OnMainSwitchChangeListener;
@@ -38,66 +44,119 @@ import org.lineageos.settings.R;
 public class DolbySettingsFragment extends PreferenceFragment implements
         OnPreferenceChangeListener, OnMainSwitchChangeListener {
 
+    private static final String TAG = "DolbySettingsFragment";
+
+    private static final AudioAttributes ATTRIBUTES_MEDIA = new AudioAttributes.Builder()
+            .setUsage(AudioAttributes.USAGE_MEDIA)
+            .build();
+
     public static final String PREF_ENABLE = "dolby_enable";
-    public static final String PREF_PRESET = "dolby_preset";
     public static final String PREF_PROFILE = "dolby_profile";
+    public static final String PREF_PRESET = "dolby_preset";
+    public static final String PREF_VIRTUALIZER = "dolby_virtualizer";
     public static final String PREF_DIALOGUE = "dolby_dialogue";
-    public static final String PREF_STEREO = "dolby_stereo";
     public static final String PREF_BASS = "dolby_bass";
+    public static final String PREF_RESET = "dolby_reset";
 
     private MainSwitchPreference mSwitchBar;
-    private ListPreference mPresetPref, mProfilePref, mDialoguePref, mStereoPref;
+    private ListPreference mProfilePref, mPresetPref, mVirtualizerPref, mDialoguePref;
     private SwitchPreference mBassPref;
+    private Preference mResetPref;
+    private CharSequence[] mPresets, mDeValues, mSwValues;
 
     private DolbyUtils mDolbyUtils;
+    private AudioManager mAudioManager;
+    private boolean mDsOn, mIsProfileUnknown, mIsOnSpeaker;
+    private final Handler mHandler = new Handler();
+
+    private final AudioDeviceCallback mAudioDeviceCallback = new AudioDeviceCallback() {
+        public void onAudioDevicesAdded(AudioDeviceInfo[] addedDevices) {
+            updateSpeakerState(false);
+        }
+
+        public void onAudioDevicesRemoved(AudioDeviceInfo[] removedDevices) {
+            updateSpeakerState(false);
+        }
+    };
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.dolby_settings);
 
+        mAudioManager = getActivity().getSystemService(AudioManager.class);
         mDolbyUtils = DolbyUtils.getInstance(getActivity());
-        final boolean dsOn = mDolbyUtils.getDsOn();
+        mDsOn = mDolbyUtils.getDsOn();
 
         mSwitchBar = (MainSwitchPreference) findPreference(PREF_ENABLE);
         mSwitchBar.addOnSwitchChangeListener(this);
-        mSwitchBar.setChecked(dsOn);
-
-        mPresetPref = (ListPreference) findPreference(PREF_PRESET);
-        mPresetPref.setOnPreferenceChangeListener(this);
-        mPresetPref.setEnabled(dsOn);
+        mSwitchBar.setChecked(mDsOn);
 
         mProfilePref = (ListPreference) findPreference(PREF_PROFILE);
         mProfilePref.setOnPreferenceChangeListener(this);
-        mProfilePref.setEnabled(dsOn);
-        mProfilePref.setValue(Integer.toString(mDolbyUtils.getProfile()));
+        mProfilePref.setEnabled(mDsOn);
+
+        final CharSequence[] profiles = mProfilePref.getEntryValues();
+        final String profile = Integer.toString(mDolbyUtils.getProfile());
+        if (Arrays.asList(profiles).contains(profile)) {
+            mProfilePref.setSummary("%s");
+            mProfilePref.setValue(profile);
+        } else {
+            mProfilePref.setSummary(getActivity().getString(R.string.dolby_unknown));
+            mIsProfileUnknown = true;
+        }
+
+        mPresetPref = (ListPreference) findPreference(PREF_PRESET);
+        mPresetPref.setOnPreferenceChangeListener(this);
+        mPresets = mPresetPref.getEntryValues();
+
+        mVirtualizerPref = (ListPreference) findPreference(PREF_VIRTUALIZER);
+        mVirtualizerPref.setOnPreferenceChangeListener(this);
+        mSwValues = mVirtualizerPref.getEntryValues();
 
         mDialoguePref = (ListPreference) findPreference(PREF_DIALOGUE);
         mDialoguePref.setOnPreferenceChangeListener(this);
-        mDialoguePref.setEnabled(dsOn);
-
-        mStereoPref = (ListPreference) findPreference(PREF_STEREO);
-        mStereoPref.setOnPreferenceChangeListener(this);
-        mStereoPref.setEnabled(dsOn);
+        mDeValues = mDialoguePref.getEntryValues();
 
         mBassPref = (SwitchPreference) findPreference(PREF_BASS);
         mBassPref.setOnPreferenceChangeListener(this);
-        mBassPref.setEnabled(dsOn);
+
+        mResetPref = (Preference) findPreference(PREF_RESET);
+        mResetPref.setEnabled(mDsOn && !mIsProfileUnknown);
+        mResetPref.setOnPreferenceClickListener(p -> {
+            mDolbyUtils.resetProfileSpecificSettings();
+            updateProfileSpecificPrefs();
+            Toast.makeText(getActivity(),
+                    getActivity().getString(R.string.dolby_reset_profile_toast,
+                            mProfilePref.getSummary()), Toast.LENGTH_SHORT).show();
+            return true;
+        });
+
+        mAudioManager.registerAudioDeviceCallback(mAudioDeviceCallback, mHandler);
+        updateSpeakerState(true);
+    }
+
+    @Override
+    public void onDestroyView() {
+        mAudioManager.unregisterAudioDeviceCallback(mAudioDeviceCallback);
+        super.onDestroyView();
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         switch (preference.getKey()) {
+            case PREF_PROFILE:
+                mDolbyUtils.setProfile(Integer.parseInt((newValue.toString())));
+                mIsProfileUnknown = false;
+                updateProfileSpecificPrefs();
+                return true;
             case PREF_PRESET:
                 mDolbyUtils.setPreset(newValue.toString());
                 return true;
-            case PREF_PROFILE:
-                mDolbyUtils.setProfile(Integer.parseInt((newValue.toString())));
+            case PREF_VIRTUALIZER:
+                mDolbyUtils.setStereoWideningAmount(Integer.parseInt((newValue.toString())));
                 return true;
             case PREF_DIALOGUE:
                 mDolbyUtils.setDialogueEnhancerAmount(Integer.parseInt((newValue.toString())));
-                return true;
-            case PREF_STEREO:
-                mDolbyUtils.setStereoWideningAmount(Integer.parseInt((newValue.toString())));
                 return true;
             case PREF_BASS:
                 mDolbyUtils.setBassEnhancerEnabled((Boolean) newValue);
@@ -109,13 +168,70 @@ public class DolbySettingsFragment extends PreferenceFragment implements
 
     @Override
     public void onSwitchChanged(Switch switchView, boolean isChecked) {
-        mSwitchBar.setChecked(isChecked);
-
+        mDsOn = isChecked;
         mDolbyUtils.setDsOn(isChecked);
-        mPresetPref.setEnabled(isChecked);
         mProfilePref.setEnabled(isChecked);
-        mDialoguePref.setEnabled(isChecked);
-        mStereoPref.setEnabled(isChecked);
-        mBassPref.setEnabled(isChecked);
+        mResetPref.setEnabled(isChecked);
+        updateProfileSpecificPrefs();
+    }
+
+    private void updateSpeakerState(boolean force) {
+        final AudioDeviceAttributes device =
+                mAudioManager.getDevicesForAttributes(ATTRIBUTES_MEDIA).get(0);
+        final boolean isOnSpeaker = (device.getType() == AudioDeviceInfo.TYPE_BUILTIN_SPEAKER);
+        if (mIsOnSpeaker != isOnSpeaker || force) {
+            Log.d(TAG, "updateSpeakerState: " + mIsOnSpeaker);
+            mIsOnSpeaker = isOnSpeaker;
+            updateProfileSpecificPrefs();
+        }
+    }
+
+    private void updateProfileSpecificPrefs() {
+        final String unknown = getActivity().getString(R.string.dolby_unknown);
+        final String speaker = getActivity().getString(R.string.dolby_connect_headphones);
+
+        Log.d(TAG, "updateProfileSpecificPrefs: mDsOn=" + mDsOn
+                + " mIsProfileUnknown=" + mIsProfileUnknown + " mIsOnSpeaker=" + mIsOnSpeaker);
+
+        final boolean enable = mDsOn && !mIsProfileUnknown;
+        mPresetPref.setEnabled(enable);
+        mDialoguePref.setEnabled(enable);
+        mVirtualizerPref.setEnabled(enable && !mIsOnSpeaker);
+        mBassPref.setEnabled(enable && !mIsOnSpeaker);
+
+        if (!enable) return;
+
+        final String preset = mDolbyUtils.getPreset();
+        if (Arrays.asList(mPresets).contains(preset)) {
+            mPresetPref.setSummary("%s");
+            mPresetPref.setValue(preset);
+        } else {
+            mPresetPref.setSummary(unknown);
+        }
+
+        final String deValue = Integer.toString(mDolbyUtils.getDialogueEnhancerAmount());
+        if (Arrays.asList(mDeValues).contains(deValue)) {
+            mDialoguePref.setSummary("%s");
+            mDialoguePref.setValue(deValue);
+        } else {
+            mDialoguePref.setSummary(unknown);
+        }
+
+        if (mIsOnSpeaker) {
+            mVirtualizerPref.setSummary(speaker);
+            mBassPref.setSummary(speaker);
+            return;
+        }
+
+        final String swValue = Integer.toString(mDolbyUtils.getStereoWideningAmount());
+        if (Arrays.asList(mSwValues).contains(swValue)) {
+            mVirtualizerPref.setSummary("%s");
+            mVirtualizerPref.setValue(swValue);
+        } else {
+            mVirtualizerPref.setSummary(unknown);
+        }
+
+        mBassPref.setChecked(mDolbyUtils.getBassEnhancerEnabled());
+        mBassPref.setSummary(null);
     }
 }
