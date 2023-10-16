@@ -56,11 +56,12 @@ public class DolbySettingsFragment extends PreferenceFragment implements
     public static final String PREF_VIRTUALIZER = "dolby_virtualizer";
     public static final String PREF_DIALOGUE = "dolby_dialogue";
     public static final String PREF_BASS = "dolby_bass";
+    public static final String PREF_VOLUME = "dolby_volume";
     public static final String PREF_RESET = "dolby_reset";
 
     private MainSwitchPreference mSwitchBar;
     private ListPreference mProfilePref, mPresetPref, mVirtualizerPref, mDialoguePref;
-    private SwitchPreference mBassPref;
+    private SwitchPreference mBassPref, mVolumePref;
     private Preference mResetPref;
     private CharSequence[] mPresets, mDeValues, mSwValues;
 
@@ -121,6 +122,9 @@ public class DolbySettingsFragment extends PreferenceFragment implements
         mBassPref = (SwitchPreference) findPreference(PREF_BASS);
         mBassPref.setOnPreferenceChangeListener(this);
 
+        mVolumePref = (SwitchPreference) findPreference(PREF_VOLUME);
+        mVolumePref.setOnPreferenceChangeListener(this);
+
         mResetPref = (Preference) findPreference(PREF_RESET);
         mResetPref.setEnabled(mDsOn && !mIsProfileUnknown);
         mResetPref.setOnPreferenceClickListener(p -> {
@@ -162,6 +166,9 @@ public class DolbySettingsFragment extends PreferenceFragment implements
             case PREF_BASS:
                 mDolbyUtils.setBassEnhancerEnabled((Boolean) newValue);
                 return true;
+            case PREF_VOLUME:
+                mDolbyUtils.setVolumeLevelerEnabled((Boolean) newValue);
+                return true;
             default:
                 return false;
         }
@@ -197,6 +204,7 @@ public class DolbySettingsFragment extends PreferenceFragment implements
         final boolean enable = mDsOn && !mIsProfileUnknown;
         mPresetPref.setEnabled(enable);
         mDialoguePref.setEnabled(enable);
+        mVolumePref.setEnabled(enable);
         mVirtualizerPref.setEnabled(enable && !mIsOnSpeaker && false);
         mBassPref.setEnabled(enable && !mIsOnSpeaker);
 
@@ -217,6 +225,8 @@ public class DolbySettingsFragment extends PreferenceFragment implements
         } else {
             mDialoguePref.setSummary(unknown);
         }
+
+        mVolumePref.setChecked(mDolbyUtils.getVolumeLevelerEnabled());
 
         if (mIsOnSpeaker) {
             mVirtualizerPref.setSummary(speaker);

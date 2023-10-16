@@ -35,6 +35,7 @@
     <string name="dolby_bass_enhancer">Bass enhancer</string>
     <string name="dolby_dialogue_enhancer">Dialogue enhancer</string>
     <string name="dolby_virtualizer">Surround virtualizer</string>
+    <string name="dolby_volume_leveler">Volume leveler</string>
     <string name="dolby_connect_headphones">Connect headphones</string>
     <string name="dolby_reset_profile">Reset to defaults</string>
     <string name="dolby_reset_profile_toast">Succesfully reset settings for %1$s profile</string>
