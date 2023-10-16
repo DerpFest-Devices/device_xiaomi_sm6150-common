@@ -45,7 +45,7 @@
             android:key="dolby_virtualizer"
             android:entries="@array/dolby_virtualizer_entries"
             android:entryValues="@array/dolby_virtualizer_values"
-            android:defaultValue="4"
+            android:defaultValue="0"
             android:title="@string/dolby_virtualizer" />
 
         <ListPreference
