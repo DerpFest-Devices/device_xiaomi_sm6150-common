@@ -58,6 +58,10 @@
             android:key="dolby_bass"
             android:title="@string/dolby_bass_enhancer" />
 
+        <SwitchPreference
+            android:key="dolby_volume"
+            android:title="@string/dolby_volume_leveler" />
+
         <Preference
             android:key="dolby_reset"
             android:title="@string/dolby_reset_profile" />
