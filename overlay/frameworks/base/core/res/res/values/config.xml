@@ -249,7 +249,6 @@
         <item>"/vendor/lib/hw/vulkan.adreno.so"</item>
         <item>"/vendor/lib/libadreno_app_profiles.so"</item>
         <item>"/vendor/lib/libadreno_utils.so"</item>
-        <item>"/vendor/lib/libgpudataproducer.so"</item>
         <item>"/vendor/lib/libgsl.so"</item>
         <item>"/vendor/lib/libllvm-glnext.so"</item>
         <item>"/vendor/lib64/egl/eglSubDriverAndroid.so"</item>
@@ -261,10 +260,7 @@
         <item>"/vendor/lib64/libOpenCL.so"</item>
         <item>"/vendor/lib64/libadreno_app_profiles.so"</item>
         <item>"/vendor/lib64/libadreno_utils.so"</item>
-        <item>"/vendor/lib64/libgpudataproducer.so"</item>
         <item>"/vendor/lib64/libgsl.so"</item>
-        <item>"/vendor/lib64/libkcl.so"</item>
-        <item>"/vendor/lib64/libkernelmanager.so"</item>
         <item>"/vendor/lib64/libllvm-glnext.so"</item>
         <item>"/vendor/lib64/libllvm-qcom.so"</item>
     </string-array>
