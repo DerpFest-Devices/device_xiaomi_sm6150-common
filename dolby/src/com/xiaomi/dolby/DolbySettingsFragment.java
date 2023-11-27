@@ -112,7 +112,6 @@ public class DolbySettingsFragment extends PreferenceFragment implements
 
         mVirtualizerPref = (ListPreference) findPreference(PREF_VIRTUALIZER);
         mVirtualizerPref.setOnPreferenceChangeListener(this);
-        mVirtualizerPref.setEnabled(false);
         mSwValues = mVirtualizerPref.getEntryValues();
 
         mDialoguePref = (ListPreference) findPreference(PREF_DIALOGUE);
@@ -205,7 +204,7 @@ public class DolbySettingsFragment extends PreferenceFragment implements
         mPresetPref.setEnabled(enable);
         mDialoguePref.setEnabled(enable);
         mVolumePref.setEnabled(enable);
-        mVirtualizerPref.setEnabled(enable && !mIsOnSpeaker && false);
+        mVirtualizerPref.setEnabled(enable && !mIsOnSpeaker);
         mBassPref.setEnabled(enable && !mIsOnSpeaker);
 
         if (!enable) return;
