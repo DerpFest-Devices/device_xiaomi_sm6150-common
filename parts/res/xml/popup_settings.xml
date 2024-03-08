@@ -2,7 +2,7 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/popup_title">
-    <SwitchPreference
+    <SwitchPreferenceCompat
         android:defaultValue="true"
         android:icon="@drawable/ic_popup_light"
         android:key="popup_led_effect"
