@@ -4,4 +4,4 @@ Common device tree for Xiaomi SM6150 based devices
 ==============
 
 #### Proprietary-files.txt
-All unpinned blobs are extracted from [miui_SWEETK6AGlobal_V14.0.5.0.THGMIXM_0ee8974df3_13.0](https://bigota.d.miui.com/V14.0.5.0.THGMIXM/miui_SWEETK6AGlobal_V14.0.5.0.THGMIXM_0ee8974df3_13.0.zip).
+All unpinned blobs are extracted from [miui_SWEETK6AGlobal_OS1.0.2.0.THGMIXM_d8d08a63aa_13.0](http://cdn-ota.azureedge.net/OS1.0.2.0.THGMIXM/miui_SWEETK6AGlobal_OS1.0.2.0.THGMIXM_d8d08a63aa_13.0.zip).
