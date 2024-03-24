@@ -3,7 +3,8 @@ ifneq ($(BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE),)
 # Set required flags
 GNSS_CFLAGS := \
     -Werror \
-    -Wno-undefined-bool-conversion
+    -Wno-undefined-bool-conversion \
+    -Wno-deprecated-volatile
 
 GNSS_HIDL_VERSION = 2.1
 
