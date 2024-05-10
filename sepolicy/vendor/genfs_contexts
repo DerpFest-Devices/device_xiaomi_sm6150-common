@@ -34,26 +34,6 @@ genfscon sysfs /devices/platform/soc/88e0000.qcom,msm-eud/wakeup                
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:qcom,power-on@800/wakeup                                                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:qcom,qpnp-smb5/wakeup                                                         u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-04/c440000.qcom,spmi:qcom,pm6150l@4:qcom,power-on@800/wakeup                                                     u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:gpio_keys/wakeup                                                                                                                            u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/rx-macro/rx_swr_ctrl/wakeup u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/tx-macro/tx_swr_ctrl/wakeup u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/diag/diag/wakeup                                                                                                                                     u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/fastrpc/adsprpc-smd/wakeup 														             u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/fastrpc/adsprpc-smd-secure/wakeup														     u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/misc/msm_aac/wakeup                                                                                                                                  u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/misc/msm_alac/wakeup                                                                                                                                 u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/misc/msm_amrnb/wakeup                                                                                                                                u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/misc/msm_amrwb/wakeup                                                                                                                                u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/misc/msm_amrwbplus/wakeup                                                                                                                            u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/misc/msm_ape/wakeup                                                                                                                                  u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/misc/msm_evrc/wakeup                                                                                                                                 u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/misc/msm_g711alaw/wakeup                                                                                                                             u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/misc/msm_g711mlaw/wakeup                                                                                                                             u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/misc/msm_mp3/wakeup                                                                                                                                  u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/misc/msm_multi_aac/wakeup                                                                                                                            u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/misc/msm_qcelp/wakeup                                                                                                                                u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/misc/msm_wma/wakeup                                                                                                                                  u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/misc/msm_wmapro/wakeup                                                                                                                               u:object_r:sysfs_wakeup:s0
 
 # PMIC devices wakeup nodes
 genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-2/2-000c/a8c000.i2c:qcom,smb1355@c:qcom,smb1355-charger@1000/power_supply/parallel/wakeup u:object_r:sysfs_wakeup:s0
