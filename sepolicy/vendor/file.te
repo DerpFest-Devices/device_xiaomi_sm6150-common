@@ -9,3 +9,6 @@ type camera_persist_file, file_type, vendor_persist_type;
 type audio_socket, file_type;
 
 type ultrasound_device, dev_type;
+
+# Torch
+type sysfs_torch, fs_type, sysfs_type;
