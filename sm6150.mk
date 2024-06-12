@@ -239,7 +239,6 @@ PRODUCT_COPY_FILES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.insmod.sh \
-    init.mi.usb.sh \
     init.qti.early_init.sh \
     init.power.rc \
     init.qcom.rc \
@@ -260,7 +259,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client \
-    hardware/xiaomi
+    hardware/xiaomi \
+    vendor/qcom/opensource/usb/etc
 
 # Telephony
 PRODUCT_PACKAGES += \
