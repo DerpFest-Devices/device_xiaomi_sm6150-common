@@ -1,22 +1,3 @@
-prebuilt_etc {
-    name: "init.qcom.usb.rc",
-    src: "init.qcom.usb.rc",
-    vendor: true,
-    sub_dir: "init/hw",
-}
-
-sh_binary {
-    name: "init.qcom.usb.sh",
-    src: "init.qcom.usb.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.mi.usb.sh",
-    src: "init.mi.usb.sh",
-    vendor: true,
-}
-
 sh_binary {
     name: "init.insmod.sh",
     src: "init.insmod.sh",
