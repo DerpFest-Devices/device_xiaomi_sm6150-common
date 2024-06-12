@@ -229,6 +229,7 @@ ro.telephony.default_network=22,22
 telephony.lteOnCdmaDevice=1
 
 # USB
+ro.usb.uvc.enabled=true
 vendor.usb.use_ffs_mtp=0
 
 # VoLTE
