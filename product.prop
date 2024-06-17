@@ -2,6 +2,9 @@
 persist.bluetooth.bqr.event_mask=14
 persist.bluetooth.bqr.min_interval_ms=500
 
+# Camera
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.derpfest.flash,org.derpfest.flash.dev
+
 # CNE
 persist.vendor.cne.feature=1
 
