@@ -230,7 +230,8 @@ telephony.lteOnCdmaDevice=1
 
 # USB
 ro.usb.uvc.enabled=true
-vendor.usb.use_ffs_mtp=0
+vendor.usb.use_ffs_mtp=1
+sys.usb.mtp.batchcancel=1
 
 # VoLTE
 persist.dbg.volte_avail_ovr=1
