@@ -327,12 +327,12 @@ vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e4134405110
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|6e6249eb7df66b3941cc21d213fabde557daf76e
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|14819df15693c737fb2a51bf89fe826200286006
 
-# GPS - from LA.UM.9.15.2.r1-09400-KAMORTA.QSSI14.0
+# GPS - from LA.UM.9.15.2.r1-09800-KAMORTA.QSSI14.0
 vendor/bin/garden_app|f03490aa94b121d0d1d82b8715612785bc2a38f9
 vendor/bin/loc_launcher|f0b95b7d523d2785a3090c2598c4bbd6170f1ba1
 vendor/bin/lowi-server|36be139901b773cf532c3788828737b0f035bea2
 vendor/bin/slim_daemon|7f2a24a3cfa5937247c6066777a8548607b06d0c
-vendor/bin/xtra-daemon|66678ca7b5200753a54ea6e8c6d2504219481895
+vendor/bin/xtra-daemon|94df0c3982c5280b4200ee50850a0f468401d4a6
 vendor/etc/vintf/manifest/vendor.qti.gnss@4.3-service.xml|7595c487d8096e8f759d3025c3ee59d351b42709
 vendor/lib64/hw/vendor.qti.gnss@4.3-impl.so|c27bcc60b68aa7fe238ef6080de83d0507bf8b96
 vendor/lib64/libaoa.so|6aacf99d44a05c80bf77ee01ac21da20ce98368d
@@ -348,7 +348,7 @@ vendor/lib64/libizat_core.so|bdaa0075bb06b74b6bcccebddbd7f35af998d3cd
 vendor/lib64/liblbs_core.so|46d8033a4058de2ff88bbd87f34f547047c3638b
 vendor/lib64/libloc_api_v02.so|03d11f71546d8105292d622cff81e153761f4ddd
 vendor/lib64/libloc_api_wds.so|d359c51a23fa6706c979547196086a816aeeb556
-vendor/lib64/libloc_qwes_iface.so|d36f45e7401a89cef0f0708e2ca4bc18d8b3e548
+vendor/lib64/libloc_qwes_iface.so|e2d2d16163ca33ae11bffd63893a151d09f710f1
 vendor/lib64/libloc_ril_client.so|49cdc0200323e081c2a2ba4763a8e7d4f4826ead
 vendor/lib64/libloc_socket.so|d5ce9f5403a34fb826b86fe68e9b07f64bfabcab
 vendor/lib64/liblocationservice.so|f71e388d1d3252ac89ec669ee6850e8ac2ec27b1
