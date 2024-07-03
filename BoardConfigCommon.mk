@@ -71,6 +71,9 @@ BOARD_USES_ALSA_AUDIO := true
 # Bluetooth
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
+# Camera
+TARGET_USES_YCRCB_CAMERA_ENCODE := true
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
