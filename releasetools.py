@@ -44,25 +44,19 @@ def AddBasebandAssertion(info, input_zip):
   for variant in variants:
     info.script.AppendExtra(cmd.format(*variant))
 
-def AddImage(info, dir, basename, dest):
-  path = dir + "/" + basename
+def AddImage(info, basename, dest):
+  name = basename
+  path = "IMAGES/" + name
   if path not in info.input_zip.namelist():
     return
 
   data = info.input_zip.read(path)
-  common.ZipWriteStr(info.output_zip, basename, data)
+  common.ZipWriteStr(info.output_zip, name, data)
   info.script.Print("Patching {} image unconditionally...".format(dest.split('/')[-1]))
-  info.script.AppendExtra('package_extract_file("%s", "%s");' % (basename, dest))
-
-def FullOTA_InstallBegin(info):
-  AddImage(info, "RADIO", "super_dummy.img", "/tmp/super_dummy.img");
-  info.script.AppendExtra('package_extract_file("install/bin/flash_super_dummy.sh", "/tmp/flash_super_dummy.sh");')
-  info.script.AppendExtra('set_metadata("/tmp/flash_super_dummy.sh", "uid", 0, "gid", 0, "mode", 0755);')
-  info.script.AppendExtra('run_program("/tmp/flash_super_dummy.sh");')
-  return
+  info.script.AppendExtra('package_extract_file("%s", "%s");' % (name, dest))
 
 def OTA_InstallEnd(info):
-  AddImage(info, "IMAGES", "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta")
-  AddImage(info, "IMAGES", "vbmeta_system.img", "/dev/block/bootdevice/by-name/vbmeta_system")
-  AddImage(info, "IMAGES", "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
+  AddImage(info, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta")
+  AddImage(info, "vbmeta_system.img", "/dev/block/bootdevice/by-name/vbmeta_system")
+  AddImage(info, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
   return
