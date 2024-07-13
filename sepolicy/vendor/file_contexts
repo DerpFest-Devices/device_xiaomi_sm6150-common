@@ -15,7 +15,6 @@
 /data/vendor/fpdump(/.*)?       u:object_r:fingerprint_data_file:s0
 /data/vendor/thermal(/.*)?      u:object_r:thermal_data_file:s0
 /data/vendor/mac_addr(/.*)?     u:object_r:vendor_wifi_vendor_data_file:s0
-/data/per_boot(/.*)?            u:object_r:per_boot_file:s0
 
 # Dolby
 /data/vendor/dolby(/.*)?                                                               u:object_r:vendor_data_file:s0
