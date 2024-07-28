@@ -110,6 +110,9 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
     audio.bluetooth.default
 
+# Blur
+TARGET_NOT_USES_BLUR := true
+
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl:64 \
