@@ -32,6 +32,16 @@ namespace_imports = [
     'vendor/qcom/opensource/display',
 ]
 
+def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_{partition}' if partition == 'vendor' else None
+
+lib_fixups: lib_fixups_user_type = {
+    **lib_fixups,
+    (
+        'vendor.qti.imsrtpservice@3.0',
+    ): lib_fixup_vendor_suffix,
+}
+
 blob_fixups: blob_fixups_user_type = {
     ('vendor/lib64/mediadrm/libwvdrmengine.so', 'vendor/lib64/libwvhidl.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
