@@ -735,7 +735,7 @@ vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
-vendor/lib64/vendor.qti.imsrtpservice@3.0.so
+vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor
 
 # Snapdragon Computer Vision Engine - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/lib64/libfastcvdsp_stub.so|af78b8104678b87fbe07d679448ae2f4bc5c461e
