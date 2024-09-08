@@ -1,6 +1,5 @@
 # Current blobs with ELF checks disabled:
 # imsdatadaemon, libcne, libwqe, lowi-server depend on libwpa_client, which is a gnu makefile target
-# libOmxVpp depends on libOmxCore, which is a gnu makefile target
 
 # ACDB loader - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/lib/libacdb-fts.so|fb0d3046e2f81838bb1ed77c9c659d2a7eccabe8
@@ -407,7 +406,6 @@ vendor/lib/libsmwrapper.so|af37e8bd00fd4130094349c1d94e83c5b0c20550
 # Media (VPP) - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/etc/configstore/vpp.configstore.xml|ed961545186c66fd9523f25866c74f2e11ee63d7
 vendor/etc/init/vppservice.rc|24c089e0e413cbb3fa6daaf0af4215870bdf1b8e
-vendor/lib64/libOmxVpp.so;DISABLE_CHECKELF|e10d0e04a35e7d517fb6554b3a3a8d777404052a
 vendor/lib64/libvppclient.so|e63252fe6692c05bb4192cdf2054fc252f9d2f9f
 vendor/lib64/libvpphvx.so|d92a352a9990c77b5724784e8c827637b850d53e
 vendor/lib64/libvpplibrary.so|71152f530320f55862c1f4afc1957597f4c8e9f0
