@@ -83,8 +83,14 @@ function blob_fixup() {
     vendor/bin/mlipayd@1.1 | vendor/lib64/libmlipay.so | vendor/lib64/libmlipay@1.1.so )
         $PATCHELF_TOOL --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "${2}"
     ;;
+    system_ext/lib/libwfdmmsrc_system.so )
+        $PATCHELF_TOOL --add-needed "libgui_shim.so" "${2}"
+    ;;
     system_ext/lib64/libwfdnative.so | vendor/lib64/libgoodixhwfingerprint.so )
         $PATCHELF_TOOL --remove-needed "android.hidl.base@1.0.so" "${2}"
+    ;;
+    system_ext/lib64/libwfdnative.so )
+        $PATCHELF_TOOL --add-needed "libinput_shim.so" "${2}"
     ;;
     vendor/etc/camera/camxoverridesettings.txt )
         sed -i "s|0x10080|0|g" "${2}"
