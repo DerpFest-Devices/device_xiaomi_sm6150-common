@@ -86,6 +86,9 @@ function blob_fixup() {
     system_ext/lib64/libwfdnative.so | vendor/lib64/libgoodixhwfingerprint.so )
         $PATCHELF_TOOL --remove-needed "android.hidl.base@1.0.so" "${2}"
     ;;
+    system_ext/lib/libwfdservice.so )
+	$PATCHELF_TOOL --replace-needed "android.media.audio.common.types-V3-cpp.so" "android.media.audio.common.types-V4-cpp.so" "${2}"
+   ;;
     vendor/etc/camera/camxoverridesettings.txt )
         sed -i "s|0x10080|0|g" "${2}"
         sed -i "s|0x1F|0x0|g" "${2}"
