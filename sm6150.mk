@@ -429,7 +429,7 @@ PRODUCT_PACKAGES += \
 
 # WiFi Display
 PRODUCT_PACKAGES += \
-    android.media.audio.common.types-V2-cpp \
+    android.media.audio.common.types-V3-cpp \
     libavservices_minijail_32 \
     libdisplayconfig.system.qti \
     libpng.vendor:32 \
