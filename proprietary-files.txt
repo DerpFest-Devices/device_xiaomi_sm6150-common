@@ -461,19 +461,6 @@ vendor/lib64/vendor.qti.hardware.vpp@1.1.so|e336f4a3d0a50ee985639db6a8a70ec98171
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so|7ae61a9c75d4a17f0aad5969ce1a27cd5b0552ae
 vendor/lib64/vendor.qti.hardware.vpp@1.3.so|85a4e2ca843525db5c76486dbee4c5c7a672ee8d
 
-# Media (OMX) - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
-vendor/lib/libOmxAacDec.so|ce4efb1349b5989eb74bd54f82e8f74974df814b
-vendor/lib/libOmxAlacDec.so|342573d77212cf263c5f9df7a6af48f4f8803197
-vendor/lib/libOmxAmrDec.so|4f9fc2f9ed5c4869ad7485004ca88974434c990f
-vendor/lib/libOmxAmrwbplusDec.so|58f8d503060d04b1aacb0166d8d380860868f97a
-vendor/lib/libOmxApeDec.so|da7197cc21e9a0bda53f237499fd5c6806461337
-vendor/lib/libOmxDsdDec.so|93832f5a8e016a0cd419fca916f29a7987d4af9e
-vendor/lib/libOmxEvrcDec.so|9d5f1457de836c5e86b7f6b99bc7a8b29d05afb3
-vendor/lib/libOmxG711Dec.so|2c3a8f5c52c4c76c7e47d78995b9022a28e01242
-vendor/lib/libOmxQcelp13Dec.so|5c859845e9803a3702c361cc3e2e802f4d3ae303
-vendor/lib/libOmxWmaDec.so|17f0f77fb9a27a8381c8dbc77d6aac5c303ac453
-vendor/lib/libdsd2pcm.so|c5ab1afd7a5a23bf83d80b5ac74247c3dd2085af
-
 # Mlipay
 vendor/bin/mlipayd@1.1
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
