@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2015 The CyanogenMod Open Source Project
- * Copyright (C) 2020-2021 The LineageOS Project
+ * Copyright (C) 2020-2025 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,9 +17,10 @@
 
 #define LOG_TAG "amplifier_sm6150"
 
+#include <dlfcn.h>
 #include <log/log.h>
+#include <system/audio.h>
 
-#include "audio_hw.h"
 #include "platform.h"
 #include "platform_api.h"
 
@@ -40,6 +41,12 @@ typedef struct amp_device {
     struct audio_device* adev;
     struct audio_usecase* usecase_tx;
     struct pcm* tfa98xx_out;
+    typeof(enable_snd_device)* enable_snd_device;
+    typeof(enable_audio_route)* enable_audio_route;
+    typeof(disable_snd_device)* disable_snd_device;
+    typeof(disable_audio_route)* disable_audio_route;
+    typeof(platform_get_pcm_device_id)* platform_get_pcm_device_id;
+    typeof(get_usecase_from_list)* get_usecase_from_list;
 } tfa_t;
 
 static tfa_t* tfa_dev = NULL;
@@ -83,10 +90,11 @@ static int amp_set_feedback(amplifier_device_t* device, void* adev, uint32_t snd
     list_init(&tfa_dev->usecase_tx->device_list);
 
     list_add_tail(&tfa_dev->adev->usecase_list, &tfa_dev->usecase_tx->list);
-    enable_snd_device(tfa_dev->adev, tfa_dev->usecase_tx->in_snd_device);
-    enable_audio_route(tfa_dev->adev, tfa_dev->usecase_tx);
+    tfa_dev->enable_snd_device(tfa_dev->adev, tfa_dev->usecase_tx->in_snd_device);
+    tfa_dev->enable_audio_route(tfa_dev->adev, tfa_dev->usecase_tx);
 
-    pcm_dev_tx_id = platform_get_pcm_device_id(tfa_dev->usecase_tx->id, tfa_dev->usecase_tx->type);
+    pcm_dev_tx_id =
+             tfa_dev->platform_get_pcm_device_id(tfa_dev->usecase_tx->id, tfa_dev->usecase_tx->type);
     ALOGD("pcm_dev_tx_id = %d", pcm_dev_tx_id);
     if (pcm_dev_tx_id < 0) {
         ALOGE("%d: Invalid pcm device for usecase (%d)", __LINE__, tfa_dev->usecase_tx->id);
@@ -119,12 +127,12 @@ disable:
         pcm_close(tfa_dev->tfa98xx_out);
         tfa_dev->tfa98xx_out = NULL;
     }
-    tfa_dev->usecase_tx = get_usecase_from_list(tfa_dev->adev, tfa_dev->usecase_tx->id);
+    tfa_dev->usecase_tx = tfa_dev->get_usecase_from_list(tfa_dev->adev, tfa_dev->usecase_tx->id);
     if (tfa_dev->usecase_tx) {
         ALOGD("%s: Disabling tfa98xx feedback", __func__);
         list_remove(&tfa_dev->usecase_tx->list);
-        disable_snd_device(tfa_dev->adev, tfa_dev->usecase_tx->in_snd_device);
-        disable_audio_route(tfa_dev->adev, tfa_dev->usecase_tx);
+        tfa_dev->disable_snd_device(tfa_dev->adev, tfa_dev->usecase_tx->in_snd_device);
+        tfa_dev->disable_audio_route(tfa_dev->adev, tfa_dev->usecase_tx);
         free(tfa_dev->usecase_tx);
     }
     return rc;
@@ -156,6 +164,26 @@ static int amp_module_open(const hw_module_t* module, const char* name, hw_devic
     tfa_dev->amp_dev.common.close = amp_dev_close;
 
     tfa_dev->amp_dev.set_feedback = amp_set_feedback;
+
+
+#define LOAD_AHAL_SYMBOL(symbol)                                          \
+    do {                                                                  \
+        tfa_dev->symbol = dlsym(RTLD_NEXT, #symbol);                       \
+        if (tfa_dev->symbol == NULL) {                                     \
+            ALOGW("%s: %s not found (%s)", __func__, #symbol, dlerror()); \
+            free(tfa_dev);                                                 \
+            return -ENODEV;                                               \
+        }                                                                 \
+    } while (0)
+
+    LOAD_AHAL_SYMBOL(enable_snd_device);
+    LOAD_AHAL_SYMBOL(enable_audio_route);
+    LOAD_AHAL_SYMBOL(disable_snd_device);
+    LOAD_AHAL_SYMBOL(disable_audio_route);
+    LOAD_AHAL_SYMBOL(platform_get_pcm_device_id);
+    LOAD_AHAL_SYMBOL(get_usecase_from_list);
+
+#undef LOAD_AHAL_SYMBOL
 
     *device = (hw_device_t*)tfa_dev;
 
