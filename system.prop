@@ -2,7 +2,7 @@
 vendor.bluetooth.soc=cherokee
 
 # Camera
-vendor.camera.aux.packagelist=com.android.camera,org.lineageos.aperture,org.lineageos.aperture.dev
+vendor.camera.aux.packagelist=com.android.camera,org.derpfest.flash,org.derpfest.flash.dev
 
 # CNE
 persist.vendor.cne.feature=1

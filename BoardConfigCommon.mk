@@ -62,7 +62,7 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    vendor/derp/config/device_framework_matrix.xml
 
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/configs/hidl/manifest.xml
 DEVICE_MANIFEST_FILE += hardware/qcom-caf/sm8150/media/conf_files/sm6150/c2_manifest.xml
@@ -96,9 +96,6 @@ TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
 # Media
 TARGET_USES_ION := true
 TARGET_DISABLED_UBWC := true
-
-# Partitions
--include vendor/lineage/config/BoardConfigReservedSize.mk
 
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 
@@ -146,7 +143,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
 
 # Sepolicy
 TARGET_SEPOLICY_DIR := msmsteppe
-include device/lineage/sepolicy/libperfmgr/sepolicy.mk
+include device/derp/sepolicy/libperfmgr/sepolicy.mk
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
