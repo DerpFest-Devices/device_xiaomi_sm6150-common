@@ -53,7 +53,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcrypto_shim.so'),
     ('vendor/bin/mlipayd@1.1', 'vendor/lib64/libmlipay.so', 'vendor/lib64/libmlipay@1.1.so'): blob_fixup()
         .remove_needed('vendor.xiaomi.hardware.mtdservice@1.0.so'),
-    'vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc': blob_fixup()
+    ('vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc', 'vendor/etc/init/vendor.qti.media.c2@1.0-service.rc'): blob_fixup()
         .regex_replace(r'writepid /dev/cpuset/foreground/tasks', 'task_profiles ProcessCapacityHigh'),
 }
 
