@@ -53,15 +53,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcrypto_shim.so'),
     ('vendor/bin/mlipayd@1.1', 'vendor/lib64/libmlipay.so', 'vendor/lib64/libmlipay@1.1.so'): blob_fixup()
         .remove_needed('vendor.xiaomi.hardware.mtdservice@1.0.so'),
-    'vendor/etc/camera/camxoverridesettings.txt': blob_fixup()
-        .regex_replace(r'0x10080', '0')
-        .regex_replace(r'0x1F', '0x0'),
-    'vendor/etc/init/vendor.sensors.qti.rc': blob_fixup()
-        .add_line_if_missing('    disabled'),
     'vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc': blob_fixup()
         .regex_replace(r'writepid /dev/cpuset/foreground/tasks', 'task_profiles ProcessCapacityHigh'),
-    'vendor/lib64/camera/components/com.qti.node.watermark.so': blob_fixup()
-        .add_needed('libpiex_shim.so'),
 }
 
 module = ExtractUtilsModule(
