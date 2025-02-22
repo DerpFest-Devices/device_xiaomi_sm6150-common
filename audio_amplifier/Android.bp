@@ -30,6 +30,7 @@ cc_library_shared {
 
     shared_libs: [
         "libdl",
+        "libhardware",
         "liblog",
         "libtinyalsa",
     ],
