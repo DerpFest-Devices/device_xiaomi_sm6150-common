@@ -283,7 +283,7 @@ PRODUCT_PACKAGES += \
     libtinyxml2
 
 # UFFD GC
-OVERRIDE_ENABLE_UFFD_GC := false
+PRODUCT_ENABLE_UFFD_GC := true
 
 # Update
 AB_OTA_UPDATER := false
