@@ -17,6 +17,7 @@
 
 <MediaCodecs>
     <Include href="media_codecs_c2.xml" />
+    <Include href="media_codecs_dolby_audio.xml" />
     <Settings>
         <Setting name="max-video-encoder-input-buffers" value="11" />
         <Domain name="telephony" enabled="true" />
