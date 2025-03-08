@@ -1,6 +1,3 @@
-# Current blobs with ELF checks disabled:
-# imsdatadaemon, libcne, libwqe, lowi-server depend on libwpa_client, which is a gnu makefile target
-
 # ACDB loader - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/lib/libacdb-fts.so|fb0d3046e2f81838bb1ed77c9c659d2a7eccabe8
 vendor/lib/libacdbloader.so|821ae8894fd27b0010baed250d54bb3b8d8b0228
@@ -165,12 +162,12 @@ vendor/etc/cne/mwqem.conf|c42ad47b34b511075e5dfb9047d32f881fe0c159
 vendor/etc/cne/profileMwqem.xml|947917691684584b7e2ddf3588cd6f8e99f3804f
 vendor/etc/default-permissions/com.qualcomm.qti.cne.xml|c63c37d067e3009735fbc54d4603d43d7d6623e1
 vendor/etc/init/cnd.rc|3a5183df3479500fb729493bc56c71166fc10bce
-vendor/lib64/libcne.so;DISABLE_CHECKELF|03cf15975c6afe694c1a5c7d4df96aed7b5a5170
+vendor/lib64/libcne.so|03cf15975c6afe694c1a5c7d4df96aed7b5a5170
 vendor/lib64/libcneapiclient.so|0973dc05f6d6d9c469fc804693af79e6f3a5056a
 vendor/lib64/libcneoplookup.so|60d6abe85061de4fa75e5e4f69d477f37f1f8f64
 vendor/lib64/libcneqmiutils.so|c2e2658698eb8b312ca6b28c1a1088a331bb28b9
 vendor/lib64/libwms.so|c1583704d05d38b6957a84c3fcc4660e6380886e
-vendor/lib64/libwqe.so;DISABLE_CHECKELF|f80786b26c9ee705f1695f798fca1f5f45bee19c
+vendor/lib64/libwqe.so|f80786b26c9ee705f1695f798fca1f5f45bee19c
 vendor/lib64/libxml.so|6d5f9b6be0212bde7b961803fec9302e8529b54a
 vendor/lib64/vendor.qti.data.factory@2.0.so|748bfbaa57a409b8962e2b1725e1415e423a7315
 vendor/lib64/vendor.qti.data.factory@2.1.so|bb1f3fa22563282ee24bf03ca681fdc45551feef
@@ -280,7 +277,7 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|14819df15693c737fb2a
 # GPS - from LA.UM.9.15.2.r1-10100-KAMORTA.QSSI14.0
 vendor/bin/garden_app|f03490aa94b121d0d1d82b8715612785bc2a38f9
 vendor/bin/loc_launcher|f0b95b7d523d2785a3090c2598c4bbd6170f1ba1
-vendor/bin/lowi-server;DISABLE_CHECKELF|0c467ccb6b84cb05879543218441057b372adffe
+vendor/bin/lowi-server|0c467ccb6b84cb05879543218441057b372adffe
 vendor/bin/slim_daemon|7f2a24a3cfa5937247c6066777a8548607b06d0c
 vendor/bin/xtra-daemon|939754c4aec0b0a7e17452e81b034df7183b6339
 vendor/etc/vintf/manifest/vendor.qti.gnss@4.3-service.xml|7595c487d8096e8f759d3025c3ee59d351b42709
@@ -634,7 +631,7 @@ system_ext/priv-app/ims/ims.apk|f2e80743a0dea58cd3efcd99028447b148a37409
 
 # Radio - IMS (vendor)
 vendor/bin/ims_rtp_daemon
-vendor/bin/imsdatadaemon;DISABLE_CHECKELF
+vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
 vendor/bin/imsrcsd
 vendor/etc/init/ims_rtp_daemon.rc
