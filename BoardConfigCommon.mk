@@ -158,3 +158,5 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
 include vendor/xiaomi/sm6150-common/BoardConfigVendor.mk
+
+include vendor/sony/dolby/BoardConfigDolby.mk
