@@ -224,6 +224,7 @@ ro.telephony.default_network=22,22
 telephony.lteOnCdmaDevice=1
 
 # USB
+ro.usb.uvc.disable_video_encode_flag=true
 ro.usb.uvc.enabled=true
 vendor.usb.controller=a600000.dwc3
 vendor.usb.use_ffs_mtp=1
