@@ -236,7 +236,7 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
     libqti-perfd-client
 
-$(call soong_config_set,power_libperfmgr,mode_extension_lib,//$(COMMON_PATH):libperfmgr-ext-xiaomi)
+$(call soong_config_set,power_libperfmgr,mode_extension_lib,//$(LOCAL_PATH):libperfmgr-ext-xiaomi)
 
 # QTI
 PRODUCT_COPY_FILES += \
