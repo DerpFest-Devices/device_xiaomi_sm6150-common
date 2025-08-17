@@ -712,7 +712,7 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|4ba792ee3234dca4cd7ebbd7b3f9003
 vendor/bin/cnss-daemon
 vendor/bin/nv_mac
 
-# WiFi Display (system) - from LA.QSSI.15.0.r1-14500-qssi.0
+# WiFi Display (system) - from LA.QSSI.16.0.r1-06700-qssi.0
 system/framework/WfdCommon.jar;BOOT_JAR|45a5b6c22ee5e3eae618c07be1869a7175077828
 system_ext/bin/wfdservice|b7b774b649b601f5a64baf79aa5e1c530278a9bc
 system_ext/etc/init/wfdservice.rc|907def8565d8f91f531ca7dfad880af05d540b0c
