@@ -14,27 +14,25 @@
 // limitations under the License.
 
 cc_binary {
-    name: "vendor.lineage.livedisplay@2.1-service.xiaomi_sm6150",
-    defaults: ["hidl_defaults"],
-    init_rc: ["vendor.lineage.livedisplay@2.1-service.xiaomi_sm6150.rc"],
-    vintf_fragments: ["vendor.lineage.livedisplay@2.1-service.xiaomi_sm6150.xml"],
+    name: "vendor.lineage.livedisplay-service.xiaomi_sm6150",
+    init_rc: ["vendor.lineage.livedisplay-service.xiaomi_sm6150.rc"],
+    vintf_fragments: ["vendor.lineage.livedisplay-service.xiaomi_sm6150.xml"],
     relative_install_path: "hw",
     srcs: [
-        ":vendor.lineage.livedisplay@2.0-sdm-utils",
-	"AntiFlicker.cpp",
+        ":vendor.lineage.livedisplay-sdm-utils",
+        "AntiFlicker.cpp",
         "SunlightEnhancement.cpp",
         "service.cpp",
     ],
     vendor: true,
     shared_libs: [
         "libbase",
+        "libbinder_ndk",
         "libbinder",
-        "libhidlbase",
         "libutils",
-        "vendor.lineage.livedisplay@2.0",
-        "vendor.lineage.livedisplay@2.1",
+        "vendor.lineage.livedisplay-V1-ndk",
     ],
     header_libs: [
-        "vendor.lineage.livedisplay@2.0-sdm-headers",
+        "vendor.lineage.livedisplay-sdm-headers",
     ],
 }
