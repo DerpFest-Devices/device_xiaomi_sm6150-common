@@ -202,10 +202,10 @@ vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|f060101b26d3674bb173e5f
 vendor/lib/vendor.qti.hardware.dsp@1.0.so|8fcb647d22144c0ce005eae37e05e786d2b045be
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so|223a9268bd92bd80dab3df02fbef38ea86bcbadd
 
-# FM (system)
-system_ext/lib64/fm_helium.so
-system_ext/lib64/libfm-hci.so
-system_ext/lib64/vendor.qti.hardware.fm@1.0.so
+# FM (system) - from qssi
+system_ext/lib64/fm_helium.so|63a119fb67a51136d738c0fa2b65c6713b3ab077
+system_ext/lib64/libfm-hci.so|96d572c590a04044f0db89356342e64ead887bc4
+system_ext/lib64/vendor.qti.hardware.fm@1.0.so|15f2b7444d7f274d7b90ef7512dd75323b3bc0c5
 
 # FM (vendor) - from msmsteppe
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|f2e143c684cd9f31372df63b44c163744b2ca0b7
@@ -290,20 +290,20 @@ vendor/lib64/vendor.qti.gnss@4.3-service.so|2cd7c121074d82050eb67b0ed40272632c3a
 vendor/lib64/vendor.qti.gnss@4.3.so|7ce1927bce2078ebe730186a5e7e095442b7c7b3
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so|8f1bd782c728fc275b8e78785a4866414d8c1cd8
 
-# IMS (system) - from qssi
-system/lib64/vendor.qti.diaghal-V1-ndk.so|757dad89ef27ea58425f6b8bb7c5963488d962f0
-system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so|bd0409212689cbc5c5e7fe5e4587d75bb3b5aebd
-system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so|572398f0840f37e550a81503d609b438ea00905b
-system_ext/lib64/lib-imsvideocodec.so|3f3cf93169e36daf5b3d681eec4a30f861069307
-system_ext/lib64/lib-imsvt.so|abf68d46249295594fbab980334c47cdf19b053e
-system_ext/lib64/lib-imsvtextutils.so|101d8d4dfb4ff44d0089f9bcd339decdb523c874
-system_ext/lib64/lib-imsvtutils.so|2b95d982c8b9ee47a01db6ef6ad2a4da47142e13
-system_ext/lib64/libdiag_system.so|730deb056c3b1daf5e19de5a7ab6f60d6af3af84
-system_ext/lib64/vendor.qti.ImsRtpService-V2-ndk.so|d3f38714174fd3edaf226fcb787a4173490ab9fc
-system_ext/lib64/vendor.qti.diaghal@1.0.so|7750e909a3a070a3eb098a84f39180156de1ae84
-system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|b65fc57443ca18c8300fd5e673b219b709612c93
-system_ext/lib64/vendor.qti.imsrtpservice@3.1.so|2200adf5cef0030cdba135fa639fc8d5245a6ea6
-system_ext/priv-app/ims/ims.apk|fbbace2741a2e06ed528ff1e619b26e3b7102f96
+# IMS (system) - from LA.QSSI.15.0.r1-16100-qssi.0
+system/lib64/vendor.qti.diaghal-V1-ndk.so|ac3381b74861e15a8fb2842dd8d929c97a5f0fa1
+system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so|0b61c9104edbcf3284daae09b253b2acbed65ad6
+system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so|7616e2b6a8cb3dd2c7c594eed1b16417a1257125
+system_ext/lib64/lib-imsvideocodec.so|5de2ce5a0cd2de94a7861f03d07411aec91ab738
+system_ext/lib64/lib-imsvt.so|8c89327d563e7769997f5d0e3748130c103dc4b9
+system_ext/lib64/lib-imsvtextutils.so|acce4410add2b5088adab8f7b4e37e36e0c09105
+system_ext/lib64/lib-imsvtutils.so|8a1e06e3edf157b3cba2e608daf70ff0afa823d4
+system_ext/lib64/libdiag_system.so|3bf9bcd950b540ddd10dd6b3ff14af328eeb449d
+system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so|c27f4e77d677a3e8d1c1c91ca1b40958dfb7f9d6
+system_ext/lib64/vendor.qti.diaghal@1.0.so|f33d7eb1654c5d9acba02376891df1bbe87d3f57
+system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|961321653e924726bd01af6bfbb33c6740bc66af
+system_ext/lib64/vendor.qti.imsrtpservice@3.1.so|33008343e8ac15821278faecc1c234e8bea3fe2d
+system_ext/priv-app/ims/ims.apk|6d3fa88eb5637eba8ff7c9ddc4a41a0b46eb2e03
 
 # IMS (vendor)
 vendor/bin/ims_rtp_daemon
