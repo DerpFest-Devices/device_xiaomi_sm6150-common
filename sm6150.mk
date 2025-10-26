@@ -153,8 +153,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     gnss@2.0-base.policy \
     gnss@2.0-xtra-daemon.policy \
-    gnss@2.0-xtwifi-client.policy \
-    gnss@2.0-xtwifi-inet-agent.policy
+    gnss@2.0-xtwifi-client.policy
 
 PRODUCT_PACKAGES += \
     libbatching \
