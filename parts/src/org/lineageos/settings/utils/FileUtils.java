@@ -17,7 +17,6 @@
 package org.lineageos.settings.utils;
 
 import android.util.Log;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -34,8 +33,8 @@ public final class FileUtils {
     }
 
     /**
-     * Reads the first line of text from the given file.
-     * Reference {@link BufferedReader#readLine()} for clarification on what a line is
+     * Reads the first line of text from the given file. Reference {@link BufferedReader#readLine()}
+     * for clarification on what a line is
      *
      * @return the read line contents, or null on failure
      */
