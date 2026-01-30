@@ -1,4 +1,4 @@
-# These proprietary files are extracted from Redmi Note 12 Pro 4G (codenamed `sweet_k6a`) OS1.0.23.0.THGMIXM, unless pinned
+# These proprietary files are extracted from Redmi Note 12 Pro 4G (codenamed `sweet_k6a`) OS1.0.33.0.THGMIXM, unless pinned
 # dada: dada-user 16 BP2A.250605.015 OS2.0.217.0.WOCMIXM release-keys
 # kamorta: LA.UM.9.15.2.r1-10100-KAMORTA.QSSI14.0
 # mojito: mojito-user 12 SKQ1.210908.001 V14.0.9.0.SKGMIXM release-keys

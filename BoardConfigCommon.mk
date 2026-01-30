@@ -151,6 +151,9 @@ SOONG_CONFIG_xiaomiSm6150Vars += \
 SOONG_CONFIG_xiaomiSm6150Vars_livedisplay_support_anti_flicker ?= true
 SOONG_CONFIG_xiaomiSm6150Vars_livedisplay_support_sunlight_enhancement ?= true
 
+# Vendor security patch level
+VENDOR_SECURITY_PATCH := 2025-12-01
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
