@@ -61,8 +61,8 @@ vendor/lib64/libsoc_helper.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
-# Charger - from msmsteppe
-vendor/bin/hvdcp_opti;RECOVERY_AVAILABLE|baa97aa77522e31ba07b9c36ff1fcb2e12f516b9
+# Charger
+vendor/bin/hvdcp_opti;RECOVERY_AVAILABLE
 
 # Certificate Authority - from msmsteppe
 vendor/app/CACertService/CACertService.apk|b1072f129d588b5c5aefa8824b6d531586a26755
