@@ -440,6 +440,10 @@ vendor/lib64/libqmiservices.so
 vendor/lib64/libqrtr.so
 vendor/lib64/libqsocket.so
 
+# QSPA - from qssi
+system_ext/etc/init/qspa_system.rc|29f1d40483dce1a44efd9e895681a07233138fc2
+system_ext/etc/qspa/qspa_default.rc|e2e5b47222504e09b4dea7bd5b35c67dd114729a
+
 # RIL (system) - from LA.QISI.16.0.r2-00900-qssi.0
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|765552dc7130cd07e1739b425df8a2237b7030ac
 system_ext/etc/permissions/qcrilhook.xml|30397e293b2c40e6b7a1d11c2a615cdd05de625a
