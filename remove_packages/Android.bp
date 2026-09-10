@@ -1,10 +1,6 @@
-android_app_import {
+cc_prebuilt_binary {
     name: "RemovePackages",
-    apk: "DebloatDummy.apk",
-    presigned: true,
-    preprocessed: true,
-
-    overrides: [
+        overrides: [
         "Chrome",
         "Chrome-Stub",
         "Maps",
@@ -12,10 +8,9 @@ android_app_import {
         "PrebuiltGmail",
         "Drive",
     ],
-
-    dex_preopt: {
-        enabled: false,
+    strip: {
+        none: true,
     },
-
-    privileged: true,
+    check_elf_files: false,
+    srcs: ["RemovePackages"],
 }
