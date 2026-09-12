@@ -5,19 +5,12 @@ android_app_import {
     preprocessed: true,
 
     overrides: [
-        "Accord",
-        "Aperture",
-        "CalculatorGooglePrebuilt_85006267",
-        "CalendarGooglePrebuilt",
         "Chrome",
         "Chrome-Stub",
         "Maps",
         "GeminiShell_227",
-        "Gmail2",
-        "talkback",
-        "YouTube",
+        "PrebuiltGmail",
         "Drive",
-        "FossifyGallery",
     ],
 
     dex_preopt: {
