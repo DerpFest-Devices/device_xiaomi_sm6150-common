@@ -437,7 +437,6 @@ vendor/lib64/libqsocket.so
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|d5829c38c2370cb9acd8b3753d62cef709815614
 system_ext/etc/permissions/qcrilhook.xml|30397e293b2c40e6b7a1d11c2a615cdd05de625a
 system_ext/framework/qcrilhook.jar|9787a32278ef29754c0b0fe665c6dae883c8e9c2
-system_ext/framework/qti-telephony-common.jar|96b11a8bceca8d612ebf856e2921c30e28fbd0fb
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|f44654156c1c6689044ccdd1af56d49a90716572
 
 # RIL (vendor) - from mojito
