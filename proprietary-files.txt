@@ -448,7 +448,6 @@ system_ext/etc/qspa/qspa_default.rc|e2e5b47222504e09b4dea7bd5b35c67dd114729a
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|765552dc7130cd07e1739b425df8a2237b7030ac
 system_ext/etc/permissions/qcrilhook.xml|30397e293b2c40e6b7a1d11c2a615cdd05de625a
 system_ext/framework/qcrilhook.jar|6b9098a45673ca2a6b3f4fdf4ab76ec970dd6942
-system_ext/framework/qti-telephony-common.jar|19257d196fa9a31037d5d2ee902179c41358f3d4
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|69dbe4520422cb4b25987902b81b48ad2987a27a
 
 # RIL (vendor) - from mojito
